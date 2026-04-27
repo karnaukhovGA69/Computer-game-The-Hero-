@@ -1,0 +1,41 @@
+[
+  {
+    "Id": "swordsman",
+    "DisplayName": "Мечник",
+    "SpriteKey": "unit_swordsman",
+    "MaxHP": 30,
+    "Attack": 8,
+    "Defense": 6,
+    "DamageMin": 6,
+    "DamageMax": 10,
+    "Initiative": 7,
+    "HireCost": { "Values": { "Gold": 60, "Wood": 0, "Stone": 0, "Mana": 0 } },
+    "WeeklyGrowth": 5
+  },
+  {
+    "Id": "archer",
+    "DisplayName": "Лучник",
+    "SpriteKey": "unit_archer",
+    "MaxHP": 18,
+    "Attack": 10,
+    "Defense": 3,
+    "DamageMin": 10,
+    "DamageMax": 16,
+    "Initiative": 9,
+    "HireCost": { "Values": { "Gold": 80, "Wood": 2, "Stone": 0, "Mana": 0 } },
+    "WeeklyGrowth": 4
+  },
+  {
+    "Id": "orc",
+    "DisplayName": "Орк",
+    "SpriteKey": "unit_orc",
+    "MaxHP": 60,
+    "Attack": 9,
+    "Defense": 7,
+    "DamageMin": 8,
+    "DamageMax": 14,
+    "Initiative": 3,
+    "HireCost": { "Values": { "Gold": 100, "Wood": 0, "Stone": 2, "Mana": 0 } },
+    "WeeklyGrowth": 3
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "Id": "barracks",
+    "DisplayName": "Казармы",
+    "UnitTypeIdLevel1": "swordsman",
+    "UnitTypeIdLevel2": "swordsman_elite",
+    "WeeklyRecruitLevel1": 5,
+    "WeeklyRecruitLevel2": 7,
+    "UpgradeCost": { "Values": { "Gold": 500, "Wood": 10, "Stone": 5, "Mana": 0 } },
+    "UnitUpgradeCostPerUnit": { "Values": { "Gold": 40, "Wood": 0, "Stone": 0, "Mana": 0 } }
+  },
+  {
+    "Id": "archery_range",
+    "DisplayName": "Стрельбище",
+    "UnitTypeIdLevel1": "archer",
+    "UnitTypeIdLevel2": "archer_elite",
+    "WeeklyRecruitLevel1": 4,
+    "WeeklyRecruitLevel2": 6,
+    "UpgradeCost": { "Values": { "Gold": 600, "Wood": 20, "Stone": 0, "Mana": 0 } },
+    "UnitUpgradeCostPerUnit": { "Values": { "Gold": 50, "Wood": 5, "Stone": 0, "Mana": 0 } }
+  },
+  {
+    "Id": "orccamp",
+    "DisplayName": "Лагерь орков",
+    "UnitTypeIdLevel1": "orc",
+    "UnitTypeIdLevel2": "orc_warchief",
+    "WeeklyRecruitLevel1": 3,
+    "WeeklyRecruitLevel2": 4,
+    "UpgradeCost": { "Values": { "Gold": 700, "Wood": 5, "Stone": 15, "Mana": 0 } },
+    "UnitUpgradeCostPerUnit": { "Values": { "Gold": 60, "Wood": 0, "Stone": 5, "Mana": 0 } }
+  }
+]
