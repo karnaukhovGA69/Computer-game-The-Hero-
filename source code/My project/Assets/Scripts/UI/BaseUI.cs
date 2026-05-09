@@ -21,7 +21,7 @@ namespace TheHero.UI
             Refresh();
         }
 
-        private void Refresh()
+        public void Refresh()
         {
             foreach (Transform child in _buildingsContainer) Destroy(child.gameObject);
             _rows.Clear();
