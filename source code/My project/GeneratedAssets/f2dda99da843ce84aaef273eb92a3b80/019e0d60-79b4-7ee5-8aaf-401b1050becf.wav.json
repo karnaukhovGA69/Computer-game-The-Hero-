@@ -1,0 +1,15 @@
+{
+    "asset": "f2dda99da843ce84aaef273eb92a3b80",
+    "fileName": "019e0d60-79b4-7ee5-8aaf-401b1050becf.wav",
+    "prompt": "Satisfying gold coin collection sound, magic chime",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 2.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

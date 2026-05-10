@@ -1,0 +1,28 @@
+{
+    "asset": "e80fa4c742195ec4f9b8068b220a9b47",
+    "fileName": "019e0cc8-4d47-78a1-808d-13410a3cf7b4.png",
+    "prompt": "Dark soft black vignette overlay for a game screen. Fading from solid black at edges to transparent in the center. Square shape.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

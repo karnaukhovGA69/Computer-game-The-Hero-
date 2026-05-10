@@ -1,0 +1,28 @@
+{
+    "asset": "78e0e41376a89a446bcac089660e21d9",
+    "fileName": "019e0cff-1e7b-7d47-b30f-5ad3f93eda69.png",
+    "prompt": "A group of green goblins with spears, full body, 90s fantasy strategy game style, hand-painted pixel art aesthetic, vibrant colors, high contrast, top-down isometric view, clean silhouette, bright and distinct. 64x64 aesthetic but high resolution. Transparent background.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

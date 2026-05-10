@@ -1,0 +1,28 @@
+{
+    "asset": "402758a168d844e4ab605163fe5e85cd",
+    "fileName": "019e0d11-dd65-7e5f-ac89-a8cb3e7a0636.png",
+    "prompt": "2D side-view battlefield background for a fantasy strategy game. Scorched dark land, lava cracks in the ground, dark obsidian mountains in the background, ominous red sky. 90s retro aesthetic. Dark and ominous. 16:9 aspect ratio. No UI elements. No characters.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

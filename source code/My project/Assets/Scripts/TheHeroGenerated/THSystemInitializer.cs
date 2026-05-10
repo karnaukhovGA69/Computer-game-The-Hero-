@@ -11,6 +11,9 @@ namespace TheHero.Generated
             if (THSceneLoader.Instance == null) { }
             if (THPauseMenu.Instance == null) { }
             if (THManager.Instance == null) { }
-        }
-    }
+            if (THStoryManager.Instance == null) { }
+            if (THAudioManager.Instance == null) { }
+            if (THArtifactManager.Instance == null) { }
+            }
+}
 }

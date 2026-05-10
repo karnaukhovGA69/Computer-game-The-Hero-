@@ -1,0 +1,15 @@
+{
+    "asset": "e9ce74bb4ae68544085d801482040930",
+    "fileName": "019e0d60-a088-7530-8a92-001b9bf74846.wav",
+    "prompt": "Triumphant fantasy victory fanfare, horns and choir",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 5.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

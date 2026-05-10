@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(mv \"/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/Information/Описание.pdf\" \"/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/\")",
-      "Bash(mv \"/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/Information/ТЗ.pdf\" \"/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/\")",
-      "Bash(rmdir \"/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/Information\")"
-    ]
-  }
-}

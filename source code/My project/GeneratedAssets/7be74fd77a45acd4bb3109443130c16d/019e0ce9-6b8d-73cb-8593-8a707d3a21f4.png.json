@@ -1,0 +1,28 @@
+{
+    "asset": "7be74fd77a45acd4bb3109443130c16d",
+    "fileName": "019e0ce9-6b8d-73cb-8593-8a707d3a21f4.png",
+    "prompt": "charred dark purple and black scorched earth tile, evil zone, 90s fantasy strategy game style, high contrast, hand-painted pixel art feel, top-down view, crisp details. 64x64 aesthetic but high resolution. Cracks with faint glow.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

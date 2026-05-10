@@ -1,0 +1,28 @@
+{
+    "asset": "f3e513f3f0657094a88c0d912fb1953f",
+    "fileName": "019e0de2-1726-73e1-8be3-511eaa64202d.png",
+    "prompt": "A spritesheet of map objects for a fantasy strategy game. Small and large gold piles, wood bundle, stone pile, blue and purple mana crystals, treasure chest, artifact on a pedestal. Top-down view, 2D hand-painted style, Heroes of Might and Magic 3 aesthetic. Transparent background. No text. 256x256 pixels per object.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

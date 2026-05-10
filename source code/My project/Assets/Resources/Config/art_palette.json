@@ -1,0 +1,20 @@
+{
+  "paletteName": "The Hero Dark Strategy",
+  "colors": [
+    { "name": "Map_DarkGreen", "hex": "#1B3022" },
+    { "name": "Map_DeepGreen", "hex": "#0C1A11" },
+    { "name": "Map_Water", "hex": "#0A1A2E" },
+    { "name": "UI_Parchment", "hex": "#D7CCC8" },
+    { "name": "UI_Gold", "hex": "#FFD700" },
+    { "name": "UI_Bronze", "hex": "#8D6E63" },
+    { "name": "UI_Stone", "hex": "#424242" },
+    { "name": "Unit_EnemyRed", "hex": "#B71C1C" },
+    { "name": "Unit_HeroBlue", "hex": "#1976D2" },
+    { "name": "Unit_HeroGold", "hex": "#FFD700" }
+  ],
+  "technical": {
+    "targetPPU": 32,
+    "filterMode": "Point",
+    "compression": "None"
+  }
+}

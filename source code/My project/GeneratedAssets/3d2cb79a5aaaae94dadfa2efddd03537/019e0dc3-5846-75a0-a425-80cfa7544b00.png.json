@@ -1,0 +1,28 @@
+{
+    "asset": "3d2cb79a5aaaae94dadfa2efddd03537",
+    "fileName": "019e0dc3-5846-75a0-a425-80cfa7544b00.png",
+    "prompt": "Ancient dense forest tile for a fantasy strategy game, hand-painted trees, 2D top-down, mossy ground. 90s game style.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -1,0 +1,28 @@
+{
+    "asset": "c2f131888976a9a41ab479f87d450363",
+    "fileName": "019e0cf2-c4c4-7c9d-a9ea-afb7e97ea0d4.png",
+    "prompt": "Entrance to a gold mine with bright gold veins, rocky exterior, 90s fantasy strategy game style, hand-painted pixel art aesthetic, bright gold interior glow, high contrast, top-down view.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

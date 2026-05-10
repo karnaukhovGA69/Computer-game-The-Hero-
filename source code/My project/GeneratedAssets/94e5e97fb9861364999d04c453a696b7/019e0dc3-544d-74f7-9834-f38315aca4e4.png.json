@@ -1,0 +1,28 @@
+{
+    "asset": "94e5e97fb9861364999d04c453a696b7",
+    "fileName": "019e0dc3-544d-74f7-9834-f38315aca4e4.png",
+    "prompt": "Deep blue water ripple tile for a fantasy strategy game, hand-painted waves, 2D top-down. 90s game style.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

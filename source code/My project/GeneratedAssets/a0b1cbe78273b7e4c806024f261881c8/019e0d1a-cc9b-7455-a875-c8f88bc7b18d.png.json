@@ -1,0 +1,28 @@
+{
+    "asset": "a0b1cbe78273b7e4c806024f261881c8",
+    "fileName": "019e0d1a-cc9b-7455-a875-c8f88bc7b18d.png",
+    "prompt": "Wise wizard with staff in battle pose, full body, side view, 90s fantasy strategy style, pixel art, sprite. Purple robes. Standing on a flat surface. Clear silhouette. High quality. 1024x1024.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

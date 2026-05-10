@@ -1,0 +1,28 @@
+{
+    "asset": "e7082abd46fc4b940b8717423b144c88",
+    "fileName": "019e0e71-08f2-785a-9791-3cc337400bc9.png",
+    "prompt": "Top-down 2D pixel art game resource icon. Small pile of sparkling gold coins, stylized fantasy. Transparent background, no white square.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -85,8 +85,12 @@ namespace TheHero.Generated
             msgGo.transform.SetParent(_layout.transform, false);
             
             var img = msgGo.GetComponent<Image>();
-            img.color = new Color(0, 0, 0, 0.8f);
+            img.color = new Color(0.1f, 0.1f, 0.1f, 0.9f);
             
+            var outline = msgGo.AddComponent<Outline>();
+            outline.effectColor = new Color(1, 0.85f, 0.4f); // Gold outline
+            outline.effectDistance = new Vector2(2, -2);
+
             var textGo = new GameObject("Text", typeof(RectTransform), typeof(Text));
             textGo.transform.SetParent(msgGo.transform, false);
             var t = textGo.GetComponent<Text>();
@@ -96,8 +100,15 @@ namespace TheHero.Generated
             t.alignment = TextAnchor.MiddleCenter;
             t.color = color;
             
+            // Add padding for the text so it doesn't touch the outline
+            var rt = textGo.GetComponent<RectTransform>();
+            rt.anchorMin = Vector2.zero;
+            rt.anchorMax = Vector2.one;
+            rt.offsetMin = new Vector2(10, 5);
+            rt.offsetMax = new Vector2(-10, -5);
+            
             var fitter = msgGo.AddComponent<ContentSizeFitter>();
-            fitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+fitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
             
             var layoutElement = msgGo.AddComponent<LayoutElement>();
             layoutElement.minHeight = 40;

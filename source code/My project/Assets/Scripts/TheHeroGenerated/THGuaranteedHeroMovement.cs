@@ -106,9 +106,9 @@ namespace TheHero.Generated
             {
                 THManager.Instance.Data.heroX = transform.position.x;
                 THManager.Instance.Data.heroY = transform.position.y;
-                THManager.Instance.SaveGame();
-            }
-            
+                // THManager.Instance.SaveGame();
+                }
+
             if (THMapController.Instance != null)
             {
                 THMapController.Instance.UpdateUI();

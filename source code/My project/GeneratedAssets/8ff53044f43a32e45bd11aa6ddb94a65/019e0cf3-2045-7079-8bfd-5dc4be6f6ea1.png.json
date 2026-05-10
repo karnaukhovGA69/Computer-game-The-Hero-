@@ -1,0 +1,28 @@
+{
+    "asset": "8ff53044f43a32e45bd11aa6ddb94a65",
+    "fileName": "019e0cf3-2045-7079-8bfd-5dc4be6f6ea1.png",
+    "prompt": "Dark knight in black spiky armor, 90s fantasy strategy game style, hand-painted pixel art aesthetic, red and purple ominous magical glow, high contrast, top-down view, menacing silhouette.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

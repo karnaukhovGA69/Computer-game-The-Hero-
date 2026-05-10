@@ -21,6 +21,11 @@ namespace TheHero.Generated
             if (State == null) State = THSaveSystem.NewGame();
             UpdateUI();
             Log("Добро пожаловать в замок!");
+
+            if (THAudioManager.Instance != null) THAudioManager.Instance.PlayMusic("Base");
+
+            if (THStoryManager.Instance != null)
+                THStoryManager.Instance.ShowDialog("first_base", "Замок", "В замке можно нанимать юнитов и улучшать здания.", "Sprites/Units/unit_swordsman_portrait");
         }
 
         public void UpdateUI()
@@ -65,11 +70,12 @@ namespace TheHero.Generated
                             return;
                         }
                         AddUnitToArmy(id, b);
-                    }
-                    Log($"+1 {b.name}");
-                    UpdateUI();
-                    THSaveSystem.SaveGame(State);
-                }
+                        }
+                        Log($"+1 {b.name}");
+                        if (THAudioManager.Instance != null) THAudioManager.Instance.PlaySfx("recruit");
+                        UpdateUI();
+                        THSaveSystem.SaveGame(State);
+}
                 else
                 {
                     Log("Недостаточно ресурсов!");
@@ -84,15 +90,15 @@ namespace TheHero.Generated
         private void AddUnitToArmy(string id, THBuildingData b)
         {
             THArmyUnit u = new THArmyUnit { id = id, name = b.name, count = 1 };
-            if (id == "barracks") { u.name = "Swordsman"; u.hpPerUnit = 30; u.attack = 5; u.defense = 2; u.initiative = 5; }
-            if (id == "range") { u.name = "Archer"; u.hpPerUnit = 20; u.attack = 7; u.defense = 1; u.initiative = 7; }
-            if (id == "mage") { u.name = "Mage"; u.hpPerUnit = 25; u.attack = 10; u.defense = 2; u.initiative = 8; }
+            if (id == "unit_swordsman") { u.name = "Swordsman"; u.hpPerUnit = 30; u.attack = 5; u.defense = 2; u.initiative = 5; }
+            if (id == "unit_archer") { u.name = "Archer"; u.hpPerUnit = 20; u.attack = 7; u.defense = 1; u.initiative = 7; }
+            if (id == "unit_mage") { u.name = "Mage"; u.hpPerUnit = 25; u.attack = 10; u.defense = 2; u.initiative = 8; }
             
             if (b.level >= 2)
             {
-                if (id == "barracks") { u.hpPerUnit += 10; u.attack += 2; }
-                if (id == "range") { u.hpPerUnit += 5; u.attack += 3; }
-                if (id == "mage") { u.hpPerUnit += 8; u.attack += 4; }
+                if (id == "unit_swordsman") { u.hpPerUnit += 10; u.attack += 2; }
+                if (id == "unit_archer") { u.hpPerUnit += 5; u.attack += 3; }
+                if (id == "unit_mage") { u.hpPerUnit += 8; u.attack += 4; }
             }
             
             State.army.Add(u);
@@ -105,9 +111,9 @@ namespace TheHero.Generated
             if (b.level >= 2) { Log("Максимальный уровень!"); return; }
 
             int goldCost = 0; int woodCost = 0; int stoneCost = 0; int manaCost = 0;
-            if (id == "barracks") { goldCost = 300; woodCost = 10; }
-            if (id == "range") { goldCost = 350; woodCost = 15; }
-            if (id == "mage") { goldCost = 500; stoneCost = 20; manaCost = 10; }
+            if (id == "unit_swordsman") { goldCost = 300; woodCost = 10; }
+            if (id == "unit_archer") { goldCost = 350; woodCost = 15; }
+            if (id == "unit_mage") { goldCost = 500; stoneCost = 20; manaCost = 10; }
 
             if (State.gold >= goldCost && State.wood >= woodCost && State.stone >= stoneCost && State.mana >= manaCost)
             {
@@ -118,9 +124,10 @@ namespace TheHero.Generated
                 b.level++;
                 UpdateUI();
                 Log("Здание улучшено!");
+                if (THAudioManager.Instance != null) THAudioManager.Instance.PlaySfx("upgrade");
                 THSaveSystem.SaveGame(State);
-            }
-            else Log("Недостаточно ресурсов!");
+                }
+else Log("Недостаточно ресурсов!");
         }
 
         public void RecruitAll(string id)
@@ -136,6 +143,6 @@ namespace TheHero.Generated
         }
 
         public void Log(string msg) { if (InfoText) InfoText.text = msg; }
-        public void BackToMap() => SceneManager.LoadScene("Map");
-    }
-}
+        public void BackToMap() => THSceneLoader.Instance.LoadMap();
+        }
+        }

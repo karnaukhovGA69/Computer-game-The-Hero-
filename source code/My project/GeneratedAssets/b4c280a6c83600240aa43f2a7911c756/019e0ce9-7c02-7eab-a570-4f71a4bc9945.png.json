@@ -1,0 +1,28 @@
+{
+    "asset": "b4c280a6c83600240aa43f2a7911c756",
+    "fileName": "019e0ce9-7c02-7eab-a570-4f71a4bc9945.png",
+    "prompt": "murky olive green swamp with small puddles and reeds tile, 90s fantasy strategy game style, high contrast, hand-painted pixel art feel, top-down view, crisp details. 64x64 aesthetic but high resolution. Sludgy texture.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

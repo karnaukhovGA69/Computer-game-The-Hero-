@@ -1,0 +1,28 @@
+{
+    "asset": "072ce4342b979794ca5b30ce9ae5ebd6",
+    "fileName": "019e0eac-d4d0-752c-a70c-ee2d0fba9091.png",
+    "prompt": "Clean minimalist top-down 2D game tile of a dirt road, stylized fantasy, flat colors, tileable, high readability.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

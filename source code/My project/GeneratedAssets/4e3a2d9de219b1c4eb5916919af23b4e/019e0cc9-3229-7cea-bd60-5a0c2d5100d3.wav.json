@@ -1,0 +1,15 @@
+{
+    "asset": "4e3a2d9de219b1c4eb5916919af23b4e",
+    "fileName": "019e0cc9-3229-7cea-bd60-5a0c2d5100d3.wav",
+    "prompt": "A heavy stone button click sound for a fantasy game. Deep, satisfying mechanical click with a hint of gold resonance.",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 1.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

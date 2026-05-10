@@ -1,0 +1,28 @@
+{
+    "asset": "f4d94546e2f821246b790b5f317bbbe2",
+    "fileName": "019e0e5a-871e-7215-89d6-28439d7daefd.png",
+    "prompt": "Top-down 2D pixel art basic green grass tile, natural green color, soft texture, high quality, stylized fantasy, 64x64, no borders.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

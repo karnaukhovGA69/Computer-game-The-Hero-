@@ -1,0 +1,28 @@
+{
+    "asset": "796a4b665af864445a8f9290f18bec60",
+    "fileName": "019e0d1b-0c32-7970-a223-7e64f363e7f1.png",
+    "prompt": "Skeleton warrior in battle pose, full body, side view, 90s fantasy strategy style, pixel art, sprite. Rusted armor. Standing on a flat surface. Clear silhouette. High quality. 1024x1024.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -1,0 +1,28 @@
+{
+    "asset": "597c8df1a10326d4e902cee8075aafb7",
+    "fileName": "019e0e2b-6c2b-7b72-8312-bfa96b250a75.png",
+    "prompt": "Top-down 2D pixel art game asset. Treasure chest, golden, high quality, 64x64. HoMM style. Transparent background.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3164947770357260877}
-  - component: {fileID: 8789781753208318208}
   m_Layer: 0
   m_Name: TH_Core
   m_TagString: Untagged
@@ -33,36 +32,6 @@ Transform:
   - {fileID: 4272518896190643724}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8789781753208318208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2840598011397141499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::THManager
-  Data:
-    gold: 500
-    wood: 20
-    stone: 10
-    mana: 5
-    day: 1
-    week: 1
-    heroName: The Hero
-    heroLevel: 1
-    heroExp: 0
-    heroX: 0
-    heroY: 0
-    movementPoints: 20
-    army: []
-    buildings: []
-    mapObjects: []
-    currentEnemyArmy: []
-    lastCombatReward: 
 --- !u!1 &7470924687238403481
 GameObject:
   m_ObjectHideFlags: 0

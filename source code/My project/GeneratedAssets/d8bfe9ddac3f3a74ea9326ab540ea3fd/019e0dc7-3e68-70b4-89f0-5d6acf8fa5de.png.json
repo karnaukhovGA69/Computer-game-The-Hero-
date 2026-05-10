@@ -1,0 +1,28 @@
+{
+    "asset": "d8bfe9ddac3f3a74ea9326ab540ea3fd",
+    "fileName": "019e0dc7-3e68-70b4-89f0-5d6acf8fa5de.png",
+    "prompt": "Variation 2: Lush green grass tile for a fantasy strategy game, hand-painted texture, different blade pattern, small blue flowers. Tiling. 90s style.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

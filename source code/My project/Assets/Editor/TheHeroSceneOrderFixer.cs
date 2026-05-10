@@ -8,7 +8,7 @@ namespace TheHero.Editor
 {
     public class TheHeroSceneOrderFixer
     {
-        [MenuItem("The Hero/Fix/01 Fix Startup Scene Order")]
+        [MenuItem("The Hero/Small Fixes/Fix Startup Scene")]
         public static void FixSceneOrder()
         {
             string[] scenePaths = {
@@ -28,7 +28,7 @@ namespace TheHero.Editor
                 }
                 else
                 {
-                    Debug.LogWarning($"[TheHeroFix] Scene not found at path: {path}");
+                    Debug.LogWarning($"[TheHeroSmallStep] Scene not found at path: {path}");
                 }
             }
 
@@ -37,10 +37,10 @@ namespace TheHero.Editor
             if (buildScenes.Count > 0)
             {
                 EditorSceneManager.OpenScene(buildScenes[0].path);
-                Debug.Log($"[TheHeroFix] Startup scene fixed: {Path.GetFileName(buildScenes[0].path)} is build index 0");
+                Debug.Log("[TheHeroSmallStep] Startup scene fixed");
             }
             
             AssetDatabase.SaveAssets();
         }
-    }
+}
 }

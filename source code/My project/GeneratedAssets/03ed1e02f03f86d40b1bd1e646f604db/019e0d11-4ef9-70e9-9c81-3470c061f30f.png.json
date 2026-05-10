@@ -1,0 +1,28 @@
+{
+    "asset": "03ed1e02f03f86d40b1bd1e646f604db",
+    "fileName": "019e0d11-4ef9-70e9-9c81-3470c061f30f.png",
+    "prompt": "Large UI panel for a fantasy combat game. Aged dark parchment texture with ornate gold borders and bronze ornamental corners. 90s strategy game style. Full frontal view. Dark and gritty. Reference colors: parchment #D7CCC8, gold #FFD700.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

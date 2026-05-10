@@ -1,0 +1,28 @@
+{
+    "asset": "9979249d0493bfa4c9aa684148402e29",
+    "fileName": "019e0ce9-973f-767d-86a4-71378b32f2aa.png",
+    "prompt": "wooden bridge over a small river tile, 90s fantasy strategy game style, high contrast, hand-painted pixel art feel, top-down view, crisp details. 64x64 aesthetic but high resolution. Connects horizontally.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

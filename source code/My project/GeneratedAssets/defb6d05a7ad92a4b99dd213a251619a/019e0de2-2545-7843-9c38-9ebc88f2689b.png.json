@@ -1,0 +1,28 @@
+{
+    "asset": "defb6d05a7ad92a4b99dd213a251619a",
+    "fileName": "019e0de2-2545-7843-9c38-9ebc88f2689b.png",
+    "prompt": "A spritesheet of enemy units for a fantasy strategy world map. Goblin squad, wolf pack, bandit camp, orc warriors, skeleton legion, dark knight on horseback, and a menacing Dark Lord in plate armor with a glowing cape. Top-down view, 2D hand-painted style, Heroes of Might and Magic 3 aesthetic. Transparent background. No text. 256x256 pixels per unit.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

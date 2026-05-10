@@ -1,0 +1,15 @@
+{
+    "asset": "02fff4b5750384b4cb99d5e670e94e6e",
+    "fileName": "019e0d60-319f-76cb-9a88-6153d7bcfa57.mp3",
+    "prompt": "Calm ambient fantasy map music, nature sounds, flute, medieval atmosphere",
+    "negativePrompt": "",
+    "model": "google-lyria-3-clip",
+    "modelName": "Google Lyria 3 Clip",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

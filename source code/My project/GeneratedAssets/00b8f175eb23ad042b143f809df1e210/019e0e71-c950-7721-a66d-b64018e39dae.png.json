@@ -1,0 +1,28 @@
+{
+    "asset": "00b8f175eb23ad042b143f809df1e210",
+    "fileName": "019e0e71-c950-7721-a66d-b64018e39dae.png",
+    "prompt": "Top-down 2D pixel art game unit icon. Small green goblin with a club, stylized fantasy. Transparent background, no white square. Small scale.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

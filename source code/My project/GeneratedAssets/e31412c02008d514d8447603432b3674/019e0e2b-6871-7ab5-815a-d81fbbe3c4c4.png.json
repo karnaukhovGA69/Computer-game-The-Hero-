@@ -1,0 +1,28 @@
+{
+    "asset": "e31412c02008d514d8447603432b3674",
+    "fileName": "019e0e2b-6871-7ab5-815a-d81fbbe3c4c4.png",
+    "prompt": "Top-down 2D pixel art game asset. Glowing blue mana crystal, high quality, 64x64. HoMM style. Transparent background.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

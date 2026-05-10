@@ -1,0 +1,15 @@
+{
+    "asset": "9138796b2aae4464bb939de04902bc9a",
+    "fileName": "019e0d60-4bf5-726e-8c19-eaa46f9f8b57.mp3",
+    "prompt": "High intensity orchestral battle music, drums, brass, dark fantasy combat theme",
+    "negativePrompt": "",
+    "model": "google-lyria-3-clip",
+    "modelName": "Google Lyria 3 Clip",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

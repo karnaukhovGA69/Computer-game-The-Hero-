@@ -1,0 +1,28 @@
+{
+    "asset": "78cd07f3eafadc64b975e6b973d17908",
+    "fileName": "019e0f63-06d5-72ec-bae6-74e8582dfeb7.jpg",
+    "prompt": "a stylized fantasy monster, small orc warrior with a club, 2D game sprite, full body, white background, high quality, digital art, RPG style",
+    "negativePrompt": "",
+    "model": "flux-2-pro",
+    "modelName": "Flux 2 (Pro)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

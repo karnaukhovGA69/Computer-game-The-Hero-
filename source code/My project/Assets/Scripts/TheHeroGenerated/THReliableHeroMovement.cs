@@ -127,7 +127,7 @@ namespace TheHero.Generated
             var marker = new GameObject("CellHighlight");
             marker.transform.position = new Vector3(pos.x, pos.y, -0.5f);
             var sr = marker.AddComponent<SpriteRenderer>();
-            sr.sprite = Resources.GetBuiltinResource<Sprite>("UI/Skin/UISprite.psd");
+            sr.sprite = Resources.Load<Sprite>("Sprites/UI/white_pixel");
             sr.color = color;
             sr.sortingOrder = 18;
             marker.transform.localScale = Vector3.one * 0.8f;
@@ -216,8 +216,8 @@ namespace TheHero.Generated
             ClearPathHighlight();
 
             if (THMapController.Instance != null) THMapController.Instance.UpdateUI();
-            THManager.Instance.SaveGame();
-        }
+            // THManager.Instance.SaveGame();
+            }
 
         private void HighlightPath(List<Vector2Int> path)
         {
@@ -227,8 +227,8 @@ namespace TheHero.Generated
                 var marker = new GameObject("PathMarker");
                 marker.transform.position = new Vector3(step.x, step.y, -1);
                 var sr = marker.AddComponent<SpriteRenderer>();
-                sr.sprite = Resources.GetBuiltinResource<Sprite>("UI/Skin/Knob.psd");
-                sr.color = new Color(0, 1, 0, 0.5f);
+                sr.sprite = Resources.Load<Sprite>("Sprites/UI/white_pixel");
+sr.color = new Color(0, 1, 0, 0.5f);
                 sr.sortingOrder = 15;
                 marker.transform.localScale = Vector3.one * 0.3f;
                 pathMarkers.Add(marker);

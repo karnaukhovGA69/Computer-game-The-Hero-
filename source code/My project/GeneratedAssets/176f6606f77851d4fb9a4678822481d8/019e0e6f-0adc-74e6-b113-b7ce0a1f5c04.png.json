@@ -1,0 +1,28 @@
+{
+    "asset": "176f6606f77851d4fb9a4678822481d8",
+    "fileName": "019e0e6f-0adc-74e6-b113-b7ce0a1f5c04.png",
+    "prompt": "Top-down 2D pixel art game tile. Dark cracked purple-grey earth, evil land. Clean look, stylized fantasy. Tileable.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

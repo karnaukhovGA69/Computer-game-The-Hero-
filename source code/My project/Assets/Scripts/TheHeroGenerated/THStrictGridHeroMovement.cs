@@ -11,30 +11,101 @@ namespace TheHero.Generated
     {
         public int currentX;
         public int currentY;
-        public int movementPoints = 20;
-        public int maxMovementPoints = 20;
         public float moveSpeed = 6f;
         public bool isMoving;
+        public bool keyboardDebugMovement = true;
 
-        private Dictionary<Vector2Int, THTile> _tiles = new Dictionary<Vector2Int, THTile>();
         private Camera _mainCamera;
         private List<GameObject> _pathMarkers = new List<GameObject>();
+        private GameObject _hoverMarker;
+
+        public void InitializeGrid()
+        {
+            if (THMapGridInput.Instance != null)
+                THMapGridInput.Instance.RefreshGrid();
+        }
+
+        public bool IsMoving => isMoving;
+
+        public void SetPositionImmediate(int x, int y)
+        {
+            currentX = x;
+            currentY = y;
+            if (THMapGridInput.Instance != null)
+            {
+                var tile = THMapGridInput.Instance.GetTileAt(x, y);
+                if (tile != null) transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y, 0);
+            }
+            else
+            {
+                transform.position = new Vector3(x, y, 0);
+            }
+        }
+
+        public void TryMoveTo(int x, int y, THMapObject interaction = null)
+        {
+            // The existing HandleMouseClick uses TryMoveTo internally but with targetTile logic
+            // I will implement a bridge
+            if (THMapGridInput.Instance != null)
+            {
+                var targetTile = THMapGridInput.Instance.GetTileAt(x, y);
+                if (targetTile != null)
+                {
+                    PerformMovementToTile(targetTile);
+                }
+            }
+        }
+
+        private void PerformMovementToTile(THTile targetTile)
+        {
+            if (targetTile.x == currentX && targetTile.y == currentY)
+            {
+                if (THClickDebugPanel.Instance != null) THClickDebugPanel.Instance.SetLastClickResult("Already on tile");
+                return;
+            }
+
+            if (!targetTile.walkable)
+            {
+                if (THMapController.Instance) THMapController.Instance.Log("Клетка непроходима");
+                return;
+            }
+
+            var path = FindPath(new Vector2Int(currentX, currentY), new Vector2Int(targetTile.x, targetTile.y));
+            if (path == null)
+            {
+                if (THMapController.Instance) THMapController.Instance.Log("Путь невозможен");
+            }
+            else
+            {
+                int totalPoints = THManager.Instance.Data.movementPoints;
+                var reachablePath = GetReachablePath(path, totalPoints, out int actualCost);
+
+                if (reachablePath.Count == 0)
+                {
+                    if (THMapController.Instance) THMapController.Instance.Log("Недостаточно очков хода");
+                    return;
+                }
+
+                bool partial = reachablePath.Count < path.Count;
+                StartCoroutine(MoveAlongPath(reachablePath, actualCost, partial));
+            }
+        }
 
         private void Start()
         {
             _mainCamera = Camera.main;
-            InitializeGrid();
             SnapToNearestTile();
+            EnsureVisibility();
+            CreateHoverMarker();
         }
 
-        public void InitializeGrid()
+        private void EnsureVisibility()
         {
-            _tiles.Clear();
-            var foundTiles = Object.FindObjectsByType<THTile>(FindObjectsInactive.Include);
-            foreach (var tile in foundTiles)
-            {
-                _tiles[new Vector2Int(tile.x, tile.y)] = tile;
-            }
+            var sr = GetComponent<SpriteRenderer>();
+            if (sr == null) sr = gameObject.AddComponent<SpriteRenderer>();
+            sr.enabled = true;
+            sr.sortingOrder = 50;
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }
 
         private void SnapToNearestTile()
@@ -45,69 +116,143 @@ namespace TheHero.Generated
                 currentY = (int)THManager.Instance.Data.heroY;
             }
 
-            if (!_tiles.ContainsKey(new Vector2Int(currentX, currentY)))
+            var input = THMapGridInput.Instance;
+            if (input != null)
             {
-                // Fallback to closest walkable tile
-                var nearest = _tiles.Values.Where(t => t.walkable).OrderBy(t => Vector2.Distance(t.transform.position, transform.position)).FirstOrDefault();
-                if (nearest != null)
+                var tile = input.GetTileAt(currentX, currentY);
+                if (tile == null || !tile.walkable)
                 {
-                    currentX = nearest.x;
-                    currentY = nearest.y;
+                    // Find safe spot near castle or any walkable tile
+                    GameObject castle = GameObject.Find("Castle_Player") ?? GameObject.Find("Castle") ?? GameObject.Find("Base");
+                    Vector3 referencePos = castle != null ? castle.transform.position : transform.position;
+
+                    var safeTile = input.GetAllTiles()
+                        .Where(t => t.walkable)
+                        .OrderBy(t => Vector2.Distance(t.transform.position, referencePos))
+                        .FirstOrDefault();
+                    
+                    if (safeTile != null)
+                    {
+                        currentX = safeTile.x;
+                        currentY = safeTile.y;
+                        Debug.LogWarning($"[TheHeroRecovery] Hero was in invalid position ({THManager.Instance.Data.heroX}, {THManager.Instance.Data.heroY}). Clamped to safe tile at {currentX}, {currentY}");
+                        
+                        THManager.Instance.Data.heroX = currentX;
+                        THManager.Instance.Data.heroY = currentY;
+                    }
+                }
+
+                tile = input.GetTileAt(currentX, currentY);
+                if (tile != null)
+                {
+                    transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y, 0);
                 }
             }
+        }
 
-            if (_tiles.TryGetValue(new Vector2Int(currentX, currentY), out THTile currentTile))
-            {
-                transform.position = new Vector3(currentTile.transform.position.x, currentTile.transform.position.y, 0);
-            }
+        private void CreateHoverMarker()
+        {
+            _hoverMarker = new GameObject("HoverMarker");
+            var sr = _hoverMarker.AddComponent<SpriteRenderer>();
+            sr.sprite = Resources.Load<Sprite>("Sprites/UI/white_pixel");
+            sr.color = new Color(1, 1, 0, 0.3f);
+            sr.sortingOrder = 40;
+            _hoverMarker.transform.localScale = Vector3.one * 0.9f;
+            _hoverMarker.SetActive(false);
         }
 
         private void Update()
         {
+            UpdateHover();
+
             if (isMoving) return;
+            if (THManager.Instance != null && THManager.Instance.Data != null && THManager.Instance.Data.gameCompleted) return;
+
+            if (keyboardDebugMovement)
+{
+                HandleKeyboard();
+            }
 
             if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
             {
-                if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
-                    return;
-
-                HandleClick();
+                HandleMouseClick();
             }
         }
 
-        private void HandleClick()
+        private void UpdateHover()
         {
-            Vector2 mousePos = Mouse.current.position.ReadValue();
-            Vector3 worldPoint = _mainCamera.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, -_mainCamera.transform.position.z));
-            
-            RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
-            THTile targetTile = null;
+            if (THMapGridInput.Instance == null || _hoverMarker == null) return;
 
-            if (hit.collider != null)
+            if (THMapGridInput.Instance.TryGetTileFromMouse(out THTile tile, out _))
             {
-                targetTile = hit.collider.GetComponent<THTile>();
-                if (targetTile == null)
+                _hoverMarker.SetActive(true);
+                _hoverMarker.transform.position = tile.transform.position + Vector3.back * 0.05f;
+                var sr = _hoverMarker.GetComponent<SpriteRenderer>();
+                sr.color = tile.walkable ? new Color(0, 1, 0, 0.3f) : new Color(1, 0, 0, 0.3f);
+            }
+            else
+            {
+                _hoverMarker.SetActive(false);
+            }
+        }
+
+        private void HandleKeyboard()
+        {
+            if (Keyboard.current == null) return;
+
+            Vector2Int dir = Vector2Int.zero;
+            if (Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.upArrowKey.wasPressedThisFrame) dir = Vector2Int.up;
+            else if (Keyboard.current.sKey.wasPressedThisFrame || Keyboard.current.downArrowKey.wasPressedThisFrame) dir = Vector2Int.down;
+            else if (Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.leftArrowKey.wasPressedThisFrame) dir = Vector2Int.left;
+            else if (Keyboard.current.dKey.wasPressedThisFrame || Keyboard.current.rightArrowKey.wasPressedThisFrame) dir = Vector2Int.right;
+
+            if (dir != Vector2Int.zero)
+            {
+                THTile target = THMapGridInput.Instance.GetTileAt(currentX + dir.x, currentY + dir.y);
+                if (target != null && target.walkable)
                 {
-                    // If clicked on an object, find tile at that position
-                    Vector2Int pos = new Vector2Int(Mathf.RoundToInt(hit.collider.transform.position.x), Mathf.RoundToInt(hit.collider.transform.position.y));
-                    _tiles.TryGetValue(pos, out targetTile);
+                    if (THManager.Instance.Data.movementPoints >= target.moveCost)
+                    {
+                        StartCoroutine(MoveAlongPath(new List<Vector2Int> { new Vector2Int(target.x, target.y) }, target.moveCost, false));
+                    }
+                    else
+                    {
+                        Debug.Log("[TheHeroClickDebug] Keyboard move failed: Not enough movement points");
+                    }
                 }
             }
+        }
 
-            if (targetTile != null)
+        private void HandleMouseClick()
+        {
+            if (THMapGridInput.Instance.TryGetTileFromMouse(out THTile targetTile, out string reason))
             {
+                string msg = $"Clicked tile: {targetTile.x}, {targetTile.y} ({reason})";
+                Debug.Log($"[TheHeroClickDebug] {msg}");
+                if (THClickDebugPanel.Instance != null) THClickDebugPanel.Instance.SetLastClickResult(msg);
+
+                if (targetTile.x == currentX && targetTile.y == currentY)
+                {
+                    msg = "Already on this tile";
+                    Debug.Log($"[TheHeroClickDebug] {msg}");
+                    if (THClickDebugPanel.Instance != null) THClickDebugPanel.Instance.SetLastClickResult(msg);
+                    return;
+                }
+
                 if (!targetTile.walkable)
                 {
-                    THMapController.Instance.Log("Эта клетка непроходима");
-                    StartCoroutine(FlashTileColor(targetTile, Color.red));
+                    msg = "Target tile is not walkable: " + targetTile.tileType;
+                    Debug.Log($"[TheHeroClickDebug] {msg}");
+                    if (THClickDebugPanel.Instance != null) THClickDebugPanel.Instance.SetLastClickResult(msg);
                     return;
                 }
 
                 var path = FindPath(new Vector2Int(currentX, currentY), new Vector2Int(targetTile.x, targetTile.y));
                 if (path == null)
                 {
-                    THMapController.Instance.Log("Путь невозможен");
-                    StartCoroutine(FlashTileColor(targetTile, Color.red));
+                    msg = "Path not found";
+                    Debug.Log($"[TheHeroClickDebug] {msg}");
+                    if (THClickDebugPanel.Instance != null) THClickDebugPanel.Instance.SetLastClickResult(msg);
                 }
                 else
                 {
@@ -116,32 +261,44 @@ namespace TheHero.Generated
 
                     if (reachablePath.Count == 0)
                     {
-                        THMapController.Instance.Log("Недостаточно очков хода");
+                        msg = "Not enough movement points";
+                        Debug.Log($"[TheHeroClickDebug] {msg}");
+                        if (THClickDebugPanel.Instance != null) THClickDebugPanel.Instance.SetLastClickResult(msg);
                         return;
                     }
 
                     bool partial = reachablePath.Count < path.Count;
+                    msg = partial ? "Moving (Partial Path)" : "Moving (Full Path)";
+                    if (THClickDebugPanel.Instance != null) THClickDebugPanel.Instance.SetLastClickResult(msg);
                     StartCoroutine(MoveAlongPath(reachablePath, actualCost, partial));
                 }
             }
             else
             {
-                THMapController.Instance.Log("Кликните по клетке карты");
+                Debug.Log($"[TheHeroClickDebug] Click failed: {reason}");
+                if (THClickDebugPanel.Instance != null) THClickDebugPanel.Instance.SetLastClickResult(reason);
             }
         }
 
         private List<Vector2Int> FindPath(Vector2Int start, Vector2Int end)
         {
-            if (!_tiles.ContainsKey(end) || !_tiles[end].walkable) return null;
-
-            var openSet = new Queue<Vector2Int>();
-            openSet.Enqueue(start);
+            var input = THMapGridInput.Instance;
+            var queue = new Queue<Vector2Int>();
+            queue.Enqueue(start);
             var cameFrom = new Dictionary<Vector2Int, Vector2Int>();
             cameFrom[start] = start;
 
-            while (openSet.Count > 0)
+            // Cache blockers for faster lookup
+            var allMapObjects = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Exclude);
+            var blockers = new HashSet<Vector2Int>();
+            foreach (var obj in allMapObjects)
             {
-                var current = openSet.Dequeue();
+                if (obj.blocksMovement) blockers.Add(new Vector2Int(obj.targetX, obj.targetY));
+            }
+
+            while (queue.Count > 0)
+            {
+                var current = queue.Dequeue();
                 if (current == end)
                 {
                     var path = new List<Vector2Int>();
@@ -157,26 +314,32 @@ namespace TheHero.Generated
                 foreach (var dir in new[] { Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right })
                 {
                     var neighbor = current + dir;
-                    if (_tiles.TryGetValue(neighbor, out THTile tile) && tile.walkable && !cameFrom.ContainsKey(neighbor))
+                    var tile = input.GetTileAt(neighbor.x, neighbor.y);
+                    
+                    // Allow endpoint to be a blocker (interaction logic will handle stopping)
+                    bool isBlocker = blockers.Contains(neighbor) && neighbor != end;
+
+                    if (tile != null && tile.walkable && !isBlocker && !cameFrom.ContainsKey(neighbor))
                     {
                         cameFrom[neighbor] = current;
-                        openSet.Enqueue(neighbor);
+                        queue.Enqueue(neighbor);
                     }
                 }
             }
-            return null;
+return null;
         }
 
         private List<Vector2Int> GetReachablePath(List<Vector2Int> fullPath, int points, out int cost)
         {
             var reachable = new List<Vector2Int>();
             cost = 0;
+            var input = THMapGridInput.Instance;
             foreach (var pos in fullPath)
             {
-                int moveCost = _tiles[pos].moveCost;
-                if (points >= cost + moveCost)
+                var tile = input.GetTileAt(pos.x, pos.y);
+                if (points >= cost + tile.moveCost)
                 {
-                    cost += moveCost;
+                    cost += tile.moveCost;
                     reachable.Add(pos);
                 }
                 else break;
@@ -189,9 +352,19 @@ namespace TheHero.Generated
             isMoving = true;
             HighlightPath(path, partial ? Color.yellow : Color.green);
 
+            var input = THMapGridInput.Instance;
             foreach (var pos in path)
             {
-                Vector3 targetPos = _tiles[pos].transform.position;
+                // Check if target tile has a blocker that should stop us early
+                var objAtPos = GetObjectAt(pos);
+                if (objAtPos != null && objAtPos.blocksMovement)
+                {
+                     if (THMapController.Instance) THMapController.Instance.HandleObjectInteraction(objAtPos);
+                     break;
+                }
+
+                var tile = input.GetTileAt(pos.x, pos.y);
+Vector3 targetPos = tile.transform.position;
                 targetPos.z = transform.position.z;
 
                 while (Vector3.Distance(transform.position, targetPos) > 0.01f)
@@ -200,10 +373,10 @@ namespace TheHero.Generated
                     yield return null;
                 }
                 transform.position = targetPos;
+                if (THAudioManager.Instance != null) THAudioManager.Instance.PlaySfx("hero_step");
                 currentX = pos.x;
                 currentY = pos.y;
-                
-                // Update persistent data every step for safety
+
                 THManager.Instance.Data.heroX = currentX;
                 THManager.Instance.Data.heroY = currentY;
             }
@@ -212,39 +385,45 @@ namespace TheHero.Generated
             ClearPathHighlight();
             isMoving = false;
 
-            THMapController.Instance.UpdateUI();
-            THManager.Instance.SaveGame();
+            if (THMapController.Instance) THMapController.Instance.UpdateUI();
+            // THManager.Instance.SaveGame();
 
-            // Check for interactions at the final tile
             CheckInteractions(new Vector2Int(currentX, currentY));
         }
 
         private void CheckInteractions(Vector2Int pos)
         {
-            // Find map objects at this position
             var objects = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include);
             foreach (var obj in objects)
             {
                 if (obj.targetX == pos.x && obj.targetY == pos.y)
                 {
-                    THMapController.Instance.HandleObjectInteraction(obj);
+                    if (THMapController.Instance) THMapController.Instance.HandleObjectInteraction(obj);
                     break;
                 }
             }
         }
 
+        private THMapObject GetObjectAt(Vector2Int pos)
+        {
+            var objects = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Exclude);
+            return objects.FirstOrDefault(o => o.targetX == pos.x && o.targetY == pos.y);
+        }
+
         private void HighlightPath(List<Vector2Int> path, Color color)
         {
             ClearPathHighlight();
+            var input = THMapGridInput.Instance;
             foreach (var pos in path)
             {
+                var tile = input.GetTileAt(pos.x, pos.y);
                 var marker = new GameObject("PathMarker");
-                marker.transform.position = _tiles[pos].transform.position + Vector3.back * 0.5f;
+                marker.transform.position = tile.transform.position + Vector3.back * 0.1f;
                 var sr = marker.AddComponent<SpriteRenderer>();
-                sr.sprite = Resources.GetBuiltinResource<Sprite>("UI/Skin/Knob.psd");
-                sr.color = color;
-                sr.sortingOrder = 40;
-                marker.transform.localScale = Vector3.one * 0.3f;
+                sr.sprite = Resources.Load<Sprite>("Sprites/UI/white_pixel");
+sr.color = color;
+                sr.sortingOrder = 45;
+                marker.transform.localScale = Vector3.one * 0.25f;
                 _pathMarkers.Add(marker);
             }
         }
@@ -253,16 +432,6 @@ namespace TheHero.Generated
         {
             foreach (var m in _pathMarkers) Destroy(m);
             _pathMarkers.Clear();
-        }
-
-        private IEnumerator FlashTileColor(THTile tile, Color color)
-        {
-            var sr = tile.GetComponent<SpriteRenderer>();
-            if (sr == null) yield break;
-            Color original = sr.color;
-            sr.color = color;
-            yield return new WaitForSeconds(0.3f);
-            sr.color = original;
         }
     }
 }

@@ -1,0 +1,28 @@
+{
+    "asset": "60a4d4c443c8d89449e02b3b9108a15c",
+    "fileName": "019e0d11-b00f-7a91-b10e-8a2b8dc6596d.png",
+    "prompt": "2D side-view battlefield background for a fantasy strategy game. Lush green grassland, ancient stone ruins in the background, scattered trees, eerie fog, dramatic lighting. 90s retro aesthetic. Deep green palette. 16:9 aspect ratio. No UI elements. No characters.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

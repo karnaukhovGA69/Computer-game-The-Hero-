@@ -1,0 +1,28 @@
+{
+    "asset": "bbecc1ff6dea05745a5fbdc16f6c8f32",
+    "fileName": "019e0e5a-e113-7cdd-8959-a4ade85feaa5.png",
+    "prompt": "Top-down 2D pixel art forest edge, mixed grass and trees, high quality, stylized fantasy, 64x64, no borders.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -18,6 +18,7 @@ namespace TheHero.Editor
 
         static TheHeroCompleteMVPBuilder()
         {
+            /*
             EditorApplication.delayCall += () =>
             {
                 if (File.Exists(MarkerPath))
@@ -28,6 +29,7 @@ namespace TheHero.Editor
                     AssetDatabase.Refresh();
                 }
             };
+            */
         }
 
         [MenuItem("The Hero/Complete MVP/Create Scenes")]

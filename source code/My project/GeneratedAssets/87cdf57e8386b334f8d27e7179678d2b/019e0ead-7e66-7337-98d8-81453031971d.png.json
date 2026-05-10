@@ -1,0 +1,28 @@
+{
+    "asset": "87cdf57e8386b334f8d27e7179678d2b",
+    "fileName": "019e0ead-7e66-7337-98d8-81453031971d.png",
+    "prompt": "Top-down 2D game icon of a pile of gold coins, stylized fantasy, flat colors, on plain white background. Pure top-down.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

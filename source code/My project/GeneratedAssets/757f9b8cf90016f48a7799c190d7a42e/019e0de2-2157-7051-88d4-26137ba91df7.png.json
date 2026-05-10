@@ -1,0 +1,28 @@
+{
+    "asset": "757f9b8cf90016f48a7799c190d7a42e",
+    "fileName": "019e0de2-2157-7051-88d4-26137ba91df7.png",
+    "prompt": "A spritesheet of map buildings for a fantasy strategy game. Majestic player castle with flags, gold mine with wooden scaffolding, lumber mill with water wheel, stone quarry with rocks, glowing ancient shrine, tall stone watchtower. Top-down view, 2D hand-painted style, Heroes of Might and Magic 3 aesthetic. Transparent background. No text. 256x256 pixels per building.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

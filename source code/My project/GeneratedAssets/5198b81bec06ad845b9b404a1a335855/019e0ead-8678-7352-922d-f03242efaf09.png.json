@@ -1,0 +1,28 @@
+{
+    "asset": "5198b81bec06ad845b9b404a1a335855",
+    "fileName": "019e0ead-8678-7352-922d-f03242efaf09.png",
+    "prompt": "Top-down 2D game icon of a wooden treasure chest, stylized fantasy, flat colors, on plain white background. Pure top-down.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

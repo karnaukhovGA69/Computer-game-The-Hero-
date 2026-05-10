@@ -1,0 +1,28 @@
+{
+    "asset": "2e580c6b20c9d7442b609d5ccefa598e",
+    "fileName": "019e0e6c-bc2a-7205-b416-119c2166cf35.png",
+    "prompt": "Top-down 2D pixel art game tile. Simple bright green grass with small yellow flowers scattered naturally. Clean texture, no borders, stylized fantasy look. Tileable.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

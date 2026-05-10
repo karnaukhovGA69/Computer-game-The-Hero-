@@ -1,0 +1,15 @@
+{
+    "asset": "47ec94d65d08cba429004c4bcbb99249",
+    "fileName": "019e0d60-a8e2-7244-96ce-e10f1c9af413.wav",
+    "prompt": "Dark sad defeat theme, minor piano chords, tragic",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 5.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

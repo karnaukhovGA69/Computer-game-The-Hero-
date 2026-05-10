@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace TheHero.Generated
 {
+    public enum THEnemyDifficulty { Weak, Medium, Strong, Deadly }
+
     [Serializable]
     public class THArmyUnit
     {
@@ -15,6 +17,8 @@ namespace TheHero.Generated
         public int defense;
         public int initiative;
         public THArmyUnit Clone() => new THArmyUnit { id = id, name = name, count = count, hpPerUnit = hpPerUnit, attack = attack, defense = defense, initiative = initiative };
+        
+        public int GetPower() => count * (hpPerUnit + attack * 4 + defense * 4 + initiative);
     }
 
     [Serializable]
@@ -38,6 +42,20 @@ namespace TheHero.Generated
         public float x, y;
         public bool collected;
         public List<THArmyUnit> enemyArmy = new List<THArmyUnit>();
+    }
+
+    [Serializable]
+    public class THArtifactData
+    {
+        public string id;
+        public string name;
+        public string description;
+        public string iconPath;
+        public int attackBonus;
+        public int defenseBonus;
+        public int moveBonus;
+        public float expMultiplier;
+        public int manaIncome;
     }
 
     [Serializable]
@@ -67,14 +85,16 @@ namespace TheHero.Generated
         public List<string> capturedObjectIds = new List<string>();
         public List<string> visitedShrineIds = new List<string>();
         public List<string> shownDialogueIds = new List<string>();
-        
+        public List<string> heroArtifactIds = new List<string>();
+
         public int campaignStageIndex = 0;
         public int questProgress = 0;
         public bool isDarkLordDefeated = false;
         public bool tutorialShown = false;
         public bool gameCompleted = false;
         public int difficulty = 1; // 0: Easy, 1: Normal, 2: Hard
-        
+        public int mapSeed = 0;
+
         public string lastEnemyId;
         public List<THArmyUnit> currentEnemyArmy = new List<THArmyUnit>();
         public string lastCombatRewardId;

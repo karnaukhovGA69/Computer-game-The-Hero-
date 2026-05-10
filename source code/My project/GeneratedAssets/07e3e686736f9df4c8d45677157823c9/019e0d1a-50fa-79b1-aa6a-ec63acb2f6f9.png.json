@@ -1,0 +1,28 @@
+{
+    "asset": "07e3e686736f9df4c8d45677157823c9",
+    "fileName": "019e0d1a-50fa-79b1-aa6a-ec63acb2f6f9.png",
+    "prompt": "Strong orc warrior with an axe, 90s fantasy RPG strategy style, pixel art, portrait. Brown skin, iron armor. Clear silhouette. High quality. 1024x1024.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

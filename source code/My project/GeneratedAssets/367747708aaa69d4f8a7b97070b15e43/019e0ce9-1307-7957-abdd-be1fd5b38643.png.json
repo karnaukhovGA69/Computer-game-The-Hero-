@@ -1,0 +1,28 @@
+{
+    "asset": "367747708aaa69d4f8a7b97070b15e43",
+    "fileName": "019e0ce9-1307-7957-abdd-be1fd5b38643.png",
+    "prompt": "dirt brown road or path through green terrain tile, 90s fantasy strategy game style, high contrast, hand-painted pixel art feel, top-down view, crisp details. 64x64 aesthetic but high resolution. Road should connect logically.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

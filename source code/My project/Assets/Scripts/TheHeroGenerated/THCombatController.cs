@@ -24,18 +24,46 @@ namespace TheHero.Generated
             State = THSaveSystem.LoadGame();
             if (State == null) State = THSaveSystem.NewGame();
             
-            LogText.text = "Бой начался! Ваши отряды готовы к бою.";
+            if (LogText != null) LogText.text = "Бой начался! Ваши отряды готовы к бою.";
             if (RoundText) RoundText.text = $"Раунд {round}";
             if (BackButton) BackButton.SetActive(false);
             if (VictoryPanel) VictoryPanel.SetActive(false);
             if (DefeatPanel) DefeatPanel.SetActive(false);
             if (CombatUIPanel) CombatUIPanel.SetActive(true);
+
+            if (THAudioManager.Instance != null) THAudioManager.Instance.PlayMusic("Combat");
+
+            UpdateUIVisuals();
+        }
+
+        public void UpdateUIVisuals()
+        {
+            var polish = Object.FindAnyObjectByType<THCombatPolish>();
+            if (polish != null) polish.UpdateSquads();
+            
+            var visuals = Object.FindAnyObjectByType<THCombatBattleVisuals>();
+            if (visuals != null) visuals.UpdateVisuals();
+        }
+
+        public void Retreat()
+        {
+            if (isCombatFinished) return;
+            LogText.text = "Вы отступили с поля боя!";
+            isCombatFinished = true;
+            if (BackButton) BackButton.SetActive(true);
+            if (CombatUIPanel) CombatUIPanel.SetActive(false);
+            
+            // Penalty for retreat: lose 20% of each squad
+            foreach(var u in State.army) u.count = Mathf.FloorToInt(u.count * 0.8f);
+            THSaveSystem.SaveGame(State);
+            UpdateUIVisuals();
         }
 
         public void Attack()
         {
             if (isCombatFinished) return;
             ExecuteTurn();
+            UpdateUIVisuals();
         }
 
         public void AutoBattle()
@@ -54,6 +82,7 @@ namespace TheHero.Generated
                 isCombatFinished = true;
                 if (BackButton) BackButton.SetActive(true);
             }
+            UpdateUIVisuals();
         }
 
         public void SkipTurn()
@@ -61,6 +90,7 @@ namespace TheHero.Generated
             if (isCombatFinished) return;
             LogText.text = "Вы пропустили ход.";
             ExecuteTurn();
+            UpdateUIVisuals();
         }
 
         private void ExecuteTurn()
@@ -92,8 +122,11 @@ namespace TheHero.Generated
 
         private void PerformAttack(THArmyUnit attacker, THArmyUnit defender, bool isPlayerAttacking)
         {
-            int totalAttack = attacker.attack * attacker.count;
-            int totalDefense = (defender.defense * defender.count) / 2;
+            int artAtk = isPlayerAttacking ? THArtifactManager.Instance.GetTotalAttackBonus(State.heroArtifactIds) : 0;
+            int artDef = !isPlayerAttacking ? THArtifactManager.Instance.GetTotalDefenseBonus(State.heroArtifactIds) : 0;
+
+            int totalAttack = (attacker.attack + artAtk) * attacker.count;
+            int totalDefense = ((defender.defense + artDef) * defender.count) / 2;
             int damage = Mathf.Max(1, totalAttack - totalDefense);
             int killed = damage / defender.hpPerUnit;
             if (killed > defender.count) killed = defender.count;
@@ -102,8 +135,10 @@ namespace TheHero.Generated
             string side = isPlayerAttacking ? "Игрок" : "Враг";
             LogText.text = $"{side}: {attacker.name} атакует {defender.name}. Урон: {damage}. Потери: {killed}.";
             
+            if (THAudioManager.Instance != null) THAudioManager.Instance.PlaySfx("combat_attack");
+
             if (defender.count <= 0)
-                LogText.text += $"\nОтряд {defender.name} уничтожен!";
+LogText.text += $"\nОтряд {defender.name} уничтожен!";
         }
 
         private void CheckCombatEnd()
@@ -117,8 +152,11 @@ namespace TheHero.Generated
                     State.isDarkLordDefeated = true;
                     State.gameCompleted = true;
                     ShowVictoryScreen(true);
-                }
-                else
+                    
+                    if (THStoryManager.Instance != null)
+                        THStoryManager.Instance.ShowDialog("victory", "Победа", "Тёмный Лорд побеждён. Королевство спасено.", "Sprites/Units/unit_swordsman_portrait");
+}
+else
                 {
                     State.gold += 150;
                     State.heroExp += 100;
@@ -126,18 +164,20 @@ namespace TheHero.Generated
                     if (BackButton) BackButton.SetActive(true);
                     if (CombatUIPanel) CombatUIPanel.SetActive(false);
                     LogText.text = "Победа! Враг разбит.";
-                }
-                THSaveSystem.SaveGame(State);
-            }
-            else if (State.army.All(u => u.count <= 0))
-            {
-                isCombatFinished = true;
-                if (DefeatPanel) DefeatPanel.SetActive(true);
-                if (CombatUIPanel) CombatUIPanel.SetActive(false);
-                LogText.text = "Поражение. Армия героя уничтожена.";
-                THSaveSystem.SaveGame(State);
-            }
-        }
+                    if (THAudioManager.Instance != null) THAudioManager.Instance.PlaySfx("victory");
+                    }
+                    THSaveSystem.SaveGame(State);
+                    }
+                    else if (State.army.All(u => u.count <= 0))
+                    {
+                    isCombatFinished = true;
+                    if (DefeatPanel) DefeatPanel.SetActive(true);
+                    if (CombatUIPanel) CombatUIPanel.SetActive(false);
+                    LogText.text = "Поражение. Армия героя уничтожена.";
+                    if (THAudioManager.Instance != null) THAudioManager.Instance.PlaySfx("defeat");
+                    THSaveSystem.SaveGame(State);
+                    }
+}
 
         public void ShowVictoryScreen(bool darkLord)
         {
@@ -158,9 +198,9 @@ namespace TheHero.Generated
             }
         }
 
-        public void BackToMap() => SceneManager.LoadScene("Map");
-        public void NewGame() { THSaveSystem.NewGame(); SceneManager.LoadScene("Map"); }
-        public void MainMenu() => SceneManager.LoadScene("MainMenu");
-        public void LoadLastSave() => SceneManager.LoadScene("Map");
-    }
+        public void BackToMap() => THSceneLoader.Instance.LoadMap();
+        public void NewGame() { THSaveSystem.NewGame(); THSceneLoader.Instance.LoadMap(); }
+        public void MainMenu() => THSceneLoader.Instance.LoadMainMenu();
+        public void LoadLastSave() => THSceneLoader.Instance.LoadMap();
+}
 }

@@ -1,0 +1,28 @@
+{
+    "asset": "80ac68e88250dd94d9007054db445e8e",
+    "fileName": "019e0eba-4b41-7df9-a62d-ac87551b0480.png",
+    "prompt": "Top-down 2D game icon of a gold mine entrance, stylized fantasy, flat colors, on plain white background. Pure top-down.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -1,0 +1,28 @@
+{
+    "asset": "be24f587bf89c2946b5858a45b49ebb2",
+    "fileName": "019e0e5c-5020-7948-ba1c-240f3ce00d5c.png",
+    "prompt": "Top-down 2D pixel art road tile, brown dirt, horizontal orientation, high quality, stylized fantasy, 64x64, no borders.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

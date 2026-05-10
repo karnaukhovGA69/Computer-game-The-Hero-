@@ -1,0 +1,28 @@
+{
+    "asset": "4a4efc173fe3bd042a08a0c9a60c00c4",
+    "fileName": "019e0e72-351a-72dd-b7fa-a437d317b32d.png",
+    "prompt": "Top-down 2D pixel art game building icon. Stone gold mine entrance, stylized fantasy. Transparent background, no white square. Small scale.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

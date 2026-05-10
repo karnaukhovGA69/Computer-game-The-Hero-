@@ -1,0 +1,28 @@
+{
+    "asset": "2de1a70d54dbe6a4aadfe2a9f08ecaa5",
+    "fileName": "019e0cff-780a-7929-bcbe-d3468d6bd991.png",
+    "prompt": "The Dark Lord, a menacing figure in dark spiky armor with a purple and red magical aura, large and imposing, full body, 90s fantasy strategy game style, hand-painted pixel art aesthetic, vibrant colors, high contrast, top-down isometric view, clean silhouette. 64x64 aesthetic but high resolution. Transparent background.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

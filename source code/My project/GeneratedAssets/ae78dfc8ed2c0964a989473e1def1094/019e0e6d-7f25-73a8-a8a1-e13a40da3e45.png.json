@@ -1,0 +1,28 @@
+{
+    "asset": "ae78dfc8ed2c0964a989473e1def1094",
+    "fileName": "019e0e6d-7f25-73a8-a8a1-e13a40da3e45.png",
+    "prompt": "Top-down 2D pixel art game tile. Sparse green forest edge, mix of grass and small stylized trees. Clean look, stylized fantasy. Tileable.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

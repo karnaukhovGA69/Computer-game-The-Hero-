@@ -1,0 +1,28 @@
+{
+    "asset": "d42415af41da20540b8573dea3c4be04",
+    "fileName": "019e0d1a-9dd3-7854-a2e1-1f8babae1ae6.png",
+    "prompt": "Heroic human swordsman in battle pose, full body, side view, 90s fantasy strategy style, pixel art, sprite. Blue armor accents. Standing on a flat surface. Clear silhouette. High quality. 1024x1024.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -52,7 +52,10 @@ namespace TheHero.Generated
             rect.anchorMin = new Vector2(0.3f, 0.2f);
             rect.anchorMax = new Vector2(0.7f, 0.8f);
             rect.sizeDelta = Vector2.zero;
-            _panel.GetComponent<Image>().color = new Color(0, 0, 0, 0.9f);
+            var pImg = _panel.GetComponent<Image>();
+            pImg.sprite = Resources.Load<Sprite>("Sprites/UI/panel_fantasy_dark");
+            pImg.type = Image.Type.Sliced;
+            pImg.color = new Color(1, 1, 1, 0.95f);
 
             var titleGo = new GameObject("Title", typeof(RectTransform), typeof(Text));
             titleGo.transform.SetParent(_panel.transform, false);
@@ -82,6 +85,7 @@ namespace TheHero.Generated
             CreateButton(content.transform, "Продолжить", Resume);
             CreateButton(content.transform, "Сохранить", Save);
             CreateButton(content.transform, "Загрузить", Load);
+            CreateButton(content.transform, "Настройки", OpenSettings);
             CreateButton(content.transform, "Главное меню", MainMenu);
             CreateButton(content.transform, "Выход", Exit);
 
@@ -93,9 +97,16 @@ namespace TheHero.Generated
             var btnGo = new GameObject(text, typeof(RectTransform), typeof(Image), typeof(Button));
             btnGo.transform.SetParent(parent, false);
             btnGo.GetComponent<RectTransform>().sizeDelta = new Vector2(250, 50);
-            btnGo.GetComponent<Image>().color = new Color(0.2f, 0.2f, 0.2f);
+            var img = btnGo.GetComponent<Image>();
+            img.sprite = Resources.Load<Sprite>("Sprites/UI/button_fantasy_normal");
             var btn = btnGo.GetComponent<Button>();
             btn.onClick.AddListener(action);
+            
+            btn.transition = Selectable.Transition.SpriteSwap;
+            var ss = btn.spriteState;
+            ss.highlightedSprite = Resources.Load<Sprite>("Sprites/UI/button_fantasy_hover");
+            ss.pressedSprite = Resources.Load<Sprite>("Sprites/UI/button_fantasy_pressed");
+            btn.spriteState = ss;
 
             var textGo = new GameObject("Text", typeof(RectTransform), typeof(Text));
             textGo.transform.SetParent(btnGo.transform, false);
@@ -135,8 +146,12 @@ namespace TheHero.Generated
         }
 
         private void Save() => THSaveSystem.SaveGame(THManager.Instance.Data);
-        private void Load()
+        private void OpenSettings()
         {
+            if (THSettingsController.Instance != null) THSettingsController.Instance.Open();
+        }
+        private void Load()
+{
             var data = THSaveSystem.LoadGame();
             if (data != null)
             {

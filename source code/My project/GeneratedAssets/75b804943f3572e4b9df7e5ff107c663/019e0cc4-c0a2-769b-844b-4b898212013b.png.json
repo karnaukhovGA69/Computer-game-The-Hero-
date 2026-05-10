@@ -1,0 +1,28 @@
+{
+    "asset": "75b804943f3572e4b9df7e5ff107c663",
+    "fileName": "019e0cc4-c0a2-769b-844b-4b898212013b.png",
+    "prompt": "Dark fantasy main menu background for a 90s strategy game. Ruined stone castle in the distance, large full moon, eerie fog, cobblestone road leading to the castle. Deep green and midnight blue palette. Moody atmospheric lighting, vignette edges. No characters or text. High detail pixel art style. 16:9 aspect ratio.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

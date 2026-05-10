@@ -1,0 +1,28 @@
+{
+    "asset": "13c5e6992922a8f48ae4235311cd47d1",
+    "fileName": "019e0e2a-327c-74e0-b5a7-7ab70bf4e3ed.png",
+    "prompt": "Top-down 2D pixel art tileset for a fantasy map. Deep blue water tile, high quality, 64x64. Stylized HoMM style. No borders. Variant Center.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

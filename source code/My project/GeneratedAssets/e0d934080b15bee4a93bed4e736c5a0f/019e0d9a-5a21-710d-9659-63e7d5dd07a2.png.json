@@ -1,0 +1,28 @@
+{
+    "asset": "e0d934080b15bee4a93bed4e736c5a0f",
+    "fileName": "019e0d9a-5a21-710d-9659-63e7d5dd07a2.png",
+    "prompt": "Epic dark fantasy landscape for a main menu background, 90s strategy game style (Heroes of Might and Magic / King's Bounty). Dark night sky with a bright moon, silhouette of a large gothic castle on a hill, misty mountains in the background, a winding stone road leading to the castle, heavy fog, deep purples and blues, atmospheric lighting, vignette effect. No text, no UI. 16:9 aspect ratio.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

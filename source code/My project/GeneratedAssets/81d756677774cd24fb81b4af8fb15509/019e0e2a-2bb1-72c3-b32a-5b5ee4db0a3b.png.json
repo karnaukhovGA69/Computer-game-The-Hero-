@@ -1,0 +1,28 @@
+{
+    "asset": "81d756677774cd24fb81b4af8fb15509",
+    "fileName": "019e0e2a-2bb1-72c3-b32a-5b5ee4db0a3b.png",
+    "prompt": "Top-down 2D pixel art tileset for a fantasy map. Basic green grass tile with small white flowers, high quality, 64x64. Stylized HoMM style. No borders. Variant Flowers.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

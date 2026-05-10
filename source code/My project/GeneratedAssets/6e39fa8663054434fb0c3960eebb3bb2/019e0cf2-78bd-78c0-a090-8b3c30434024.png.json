@@ -1,0 +1,28 @@
+{
+    "asset": "6e39fa8663054434fb0c3960eebb3bb2",
+    "fileName": "019e0cf2-78bd-78c0-a090-8b3c30434024.png",
+    "prompt": "Stack of lumber logs with a magical green leaf glow, 90s fantasy strategy game style, hand-painted pixel art aesthetic, bright brown and green, magical glowing aura, high contrast, top-down view.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

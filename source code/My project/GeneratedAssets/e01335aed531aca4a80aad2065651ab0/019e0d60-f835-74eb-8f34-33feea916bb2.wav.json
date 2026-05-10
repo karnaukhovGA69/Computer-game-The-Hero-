@@ -1,0 +1,15 @@
+{
+    "asset": "e01335aed531aca4a80aad2065651ab0",
+    "fileName": "019e0d60-f835-74eb-8f34-33feea916bb2.wav",
+    "prompt": "Soldiers marching and coins clinking, army recruitment sound",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 2.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

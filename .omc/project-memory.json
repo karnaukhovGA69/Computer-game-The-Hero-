@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1777311987297,
+  "lastScanned": 1778334018711,
   "projectRoot": "/mnt/c/Users/HYPERPC/Computer-game-The-Hero-",
   "techStack": {
     "languages": [],
@@ -36,7 +36,7 @@
       "path": "Architecture",
       "purpose": null,
       "fileCount": 9,
-      "lastAccessed": 1777311987265,
+      "lastAccessed": 1778334018692,
       "keyFiles": [
         "architecture.aux",
         "architecture.fdb_latexmk",
@@ -45,21 +45,11 @@
         "architecture.out"
       ]
     },
-    "Information": {
-      "path": "Information",
-      "purpose": null,
-      "fileCount": 2,
-      "lastAccessed": 1777311987276,
-      "keyFiles": [
-        "Описание.pdf",
-        "ТЗ.pdf"
-      ]
-    },
     "source code": {
       "path": "source code",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1777311987283,
+      "lastAccessed": 1778334018695,
       "keyFiles": []
     }
   },
@@ -350,12 +340,6 @@
       "path": "source code/My project/Assets/Scripts/Infrastructure/JsonLoader.cs",
       "accessCount": 2,
       "lastAccessed": 1777319194363,
-      "type": "file"
-    },
-    {
-      "path": "CLAUDE.md",
-      "accessCount": 1,
-      "lastAccessed": 1777315287582,
       "type": "file"
     },
     {

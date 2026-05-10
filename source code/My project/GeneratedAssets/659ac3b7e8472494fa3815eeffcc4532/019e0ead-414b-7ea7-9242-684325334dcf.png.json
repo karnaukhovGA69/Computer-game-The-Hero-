@@ -1,0 +1,28 @@
+{
+    "asset": "659ac3b7e8472494fa3815eeffcc4532",
+    "fileName": "019e0ead-414b-7ea7-9242-684325334dcf.png",
+    "prompt": "Top-down 2D game icon of a green orc enemy, stylized fantasy, flat colors, on plain white background. Pure top-down.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

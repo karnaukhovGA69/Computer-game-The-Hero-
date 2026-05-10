@@ -1,0 +1,15 @@
+{
+    "asset": "af215d5a89ebc8647acc3348ec36076e",
+    "fileName": "019e0d61-13db-70c6-8536-297ef3b700e7.wav",
+    "prompt": "Hourglass flip and a mystical bell chime, end of turn sound",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 2.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}

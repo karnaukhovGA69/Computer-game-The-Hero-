@@ -1,0 +1,28 @@
+{
+    "asset": "bf24355196e131f42b715151907edc4d",
+    "fileName": "019e0ce9-0f5a-772f-acfe-31ef7f937204.png",
+    "prompt": "vibrant green grass terrain tile, 90s fantasy strategy game style, high contrast, hand-painted pixel art feel, top-down view, crisp details, vibrant colors. 64x64 aesthetic but high resolution. Clear boundaries.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

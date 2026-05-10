@@ -1,0 +1,28 @@
+{
+    "asset": "9d5a63bc2dee8e44e88d7f3ef967ecd4",
+    "fileName": "019e0dc2-77b7-75c0-b49d-f68808b401cd.png",
+    "prompt": "Ornate dark fantasy UI panel, dark stone texture, golden ornate borders, medieval gothic style. 9-sliced capable. No text.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

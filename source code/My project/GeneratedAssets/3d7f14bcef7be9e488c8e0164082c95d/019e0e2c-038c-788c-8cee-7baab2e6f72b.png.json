@@ -1,0 +1,28 @@
+{
+    "asset": "3d7f14bcef7be9e488c8e0164082c95d",
+    "fileName": "019e0e2c-038c-788c-8cee-7baab2e6f72b.png",
+    "prompt": "Top-down 2D pixel art game asset. Dark Lord in heavy armor with glowing red eyes, high quality, 64x64. HoMM style. Transparent background. Boss unit.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

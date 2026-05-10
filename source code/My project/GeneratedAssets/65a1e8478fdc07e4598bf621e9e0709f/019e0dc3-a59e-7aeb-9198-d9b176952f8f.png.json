@@ -1,0 +1,28 @@
+{
+    "asset": "65a1e8478fdc07e4598bf621e9e0709f",
+    "fileName": "019e0dc3-a59e-7aeb-9198-d9b176952f8f.png",
+    "prompt": "Dark corrupted wasteland tile for a fantasy strategy game, volcanic cracks, purple glow, 2D top-down. 90s game style.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

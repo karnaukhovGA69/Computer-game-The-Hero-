@@ -79,38 +79,87 @@ namespace TheHero.Generated
         {
             if (File.Exists(SavePath)) File.Delete(SavePath);
             if (File.Exists(BackupPath)) File.Delete(BackupPath);
+            Debug.Log("[TheHeroNewGame] Save files deleted");
+        }
+
+        public static void ClearAllSaveDataForNewGame()
+        {
+            DeleteSave();
+
+            string[] keys = {
+                "TheHero_Gold", "TheHero_Wood", "TheHero_Stone", "TheHero_Mana",
+                "TheHero_Army_Swordsman", "TheHero_Army_Archer", "TheHero_Army_Mage",
+                "TheHero_Building_Barracks_Level", "TheHero_Building_Archery_Level", "TheHero_Building_MageTower_Level",
+                "TheHero_CollectedObjects", "TheHero_DefeatedEnemies", "TheHero_CapturedObjects", "TheHero_VisitedObjects",
+                "TheHero_LastCombatVictory", "TheHero_LastDefeatedEnemyId", "TheHero_GameCompleted",
+                "TheHero_HeroGridX", "TheHero_HeroGridY", "TheHero_MapSeed", "TheHero_CurrentScene",
+                "TheHero_SaveData", "TH_Save", "TheHero_IsStartingNewGame"
+            };
+
+            foreach (string key in keys)
+            {
+                if (PlayerPrefs.HasKey(key)) PlayerPrefs.DeleteKey(key);
+            }
+            PlayerPrefs.Save();
+            Debug.Log("[TheHeroNewGame] PlayerPrefs save keys cleared");
         }
 
         public static THGameState NewGame()
         {
+            Debug.Log("[TheHeroNewGame] START");
+            ClearAllSaveDataForNewGame();
+
             var state = new THGameState();
-            state.gameVersion = "1.0.0-rc1";
+            state.gameVersion = "1.0.0-release";
             state.gold = 500;
             state.wood = 20;
             state.stone = 10;
             state.mana = 5;
-            state.heroLevel = 1;
-            state.heroX = 1; // Start near base
-            state.heroY = 1;
-            state.movementPoints = 20;
-            state.maxMovementPoints = 20;
             
-            // Clean statistics
-            state.daysPassed = 0;
-            state.battlesWon = 0;
-            state.resourcesCollected = 0;
+            state.heroLevel = 1;
+            state.heroExp = 0;
+            state.heroX = 2; // Near castle (2,7)
+            state.heroY = 6;
+            state.movementPoints = 20;
+state.maxMovementPoints = 20;
+            
+            state.day = 1;
+            state.week = 1;
+            state.gameCompleted = false;
+            state.mapSeed = UnityEngine.Random.Range(1, 999999);
 
-            state.army.Add(new THArmyUnit { id = "barracks", name = "Swordsman", count = 12, hpPerUnit = 30, attack = 5, defense = 2, initiative = 5 });
-            state.army.Add(new THArmyUnit { id = "range", name = "Archer", count = 8, hpPerUnit = 20, attack = 7, defense = 1, initiative = 7 });
+            // Default Army
+            state.army.Clear();
+            state.army.Add(new THArmyUnit { id = "unit_swordsman", name = "Swordsman", count = 12, hpPerUnit = 30, attack = 5, defense = 2, initiative = 5 });
+            state.army.Add(new THArmyUnit { id = "unit_archer", name = "Archer", count = 8, hpPerUnit = 20, attack = 7, defense = 1, initiative = 7 });
+            // Mage removed from start
 
-            state.buildings.Add(new THBuildingData { id = "barracks", name = "Barracks", recruitsAvailable = 5, goldCost = 60 });
-            state.buildings.Add(new THBuildingData { id = "range", name = "Archery Range", recruitsAvailable = 4, goldCost = 80, woodCost = 1 });
-            state.buildings.Add(new THBuildingData { id = "mage", name = "Mage Tower", recruitsAvailable = 2, goldCost = 120, manaCost = 2 });
+            // Default Buildings
+state.buildings.Clear();
+            state.buildings.Add(new THBuildingData { id = "unit_swordsman", name = "Barracks", level = 1, recruitsAvailable = 18, goldCost = 60 });
+            state.buildings.Add(new THBuildingData { id = "unit_archer", name = "Archery Range", level = 1, recruitsAvailable = 12, goldCost = 80, woodCost = 1 });
+            state.buildings.Add(new THBuildingData { id = "unit_mage", name = "Mage Tower", level = 1, recruitsAvailable = 6, goldCost = 120, manaCost = 2 });
+
+            // Clear lists explicitly just in case
+            state.collectedObjectIds.Clear();
+            state.defeatedEnemyIds.Clear();
+            state.capturedObjectIds.Clear();
+            state.visitedShrineIds.Clear();
+            state.shownDialogueIds.Clear();
+            state.heroArtifactIds.Clear();
+            state.currentEnemyArmy.Clear();
 
             state.tutorialShown = PlayerPrefs.GetInt("TheHero_TutorialShown", 0) == 1;
+
+            Debug.Log($"[TheHeroNewGame] Resources: Gold={state.gold} Wood={state.wood} Stone={state.stone} Mana={state.mana}");
+            Debug.Log($"[TheHeroNewGame] Army: Swordsman=12 Archer=8 Mage=0");
+            Debug.Log("[TheHeroNewGame] CollectedObjects cleared");
+            Debug.Log("[TheHeroNewGame] DefeatedEnemies cleared");
+            Debug.Log("[TheHeroNewGame] CapturedObjects cleared");
+            Debug.Log("[TheHeroNewGame] Default game state created");
 
             SaveGame(state);
             return state;
         }
-    }
+}
 }

@@ -1,0 +1,28 @@
+{
+    "asset": "7b9e4177dce06354ab9216f8d18cc43e",
+    "fileName": "019e0d32-3dcb-7c6f-aade-ae3933a46d46.png",
+    "prompt": "Leather boots with wings, 'Boots of Travel', 90s fantasy strategy game style, pixel art icon. Brown leather, magic glow. 512x512.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

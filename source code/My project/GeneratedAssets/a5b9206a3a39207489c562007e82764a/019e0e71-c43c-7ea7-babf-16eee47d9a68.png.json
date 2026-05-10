@@ -1,0 +1,28 @@
+{
+    "asset": "a5b9206a3a39207489c562007e82764a",
+    "fileName": "019e0e71-c43c-7ea7-babf-16eee47d9a68.png",
+    "prompt": "Top-down 2D pixel art game unit icon. Grey wolf, stylized fantasy. Transparent background, no white square. Small scale.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

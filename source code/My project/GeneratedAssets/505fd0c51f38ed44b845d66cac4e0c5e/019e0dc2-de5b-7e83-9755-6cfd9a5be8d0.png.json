@@ -1,0 +1,28 @@
+{
+    "asset": "505fd0c51f38ed44b845d66cac4e0c5e",
+    "fileName": "019e0dc2-de5b-7e83-9755-6cfd9a5be8d0.png",
+    "prompt": "Fantasy UI button hover state, glowing gold border, 90s strategy style. Square shape. No text.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

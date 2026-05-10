@@ -1,0 +1,28 @@
+{
+    "asset": "9060ddbef3d5db44bae6e4f66ffa4ffd",
+    "fileName": "019e0e59-c108-714d-9960-dcf6cd327ca6.png",
+    "prompt": "Top-down 2D pixel art gray wolf pack, high quality, stylized fantasy, transparent background, no white border.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -1,0 +1,28 @@
+{
+    "asset": "87ac7a2d6d118974d8b21a5ae264ad15",
+    "fileName": "019e0d11-d6b1-7a2d-b7dd-c26fdad16a02.png",
+    "prompt": "Long horizontal horizontal UI panel for a combat log. Dark parchment texture with gold borders. 90s fantasy strategy game style. Reference colors: parchment #D7CCC8, gold #FFD700.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

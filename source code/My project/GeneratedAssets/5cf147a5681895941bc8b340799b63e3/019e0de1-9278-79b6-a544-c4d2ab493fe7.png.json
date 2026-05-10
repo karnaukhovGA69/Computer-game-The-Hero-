@@ -1,0 +1,28 @@
+{
+    "asset": "5cf147a5681895941bc8b340799b63e3",
+    "fileName": "019e0de1-9278-79b6-a544-c4d2ab493fe7.png",
+    "prompt": "A spritesheet of 4x4 tiles for a fantasy strategy game. 4 variants of lush green grass, 4 variants of dry grass with small flowers, 8 variants of dirt roads including horizontal, vertical, turns, t-junctions, and crossroad. Top-down view, 2D hand-painted style, Heroes of Might and Magic 3 aesthetic. Each tile is 256x256 pixels. Seamless when tiled. No text.",
+    "negativePrompt": "",
+    "model": "flux-2-dev",
+    "modelName": "Flux 2 (Dev)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

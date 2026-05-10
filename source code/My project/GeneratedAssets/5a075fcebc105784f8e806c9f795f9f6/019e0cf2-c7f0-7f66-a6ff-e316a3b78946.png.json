@@ -1,0 +1,28 @@
+{
+    "asset": "5a075fcebc105784f8e806c9f795f9f6",
+    "fileName": "019e0cf2-c7f0-7f66-a6ff-e316a3b78946.png",
+    "prompt": "Ancient stone altar shrine with a beam of white light, 90s fantasy strategy game style, hand-painted pixel art aesthetic, mystical white glow, high contrast, top-down view.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -1,0 +1,28 @@
+{
+    "asset": "bc889dde0a2817547a889352498f554e",
+    "fileName": "019e0cfe-2f3c-7f7f-ba90-2b6a89c1141a.png",
+    "prompt": "A brave knight in shiny silver armor with blue accents, full body, head to toe, standing in a heroic idle pose, 90s fantasy strategy game style, hand-painted pixel art aesthetic, vibrant colors, high contrast, top-down isometric view, clean silhouette, bright and very noticeable. 64x64 aesthetic but high resolution. Transparent background.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

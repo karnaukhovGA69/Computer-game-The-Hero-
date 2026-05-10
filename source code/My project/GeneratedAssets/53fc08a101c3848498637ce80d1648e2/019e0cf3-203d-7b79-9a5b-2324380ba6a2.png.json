@@ -1,0 +1,28 @@
+{
+    "asset": "53fc08a101c3848498637ce80d1648e2",
+    "fileName": "019e0cf3-203d-7b79-9a5b-2324380ba6a2.png",
+    "prompt": "Group of hooded bandits with swords and dark cloaks, 90s fantasy strategy game style, hand-painted pixel art aesthetic, high contrast, top-down view, readable silhouette.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

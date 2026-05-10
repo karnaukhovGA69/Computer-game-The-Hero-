@@ -1,0 +1,28 @@
+{
+    "asset": "d5e0c864f56f56246abe0d8a3bee9191",
+    "fileName": "019e0cf3-44ef-72ca-b064-136f4c38fce4.png",
+    "prompt": "Ornate golden treasure chest, 90s fantasy strategy game style, hand-painted pixel art aesthetic, golden glowing aura, high contrast, top-down view, sparkling.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

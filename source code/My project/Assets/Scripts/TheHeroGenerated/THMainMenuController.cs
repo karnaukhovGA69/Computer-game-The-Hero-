@@ -15,8 +15,11 @@ namespace TheHero.Generated
         private void Start()
         {
             Debug.Log("[TH] MainMenuController initializing...");
+            
+            if (THAudioManager.Instance != null) THAudioManager.Instance.PlayMusic("MainMenu");
+
             Wire("New Game", OnNewGameClick);
-            Wire("Continue", OnContinueClick);
+Wire("Continue", OnContinueClick);
             Wire("Settings", OnSettingsClick);
             Wire("Help", OnHelpClick);
             Wire("Exit", Exit);
@@ -55,9 +58,12 @@ namespace TheHero.Generated
                 {
                     btn.onClick.RemoveAllListeners(); 
                     btn.onClick.AddListener(action); 
+                    btn.onClick.AddListener(() => {
+                        if (THAudioManager.Instance != null) THAudioManager.Instance.PlaySfx("button_click");
+                    });
                     Debug.Log($"[TH] Wired button: {name} on {btn.gameObject.name}");
                 }
-            }
+}
             else
             {
                 // Only log warning for main buttons to avoid noise from sub-panel buttons if they aren't loaded yet

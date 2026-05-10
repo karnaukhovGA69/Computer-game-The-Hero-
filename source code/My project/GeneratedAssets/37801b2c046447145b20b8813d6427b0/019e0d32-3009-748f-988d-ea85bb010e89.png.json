@@ -1,0 +1,28 @@
+{
+    "asset": "37801b2c046447145b20b8813d6427b0",
+    "fileName": "019e0d32-3009-748f-988d-ea85bb010e89.png",
+    "prompt": "Glowing sword with golden aura, 'Sword of Dawn', 90s fantasy strategy game style, pixel art icon. High contrast, clear silhouette. Dark background. 512x512.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

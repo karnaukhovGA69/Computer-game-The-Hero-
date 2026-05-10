@@ -20,15 +20,24 @@ namespace TheHero.Generated
             {
                 case "grass":
                 case "road":
+                case "bridge":
                     walkable = true;
                     moveCost = 1;
                     break;
-                case "forest":
+                case "forest_edge":
+                case "forest_sparse":
+                case "hill":
+                case "darkland":
                     walkable = true;
                     moveCost = 2;
                     break;
-                case "water":
+                case "forest_dense":
+                case "swamp":
+                    walkable = true;
+                    moveCost = 3;
+                    break;
                 case "mountain":
+                case "water":
                     walkable = false;
                     moveCost = 999;
                     break;

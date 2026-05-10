@@ -1,0 +1,15 @@
+{
+    "asset": "ce84538730b931c42a22106903a7d1ce",
+    "fileName": "019e0d60-967e-722b-8472-dadd01d87f7c.wav",
+    "prompt": "Sword swing and heavy impact on armor, combat hit",
+    "negativePrompt": "",
+    "model": "elevenlabs-sound-effects-v2",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "duration": 2.0,
+    "autoTrim": false,
+    "hasReference": false,
+    "voice": ""
+}
