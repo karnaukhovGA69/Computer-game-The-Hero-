@@ -7,24 +7,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-[InitializeOnLoad]
 public class TheHeroMapFixer
 {
-    private static string MarkerPath => "Assets/Editor/RUN_THE_HERO_MAP_FIX.txt";
-
     static TheHeroMapFixer()
     {
-        /*
-        if (File.Exists(MarkerPath))
-        {
-            EditorApplication.delayCall += () => {
-                CreatePlayableMap();
-                UpdateMainMenu();
-                File.Delete(MarkerPath);
-                AssetDatabase.Refresh();
-            };
-        }
-        */
+        // Autoload disabled. This old map fixer is kept only as a manual tool
+        // under MenuItem commands; it must not rebuild scenes when Unity opens.
     }
 
     [MenuItem("The Hero/Fix Map/Create Playable Map")]

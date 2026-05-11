@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 namespace TheHero.Generated
 {
+    // Deprecated base-exit helper. Current Base scene uses THBaseRuntime.BackToMap.
+    // Kept for old generated scenes only.
     public class THBaseBackButtonFix : MonoBehaviour
     {
         public Button backButton;
@@ -67,8 +69,6 @@ namespace TheHero.Generated
 
         public void BackToMap()
         {
-            if (THManager.Instance != null) THManager.Instance.SaveGame();
-
             if (SceneManager.GetActiveScene().name == "Base")
             {
                 SceneManager.LoadScene("Map");

@@ -39,10 +39,27 @@ namespace TheHero.Generated
         private IEnumerator DoShowVictoryDialog(string title, string content, string portraitPath)
         {
             yield return DoShowDialog(title, content, portraitPath);
+
+            if (continueButton != null)
+            {
+                continueButton.gameObject.SetActive(false);
+            }
             
             if (mainMenuButton != null)
             {
                 mainMenuButton.gameObject.SetActive(true);
+                var rt = mainMenuButton.GetComponent<RectTransform>();
+                if (rt != null)
+                {
+                    rt.anchorMin = new Vector2(0.5f, 0);
+                    rt.anchorMax = new Vector2(0.5f, 0);
+                    rt.pivot = new Vector2(0.5f, 0);
+                    rt.anchoredPosition = new Vector2(0, 30);
+                    rt.sizeDelta = new Vector2(260, 60);
+                }
+
+                var label = mainMenuButton.GetComponentInChildren<Text>();
+                if (label != null) label.text = "\u0412\u042b\u0419\u0422\u0418 \u0412 \u041c\u0415\u041d\u042e";
                 mainMenuButton.onClick.RemoveAllListeners();
                 mainMenuButton.onClick.AddListener(() => {
                     Time.timeScale = 1f;
@@ -57,7 +74,6 @@ namespace TheHero.Generated
             if (state != null && state.shownDialogueIds.Contains(dialogId)) return;
 
             if (state != null) state.shownDialogueIds.Add(dialogId);
-            THManager.Instance.SaveGame();
 
             StartCoroutine(DoShowDialogWrapper(title, content, portraitPath));
         }
@@ -70,6 +86,7 @@ namespace TheHero.Generated
         private IEnumerator DoShowDialogWrapper(string title, string content, string portraitPath)
         {
             yield return DoShowDialog(title, content, portraitPath);
+            if (continueButton != null) continueButton.gameObject.SetActive(true);
             if (mainMenuButton != null) mainMenuButton.gameObject.SetActive(false);
         }
 
@@ -91,6 +108,7 @@ namespace TheHero.Generated
             dialogPanel.SetActive(true);
             Time.timeScale = 0f; // Force pause
             
+            continueButton.gameObject.SetActive(true);
             continueButton.onClick.RemoveAllListeners();
             continueButton.onClick.AddListener(CloseDialog);
             

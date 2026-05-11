@@ -20,7 +20,7 @@ public class TheHeroFixOversizedMapSprites : EditorWindow
         Sprite castleIcon = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Resources/Sprites/CleanMap/Objects/clean_castle.png");
         Sprite mineIcon = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Resources/Sprites/CleanMap/Objects/clean_mine.png");
 
-        var spriteRenderers = Object.FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        var spriteRenderers = Object.FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Include);
         
         Debug.Log("[TheHeroScaleFix] Oversized map sprites scanned");
 

@@ -27,6 +27,22 @@ public int rewardWood;
 
         public int GetArmyPower() => enemyArmy.Sum(u => u.GetPower());
 
+        private void Awake()
+        {
+            if (string.IsNullOrWhiteSpace(id)) id = gameObject.name;
+            if (string.IsNullOrWhiteSpace(displayName)) displayName = gameObject.name;
+
+            if (type == ObjectType.Enemy)
+            {
+                startsCombat = true;
+                blocksMovement = true;
+            }
+            else
+            {
+                startsCombat = false;
+            }
+        }
+
         public void OnPointerDown(PointerEventData eventData)
         {
             if (THMapController.Instance == null || THMapController.Instance.HeroMover == null) return;
@@ -51,6 +67,11 @@ public int rewardWood;
 
         private void OnMouseEnter()
         {
+            if (THSingleMapHoverLabel.Instance != null)
+            {
+                THSingleMapHoverLabel.Instance.Show(displayName, transform.position);
+            }
+
             if (THMapController.Instance)
             {
                 if (type == ObjectType.Enemy)
@@ -74,6 +95,14 @@ public int rewardWood;
                 {
                     THMapController.Instance.Log(displayName);
                 }
+            }
+        }
+
+        private void OnMouseExit()
+        {
+            if (THSingleMapHoverLabel.Instance != null)
+            {
+                THSingleMapHoverLabel.Instance.Hide();
             }
         }
 

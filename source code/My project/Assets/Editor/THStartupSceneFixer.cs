@@ -5,30 +5,29 @@ using UnityEngine;
 [InitializeOnLoad]
 public static class THStartupSceneFixer
 {
+    private const string MainMenuPath = "Assets/Scenes/MainMenu.unity";
+
     static THStartupSceneFixer()
     {
-        EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
+        // Lightweight editor preference only: this does not rebuild scenes or run
+        // any fixer. It makes Play Mode start from MainMenu even when Map.unity is
+        // the currently opened scene in the editor.
+        ApplyMainMenuStartScene();
     }
 
-    private static void OnPlayModeStateChanged(PlayModeStateChange state)
+    [MenuItem("The Hero/Small Fixes/Set Play Mode Start Scene")]
+    public static void SetPlayModeStartScene()
     {
-        // When the user clicks "Play"
-        if (state == PlayModeStateChange.ExitingEditMode)
+        ApplyMainMenuStartScene();
+    }
+
+    private static void ApplyMainMenuStartScene()
+    {
+        var sceneAsset = AssetDatabase.LoadAssetAtPath<SceneAsset>(MainMenuPath);
+        if (sceneAsset != null)
         {
-            // Save the currently open scene so we can return to it later if we want
-            // but for now, just ensure MainMenu is loaded as the first scene.
-            
-            // Check if Main Menu is already the first scene in build settings
-            if (EditorBuildSettings.scenes.Length > 0)
-            {
-                string mainMenuPath = EditorBuildSettings.scenes[0].path;
-                var sceneAsset = AssetDatabase.LoadAssetAtPath<SceneAsset>(mainMenuPath);
-                if (sceneAsset != null)
-                {
-                    EditorSceneManager.playModeStartScene = sceneAsset;
-                    Debug.Log($"[THStartup] Set Play Mode start scene to: {mainMenuPath}");
-                }
-            }
+            EditorSceneManager.playModeStartScene = sceneAsset;
+            Debug.Log($"[THStartup] Set Play Mode start scene to: {MainMenuPath}");
         }
     }
 }

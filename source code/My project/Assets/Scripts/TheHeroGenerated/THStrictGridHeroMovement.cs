@@ -44,8 +44,12 @@ namespace TheHero.Generated
 
         public void TryMoveTo(int x, int y, THMapObject interaction = null)
         {
-            // The existing HandleMouseClick uses TryMoveTo internally but with targetTile logic
-            // I will implement a bridge
+            if (interaction != null && x == currentX && y == currentY)
+            {
+                if (THMapController.Instance != null) THMapController.Instance.HandleObjectInteraction(interaction);
+                return;
+            }
+
             if (THMapGridInput.Instance != null)
             {
                 var targetTile = THMapGridInput.Instance.GetTileAt(x, y);
@@ -199,6 +203,7 @@ namespace TheHero.Generated
         private void HandleKeyboard()
         {
             if (Keyboard.current == null) return;
+            if (THMapGridInput.Instance == null) return;
 
             Vector2Int dir = Vector2Int.zero;
             if (Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.upArrowKey.wasPressedThisFrame) dir = Vector2Int.up;
@@ -225,6 +230,12 @@ namespace TheHero.Generated
 
         private void HandleMouseClick()
         {
+            if (THMapGridInput.Instance == null)
+            {
+                Debug.LogWarning("[TheHeroClickDebug] Click failed: grid input is missing");
+                return;
+            }
+
             if (THMapGridInput.Instance.TryGetTileFromMouse(out THTile targetTile, out string reason))
             {
                 string msg = $"Clicked tile: {targetTile.x}, {targetTile.y} ({reason})";
@@ -283,6 +294,8 @@ namespace TheHero.Generated
         private List<Vector2Int> FindPath(Vector2Int start, Vector2Int end)
         {
             var input = THMapGridInput.Instance;
+            if (input == null) return null;
+
             var queue = new Queue<Vector2Int>();
             queue.Enqueue(start);
             var cameFrom = new Dictionary<Vector2Int, Vector2Int>();
@@ -337,6 +350,7 @@ return null;
             foreach (var pos in fullPath)
             {
                 var tile = input.GetTileAt(pos.x, pos.y);
+                if (tile == null) break;
                 if (points >= cost + tile.moveCost)
                 {
                     cost += tile.moveCost;
@@ -353,6 +367,7 @@ return null;
             HighlightPath(path, partial ? Color.yellow : Color.green);
 
             var input = THMapGridInput.Instance;
+            int spentCost = 0;
             foreach (var pos in path)
             {
                 // Check if target tile has a blocker that should stop us early
@@ -363,7 +378,9 @@ return null;
                      break;
                 }
 
+                if (input == null) break;
                 var tile = input.GetTileAt(pos.x, pos.y);
+                if (tile == null) break;
 Vector3 targetPos = tile.transform.position;
                 targetPos.z = transform.position.z;
 
@@ -376,12 +393,13 @@ Vector3 targetPos = tile.transform.position;
                 if (THAudioManager.Instance != null) THAudioManager.Instance.PlaySfx("hero_step");
                 currentX = pos.x;
                 currentY = pos.y;
+                spentCost += tile.moveCost;
 
                 THManager.Instance.Data.heroX = currentX;
                 THManager.Instance.Data.heroY = currentY;
             }
 
-            THManager.Instance.Data.movementPoints -= cost;
+            THManager.Instance.Data.movementPoints = Mathf.Max(0, THManager.Instance.Data.movementPoints - spentCost);
             ClearPathHighlight();
             isMoving = false;
 
@@ -417,6 +435,7 @@ Vector3 targetPos = tile.transform.position;
             foreach (var pos in path)
             {
                 var tile = input.GetTileAt(pos.x, pos.y);
+                if (tile == null) continue;
                 var marker = new GameObject("PathMarker");
                 marker.transform.position = tile.transform.position + Vector3.back * 0.1f;
                 var sr = marker.AddComponent<SpriteRenderer>();

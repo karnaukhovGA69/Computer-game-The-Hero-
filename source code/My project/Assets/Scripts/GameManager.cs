@@ -9,6 +9,8 @@ using TheHero.Subsystems.Save;
 
 namespace TheHero
 {
+    // Deprecated architecture duplicate. Active scenes use TheHero.Generated.THManager.
+    // Kept because subsystem prototypes still compile against this namespace.
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance { get; private set; }

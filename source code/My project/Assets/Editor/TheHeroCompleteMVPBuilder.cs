@@ -10,26 +10,14 @@ using TheHero.Generated;
 
 namespace TheHero.Editor
 {
-[InitializeOnLoad]
     public static class TheHeroCompleteMVPBuilder
     {
-        private const string MarkerPath = "Assets/Editor/RUN_THE_HERO_AUTOBUILD.txt";
         private const string ActionsPath = "Assets/InputSystem_Actions.inputactions";
 
         static TheHeroCompleteMVPBuilder()
         {
-            /*
-            EditorApplication.delayCall += () =>
-            {
-                if (File.Exists(MarkerPath))
-                {
-                    Debug.Log("[TheHero] Marker file found. Starting autobuild...");
-                    CreateScenesAndBuild();
-                    File.Delete(MarkerPath);
-                    AssetDatabase.Refresh();
-                }
-            };
-            */
+            // Autoload disabled. Scene creation/build operations must be launched
+            // manually from MenuItem commands so opening Unity cannot rebuild scenes.
         }
 
         [MenuItem("The Hero/Complete MVP/Create Scenes")]

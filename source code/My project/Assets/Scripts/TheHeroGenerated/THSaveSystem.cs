@@ -11,6 +11,12 @@ namespace TheHero.Generated
 
         public static void SaveGame(THGameState state)
         {
+            if (state == null)
+            {
+                Debug.LogWarning("[TH] Save skipped: state is null.");
+                return;
+            }
+
             try
             {
                 state.savesCount++;
@@ -93,7 +99,7 @@ namespace TheHero.Generated
                 "TheHero_CollectedObjects", "TheHero_DefeatedEnemies", "TheHero_CapturedObjects", "TheHero_VisitedObjects",
                 "TheHero_LastCombatVictory", "TheHero_LastDefeatedEnemyId", "TheHero_GameCompleted",
                 "TheHero_HeroGridX", "TheHero_HeroGridY", "TheHero_MapSeed", "TheHero_CurrentScene",
-                "TheHero_SaveData", "TH_Save", "TheHero_IsStartingNewGame"
+                "TheHero_SaveData", "TH_Save", "TheHero_IsStartingNewGame", "Combat_DarkLord"
             };
 
             foreach (string key in keys)
@@ -118,8 +124,8 @@ namespace TheHero.Generated
             
             state.heroLevel = 1;
             state.heroExp = 0;
-            state.heroX = 2; // Near castle (2,7)
-            state.heroY = 6;
+            state.heroX = 4; // Near Castle_Player on the rebuilt 36x24 adventure map.
+            state.heroY = 3;
             state.movementPoints = 20;
 state.maxMovementPoints = 20;
             
@@ -132,7 +138,7 @@ state.maxMovementPoints = 20;
             state.army.Clear();
             state.army.Add(new THArmyUnit { id = "unit_swordsman", name = "Swordsman", count = 12, hpPerUnit = 30, attack = 5, defense = 2, initiative = 5 });
             state.army.Add(new THArmyUnit { id = "unit_archer", name = "Archer", count = 8, hpPerUnit = 20, attack = 7, defense = 1, initiative = 7 });
-            // Mage removed from start
+            state.army.Add(new THArmyUnit { id = "unit_mage", name = "Mage", count = 0, hpPerUnit = 25, attack = 10, defense = 2, initiative = 8 });
 
             // Default Buildings
 state.buildings.Clear();
@@ -150,6 +156,8 @@ state.buildings.Clear();
             state.currentEnemyArmy.Clear();
 
             state.tutorialShown = PlayerPrefs.GetInt("TheHero_TutorialShown", 0) == 1;
+            PlayerPrefs.SetInt("TheHero_IsStartingNewGame", 1);
+            PlayerPrefs.Save();
 
             Debug.Log($"[TheHeroNewGame] Resources: Gold={state.gold} Wood={state.wood} Stone={state.stone} Mana={state.mana}");
             Debug.Log($"[TheHeroNewGame] Army: Swordsman=12 Archer=8 Mage=0");

@@ -30,7 +30,8 @@ namespace TheHero.Generated
 
         private void Start()
         {
-            CreateCaptionUI();
+            // Hover labels are handled by THSingleMapHoverLabel from THMapObject.
+            // Do not create a second MapCaption label here.
         }
 
         public void RefreshGrid()
@@ -85,27 +86,7 @@ namespace TheHero.Generated
 
         private void Update()
         {
-            if (_captionText == null) return;
-
-            if (TryGetTileFromMouse(out THTile tile, out _))
-            {
-                var mapObjs = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include);
-                var obj = mapObjs.FirstOrDefault(o => o.targetX == tile.x && o.targetY == tile.y && o.gameObject.activeInHierarchy);
-                
-                if (obj != null)
-                {
-                    _captionText.text = obj.displayName;
-                    _captionText.gameObject.SetActive(true);
-                }
-                else
-                {
-                    _captionText.gameObject.SetActive(false);
-                }
-            }
-            else
-            {
-                _captionText.gameObject.SetActive(false);
-            }
+            if (_captionText != null) _captionText.gameObject.SetActive(false);
         }
 
         public bool TryGetTileFromMouse(out THTile tile, out string reason)
@@ -114,6 +95,13 @@ namespace TheHero.Generated
             reason = "";
 
             if (UnityEngine.InputSystem.Mouse.current == null) return false;
+            if (_mainCamera == null) _mainCamera = Camera.main;
+            if (_mainCamera == null)
+            {
+                reason = "Main camera not found";
+                return false;
+            }
+
             Vector2 mousePosition = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
 
             if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())

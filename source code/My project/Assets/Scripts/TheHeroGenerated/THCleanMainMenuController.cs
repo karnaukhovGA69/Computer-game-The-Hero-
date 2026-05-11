@@ -24,6 +24,8 @@ namespace TheHero.Generated
 
         private void Start()
         {
+            THButtonLayoutFix.ApplyMainMenu();
+
             // Connect Main Buttons
             if (NewGameButton)
             {

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 namespace TheHero.Generated
 {
+    // Deprecated runtime duplicate. Current MainMenu scene uses THCleanMainMenuController.
+    // Kept as historical generated code only.
     public class THMainMenuControllerFixed : MonoBehaviour
     {
         [Header("Panels")]

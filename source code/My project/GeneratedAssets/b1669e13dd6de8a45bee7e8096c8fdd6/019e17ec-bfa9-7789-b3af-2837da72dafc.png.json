@@ -1,0 +1,38 @@
+{
+    "asset": "b1669e13dd6de8a45bee7e8096c8fdd6",
+    "fileName": "019e17ec-bfa9-7789-b3af-2837da72dafc.png",
+    "prompt": "2D top-down mountain tileset, stylized mountain center tiles and edge transitions to green meadow. Includes mountain peaks and rocky edges. No labels, no grid lines. Matching the style of the reference image. Gray stone mountains, green grass transitions. Fantasy map style.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "fde6fe679eb95e941acfbab40c6d801b",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -48,7 +48,7 @@ public class TheHeroFixMapAndBaseUI : EditorWindow
         // Fix Boss Label duplication (ensure only one Boss object name label exists)
         // Code-wise duplication is handled by THMapObjectVisuals fix.
         // Scene-wise duplication:
-        var allGos = Object.FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        var allGos = Object.FindObjectsByType<GameObject>(FindObjectsInactive.Include);
         foreach (var go in allGos)
         {
             if (go.name == "Tooltip" && go.transform.parent != null && go.transform.parent.name == "Тёмный Лорд")

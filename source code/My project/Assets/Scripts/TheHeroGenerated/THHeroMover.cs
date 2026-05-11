@@ -5,6 +5,8 @@ using System.Linq;
 
 namespace TheHero.Generated
 {
+    // Deprecated movement duplicate. Current Map scene uses THStrictGridHeroMovement.
+    // Kept for reference only; do not attach together with the strict grid mover.
     public class THHeroMover : MonoBehaviour
     {
         public bool IsMoving { get; private set; }

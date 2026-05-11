@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace TheHero.Generated
 {
@@ -35,12 +36,19 @@ namespace TheHero.Generated
         {
             ApplyPersistence();
             
-            bool isNewGame = State.daysPassed == 0 && State.collectedObjectIds.Count == 0 && State.defeatedEnemyIds.Count == 0;
-            if (isNewGame)
+            bool isExplicitNewGame = PlayerPrefs.GetInt("TheHero_IsStartingNewGame", 0) == 1;
+            bool isFreshState = State.daysPassed == 0 && State.collectedObjectIds.Count == 0 && State.defeatedEnemyIds.Count == 0;
+            if (isExplicitNewGame)
+            {
+                PlaceHeroNearCastleForNewGame();
+                PlayerPrefs.DeleteKey("TheHero_IsStartingNewGame");
+                PlayerPrefs.Save();
+            }
+            else if (isFreshState)
             {
                 Debug.Log("[TheHeroMap] New game map state applied");
                 // Position should already be set in NewGame(), but just in case:
-                if (State.heroX == 0 && State.heroY == 0) { State.heroX = 4; State.heroY = 10; }
+                if (State.heroX == 0 && State.heroY == 0) { State.heroX = 4; State.heroY = 3; }
             }
 
             // Stable hero position
@@ -55,8 +63,39 @@ namespace TheHero.Generated
             {
                 var follow = cam.GetComponent<THCameraFollow>() ?? cam.gameObject.AddComponent<THCameraFollow>();
                 follow.Target = HeroMover.transform;
-                follow.MinBounds = new Vector2(-12, -8);
-                follow.MaxBounds = new Vector2(12, 8);
+                var grid = THMapGridInput.Instance;
+                if (grid != null)
+                {
+                    grid.RefreshGrid();
+                    float halfHeight = cam.orthographicSize;
+                    float halfWidth = halfHeight * cam.aspect;
+                    float minX = grid.MinX + halfWidth;
+                    float maxX = grid.MaxX - halfWidth;
+                    float minY = grid.MinY + halfHeight;
+                    float maxY = grid.MaxY - halfHeight;
+
+                    if (minX > maxX)
+                    {
+                        float midX = (grid.MinX + grid.MaxX) * 0.5f;
+                        minX = midX;
+                        maxX = midX;
+                    }
+
+                    if (minY > maxY)
+                    {
+                        float midY = (grid.MinY + grid.MaxY) * 0.5f;
+                        minY = midY;
+                        maxY = midY;
+                    }
+
+                    follow.MinBounds = new Vector2(minX, minY);
+                    follow.MaxBounds = new Vector2(maxX, maxY);
+                }
+                else
+                {
+                    follow.MinBounds = new Vector2(-18, -12);
+                    follow.MaxBounds = new Vector2(17, 11);
+                }
                 follow.SmoothSpeed = 10f;
                 
                 // Immediate focus on start
@@ -73,6 +112,7 @@ namespace TheHero.Generated
             WireButton("MenuButton", OpenPauseMenu);
             WireButton("BaseButton", GoToBase);
             WireButton("CastleButton", GoToBase);
+            THButtonLayoutFix.ApplyMap();
 
             // Final Victory Check
             if (State.gameCompleted)
@@ -83,9 +123,54 @@ namespace TheHero.Generated
             else if (THStoryManager.Instance != null && !State.shownDialogueIds.Contains("intro"))
             {
                 THStoryManager.Instance.ShowDialog("intro", "Начало пути", "Королевство пало во тьму. Соберите армию и победите Тёмного Лорда.", "Sprites/Units/unit_swordsman_portrait");
-                State.shownDialogueIds.Add("intro");
-                THSaveSystem.SaveGame(State);
             }
+        }
+
+        private void PlaceHeroNearCastleForNewGame()
+        {
+            var castle = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include)
+                .Where(o => o != null && o.type == THMapObject.ObjectType.Base)
+                .OrderByDescending(o => o.id == "Castle_Player" || o.name == "Castle_Player")
+                .FirstOrDefault();
+
+            int castleX = castle != null ? castle.targetX : 2;
+            int castleY = castle != null ? castle.targetY : 3;
+
+            var grid = THMapGridInput.Instance;
+            if (grid != null) grid.RefreshGrid();
+
+            var candidates = new[]
+            {
+                new Vector2Int(castleX + 1, castleY),
+                new Vector2Int(castleX + 2, castleY),
+                new Vector2Int(castleX, castleY - 1),
+                new Vector2Int(castleX, castleY + 1),
+                new Vector2Int(castleX + 1, castleY - 1),
+                new Vector2Int(castleX + 1, castleY + 1),
+                new Vector2Int(4, 3)
+            };
+
+            var start = candidates.FirstOrDefault(pos => IsValidHeroStart(pos, grid));
+            if (start == default && !IsValidHeroStart(start, grid))
+            {
+                start = new Vector2Int(4, 3);
+            }
+
+            State.heroX = start.x;
+            State.heroY = start.y;
+            Debug.Log($"[TheHeroNewGame] Hero start set near castle: ({start.x}, {start.y})");
+        }
+
+        private bool IsValidHeroStart(Vector2Int pos, THMapGridInput grid)
+        {
+            if (grid != null)
+            {
+                var tile = grid.GetTileAt(pos.x, pos.y);
+                if (tile == null || !tile.walkable) return false;
+            }
+
+            return !Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include)
+                .Any(o => o != null && o.blocksMovement && o.type != THMapObject.ObjectType.Base && o.targetX == pos.x && o.targetY == pos.y);
         }
 
         private void ShowFinalVictory()
@@ -101,7 +186,7 @@ namespace TheHero.Generated
 
         private void ApplyPersistence()
         {
-            var mapObjects = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include);
+            var mapObjects = GetUniqueMapObjects(Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include));
             int activeResources = 0;
             int activeEnemies = 0;
 
@@ -141,6 +226,52 @@ namespace TheHero.Generated
             Debug.Log($"[TheHeroMap] Enemies active: {activeEnemies}");
         }
 
+        private List<THMapObject> GetUniqueMapObjects(THMapObject[] mapObjects)
+        {
+            var unique = new Dictionary<string, THMapObject>();
+            var unnamedIndex = 0;
+
+            foreach (var obj in mapObjects)
+            {
+                if (obj == null) continue;
+
+                string key = string.IsNullOrWhiteSpace(obj.id)
+                    ? $"__unnamed_{unnamedIndex++}"
+                    : obj.id;
+
+                if (!unique.TryGetValue(key, out var existing))
+                {
+                    unique[key] = obj;
+                    continue;
+                }
+
+                var keep = ChoosePreferredMapObject(existing, obj);
+                var duplicate = keep == existing ? obj : existing;
+                unique[key] = keep;
+
+                if (duplicate != null && duplicate.gameObject.activeSelf)
+                {
+                    duplicate.gameObject.SetActive(false);
+                    Debug.LogWarning($"[TheHeroMap] Duplicate map object id '{key}' disabled: {duplicate.name}");
+                }
+            }
+
+            return unique.Values.ToList();
+        }
+
+        private THMapObject ChoosePreferredMapObject(THMapObject a, THMapObject b)
+        {
+            if (a == null) return b;
+            if (b == null) return a;
+            if (a.isFinalBoss != b.isFinalBoss) return a.isFinalBoss ? a : b;
+            if (a.isDarkLord != b.isDarkLord) return a.isDarkLord ? a : b;
+            if (a.enemyArmy.Count != b.enemyArmy.Count) return a.enemyArmy.Count > b.enemyArmy.Count ? a : b;
+
+            int aReward = a.rewardGold + a.rewardWood + a.rewardStone + a.rewardMana + a.rewardExp;
+            int bReward = b.rewardGold + b.rewardWood + b.rewardStone + b.rewardMana + b.rewardExp;
+            return aReward >= bReward ? a : b;
+        }
+
         private void WireButton(string name, UnityEngine.Events.UnityAction action)
         {
             var btn = GameObject.Find(name)?.GetComponent<Button>();
@@ -165,7 +296,6 @@ namespace TheHero.Generated
         public void OpenPauseMenu() => THPauseMenu.Instance.Pause();
         public void GoToBase() 
         {
-            THSavePolicy.ManualSave();
             THSceneLoader.Instance.LoadBase();
         }
 
@@ -214,7 +344,8 @@ namespace TheHero.Generated
                 
                 foreach(var b in State.buildings)
                 {
-                    b.recruitsAvailable += (b.id == "mage" ? 2 : (b.id == "range" ? 4 : 5));
+                    int weeklyGrowth = b.id == "unit_mage" ? 2 : (b.id == "unit_archer" ? 4 : 5);
+                    b.recruitsAvailable = Mathf.Min(GetRecruitCap(b.id), b.recruitsAvailable + weeklyGrowth);
                 }
 
                 if (THWeeklyIncomeSystem.Instance != null)
@@ -261,6 +392,14 @@ namespace TheHero.Generated
         {
             if (InfoText) InfoText.text = msg;
             Debug.Log("[TH] " + msg);
+        }
+
+        private int GetRecruitCap(string buildingId)
+        {
+            if (buildingId == "unit_swordsman") return 18;
+            if (buildingId == "unit_archer") return 12;
+            if (buildingId == "unit_mage") return 6;
+            return 10;
         }
 
         public void ShowConfirmation(string message, UnityEngine.Events.UnityAction onConfirm)
@@ -406,7 +545,6 @@ if (State.collectedObjectIds.Contains(obj.id) || State.defeatedEnemyIds.Contains
                     break;
                 case THMapObject.ObjectType.Base:
                     _isTransitioning = true;
-                    THSavePolicy.ManualSave();
                     THSceneLoader.Instance.LoadBase();
                     break;
                 case THMapObject.ObjectType.Artifact:
@@ -423,7 +561,6 @@ if (!State.defeatedEnemyIds.Contains(obj.id))
                         State.lastEnemyId = obj.id;
                         State.currentEnemyArmy = obj.enemyArmy.Select(u => u.Clone()).ToList();
                         PlayerPrefs.SetInt("Combat_DarkLord", obj.isDarkLord ? 1 : 0);
-                        THSavePolicy.ManualSave();
                         THSceneLoader.Instance.LoadCombat();
                     }
                     break;

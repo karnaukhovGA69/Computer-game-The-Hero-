@@ -5,6 +5,8 @@ using System.Linq;
 
 namespace TheHero.Generated
 {
+    // Deprecated runtime duplicate. Current Base scene uses THBaseRuntime.
+    // Kept for old manual editor builders only; do not attach in active scenes.
     public class THBaseController : MonoBehaviour
     {
         public THGameState State;

@@ -1,0 +1,38 @@
+{
+    "asset": "f38878c9bea308d46871e3922e36d69a",
+    "fileName": "019e17ec-d361-7f15-b4e7-937a458b20cf.png",
+    "prompt": "Clean 2D top-down meadow tileset, 4 variations of grass tiles, no labels, no grid lines, seamless top-down green grass, stylized hand-drawn style, matching the style of the reference image. Each tile is 64x64 equivalent in a grid. Vibrant colors, fantasy map style.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "fde6fe679eb95e941acfbab40c6d801b",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -1,0 +1,38 @@
+{
+    "asset": "50b14ae89c9a6214e9c0df5fbca7fbc3",
+    "fileName": "019e17ec-bab4-7b5a-9420-69b8db3c600a.png",
+    "prompt": "2D top-down river tileset, stylized water tiles and bank transitions to green meadow. Includes water center, straight river, corners, and banks (N, S, E, W, inner/outer corners). No labels, no grid lines. Matching the style of the reference image. Vibrant blue water, green grass banks. Fantasy map style.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "fde6fe679eb95e941acfbab40c6d801b",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

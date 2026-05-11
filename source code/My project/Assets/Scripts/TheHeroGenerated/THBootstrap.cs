@@ -32,25 +32,32 @@ public enum SceneType { MainMenu, Map, Combat, Base }
             mGo.AddComponent<THManager>();
         }
 
-        // Add Controller
+        // Scene controllers are serialized in the scenes. Do not auto-add legacy
+        // controllers here: Map/Combat/Base already use THMapController,
+        // THCombatRuntime and THBaseRuntime. Adding old controllers at runtime
+        // creates duplicate systems and conflicting save/combat/base logic.
         switch (type)
         {
             case SceneType.MainMenu:
-                if (gameObject.GetComponent<THMainMenuController>() == null)
-                    gameObject.AddComponent<THMainMenuController>();
+                WarnIfMissing(Object.FindAnyObjectByType<THCleanMainMenuController>(), "THCleanMainMenuController");
                 break;
             case SceneType.Map:
-                if (gameObject.GetComponent<THMapController>() == null)
-                    gameObject.AddComponent<THMapController>();
+                WarnIfMissing(Object.FindAnyObjectByType<THMapController>(), "THMapController");
                 break;
             case SceneType.Combat:
-                if (gameObject.GetComponent<THCombatController>() == null)
-                    gameObject.AddComponent<THCombatController>();
+                WarnIfMissing(Object.FindAnyObjectByType<THCombatRuntime>(), "THCombatRuntime");
                 break;
             case SceneType.Base:
-                if (gameObject.GetComponent<THBaseController>() == null)
-                    gameObject.AddComponent<THBaseController>();
+                WarnIfMissing(Object.FindAnyObjectByType<THBaseRuntime>(), "THBaseRuntime");
                 break;
+        }
+    }
+
+    private static void WarnIfMissing(Object controller, string controllerName)
+    {
+        if (controller == null)
+        {
+            Debug.LogWarning($"[TH] {controllerName} is missing from the active scene.");
         }
     }
 }

@@ -42,6 +42,7 @@ namespace TheHero.Generated
             }
 
             RefreshUI();
+            THButtonLayoutFix.ApplyBase();
             
             if (THAudioManager.Instance != null) THAudioManager.Instance.PlayMusic("Base");
         }
@@ -61,7 +62,7 @@ namespace TheHero.Generated
             // Resources
             if (resourcesText != null)
             {
-                resourcesText.text = $"Gold: {State.gold} | Wood: {State.wood} | Stone: {State.stone} | Mana: {State.mana}";
+                resourcesText.text = $"\u0417\u043e\u043b\u043e\u0442\u043e: {State.gold}   \u0414\u0435\u0440\u0435\u0432\u043e: {State.wood}   \u041a\u0430\u043c\u0435\u043d\u044c: {State.stone}   \u041c\u0430\u043d\u0430: {State.mana}";
             }
 
             // Buildings
@@ -77,6 +78,7 @@ namespace TheHero.Generated
             var mage = State.army.FirstOrDefault(u => u.id == "unit_mage");
             int m = mage != null ? mage.count : 0;
             Debug.Log($"[TheHeroBase] army stats: Swordsman={s} Archer={a} Mage={m}");
+            THButtonLayoutFix.ApplyBase();
             }
 
         private void UpdateBuildingsUI()
@@ -98,6 +100,12 @@ namespace TheHero.Generated
 
         private void CreateBuildingCard(THBuildingData b)
         {
+            if (buildingCardTemplate == null)
+            {
+                Debug.LogWarning("[TheHeroBase] Building card template is missing.");
+                return;
+            }
+
             GameObject card = Instantiate(buildingCardTemplate, buildingsContainer);
             card.SetActive(true);
             card.name = "BuildingCard_" + b.id;
@@ -114,8 +122,7 @@ namespace TheHero.Generated
             SetText(texts, "CountAvailableText", $"{currentVal}/{maxVal}");
             SetText(texts, "CostText", $"Цена за 1: {GetRecruitCostString(b, false)}");
             
-            int totalGold = b.goldCost * currentVal;
-            SetText(texts, "TotalCostText", $"Сумма: {totalGold} золота");
+            SetText(texts, "TotalCostText", $"Сумма: {GetRecruitCostString(b, true)}");
 
             string upgradeCost = b.level >= 2 ? "Улучшено" : $"Улучшить: {GetUpgradeCostString(b.id)}";
             SetText(texts, "UpgradeCostText", upgradeCost);
@@ -168,6 +175,11 @@ namespace TheHero.Generated
             foreach (var u in State.army)
             {
                 if (u.count <= 0) continue;
+                if (armyRowTemplate == null)
+                {
+                    Debug.LogWarning("[TheHeroBase] Army row template is missing.");
+                    break;
+                }
                 
                 GameObject row = Instantiate(armyRowTemplate, armyContainer);
                 row.SetActive(true);
@@ -177,7 +189,7 @@ namespace TheHero.Generated
             }
 
             if (armySummaryText != null)
-                armySummaryText.text = $"Всего юнитов: {totalCount}";
+                armySummaryText.text = $"\u0412\u0441\u0435\u0433\u043e \u044e\u043d\u0438\u0442\u043e\u0432: {totalCount}";
         }
 
         public void RecruitOne(string buildingId)
@@ -361,7 +373,6 @@ namespace TheHero.Generated
         public void BackToMap()
         {
             Debug.Log("[TheHeroBase] Back to Map clicked");
-            SaveGameIfPossible();
             SceneManager.LoadScene("Map");
         }
     }

@@ -35,7 +35,7 @@ namespace TheHero.Generated
             if (Data == null)
             {
                 if (THSaveSystem.HasSave()) Data = THSaveSystem.LoadGame();
-                else NewGame();
+                if (Data == null) NewGame();
             }
         }
 

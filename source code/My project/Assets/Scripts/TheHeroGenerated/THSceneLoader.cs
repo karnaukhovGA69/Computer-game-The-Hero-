@@ -99,10 +99,10 @@ namespace TheHero.Generated
 
         private IEnumerator LoadRoutine(int index)
         {
-            if (SceneManager.GetActiveScene().buildIndex != 0) // Don't save from main menu
-            {
-                THSaveSystem.SaveGame(THManager.Instance.Data);
-            }
+            // Scene transitions must not autosave. Save policy is centralized in
+            // THSavePolicy: manual Save, new week, battle finish, and base actions.
+            var hoverLabel = Object.FindAnyObjectByType<THSingleMapHoverLabel>();
+            if (hoverLabel != null) hoverLabel.Hide();
 
             _loadingPanel.SetActive(true);
             _progressBar.value = 0;

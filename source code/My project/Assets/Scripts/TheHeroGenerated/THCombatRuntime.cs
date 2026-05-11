@@ -68,6 +68,7 @@ namespace TheHero.Generated
         public int currentTurnIndex = 0;
 
         private bool combatFinished = false;
+        private bool combatVictory = false;
         private bool rewardApplied = false;
         private bool isLeavingCombat = false;
         private bool enemyTurnInProgress = false;
@@ -133,13 +134,14 @@ namespace TheHero.Generated
             Debug.Log("[TheHeroCombat] Finish battle clicked");
             if (isLeavingCombat) return;
             isLeavingCombat = true;
-            ApplyCombatResultIfNeeded();
+            if (combatFinished) ApplyCombatResultIfNeeded();
             SceneManager.LoadScene("Map");
         }
 
         public void ReturnToMainMenu()
         {
             Debug.Log("[TheHeroCombat] Returning to MainMenu");
+            if (combatFinished) ApplyCombatResultIfNeeded();
             SceneManager.LoadScene("MainMenu");
         }
 
@@ -193,6 +195,7 @@ namespace TheHero.Generated
             LoadCombatData();
             round = 1;
             combatFinished = false;
+            combatVictory = false;
             
             BuildTurnQueue();
             currentTurnIndex = 0;
@@ -206,6 +209,7 @@ namespace TheHero.Generated
             Log($"Раунд {round}");
 
             if (resultPanel) resultPanel.SetActive(false);
+            THButtonLayoutFix.ApplyCombat();
 
             CheckEnemyTurn();
         }
@@ -427,6 +431,8 @@ namespace TheHero.Generated
             if (turnOrderContainer != null)
             {
                 ClearContainer(turnOrderContainer);
+                if (turnQueue.Count == 0) return;
+
                 for (int i = 0; i < turnQueue.Count; i++)
                 {
                     int index = (currentTurnIndex + i) % turnQueue.Count;
@@ -657,6 +663,8 @@ namespace TheHero.Generated
         private void FinishCombat(bool victory)
         {
             combatFinished = true;
+            combatVictory = victory;
+            bool finalVictory = victory && reward != null && reward.isFinalVictory;
             if (actionButtonsRoot) actionButtonsRoot.SetActive(false);
             if (resultPanel)
             {
@@ -676,14 +684,20 @@ namespace TheHero.Generated
 
                 if (finishBattleButton)
                 {
-                    finishBattleButton.gameObject.SetActive(true);
+                    finishBattleButton.gameObject.SetActive(!finalVictory);
                     var btnText = finishBattleButton.GetComponentInChildren<Text>();
                     if (btnText) btnText.text = victory ? "ЗАВЕРШИТЬ БОЙ" : "НА КАРТУ";
                 }
-                if (mainMenuButton) mainMenuButton.gameObject.SetActive(true);
+                if (mainMenuButton)
+                {
+                    mainMenuButton.gameObject.SetActive(true);
+                    var menuText = mainMenuButton.GetComponentInChildren<Text>();
+                    if (menuText) menuText.text = finalVictory ? "\u0412\u042b\u0419\u0422\u0418 \u0412 \u041c\u0415\u041d\u042e" : "\u0413\u041b\u0410\u0412\u041d\u041e\u0415 \u041c\u0415\u041d\u042e";
+                }
             }
             
             ConnectResultButtons();
+            THButtonLayoutFix.ApplyCombat();
         }
 
         private void SaveCombatResult()
@@ -691,18 +705,29 @@ namespace TheHero.Generated
             var state = THManager.Instance.Data;
             if (state != null)
             {
-                state.gold += reward.gold;
-                state.heroExp += reward.exp;
-                if (!string.IsNullOrEmpty(enemyId))
+                if (combatVictory)
                 {
-                    if (!state.defeatedEnemyIds.Contains(enemyId))
-                        state.defeatedEnemyIds.Add(enemyId);
-                    
-                    if (reward.isFinalVictory)
+                    state.gold += reward.gold;
+                    state.heroExp += reward.exp;
+                    state.battlesWon++;
+
+                    if (!string.IsNullOrEmpty(enemyId))
                     {
-                        state.gameCompleted = true;
-                        Debug.Log("[TheHeroVictory] Final boss defeated. Game marked as completed.");
+                        if (!state.defeatedEnemyIds.Contains(enemyId))
+                            state.defeatedEnemyIds.Add(enemyId);
+                        state.enemiesDefeated = state.defeatedEnemyIds.Count;
+
+                        if (reward.isFinalVictory)
+                        {
+                            state.isDarkLordDefeated = true;
+                            state.gameCompleted = true;
+                            Debug.Log("[TheHeroVictory] Final boss defeated. Game marked as completed.");
+                        }
                     }
+                }
+                else
+                {
+                    state.battlesLost++;
                 }
 
                 foreach (var pu in playerUnits)
@@ -710,13 +735,16 @@ namespace TheHero.Generated
                     var original = state.army.Find(u => u.id == pu.id);
                     if (original != null) original.count = pu.count;
                 }
+
+                state.currentEnemyArmy.Clear();
+                PlayerPrefs.DeleteKey("Combat_DarkLord");
                 
                 THSavePolicy.SaveOnBattleFinish();
             }
             else
             {
-                PlayerPrefs.SetInt("TheHero_LastCombatVictory", 1);
-                PlayerPrefs.SetString("TheHero_LastDefeatedEnemyId", enemyId);
+                PlayerPrefs.SetInt("TheHero_LastCombatVictory", combatVictory ? 1 : 0);
+                if (combatVictory) PlayerPrefs.SetString("TheHero_LastDefeatedEnemyId", enemyId);
             }
         }
 

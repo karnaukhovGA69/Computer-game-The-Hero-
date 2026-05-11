@@ -177,11 +177,11 @@ public class TheHeroFixBossCombatAndSavePolicy : EditorWindow
 
     private static void ClearOldCombatUI()
     {
-        var allCanvases = Object.FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        var allCanvases = Object.FindObjectsByType<Canvas>(FindObjectsInactive.Include);
         foreach (var c in allCanvases) Undo.DestroyObjectImmediate(c.gameObject);
 
         string[] tags = { "Story", "Dialog", "Frame", "Panel", "Unit", "Button", "Text", "Window", "Fantasy" };
-        var allGos = Object.FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        var allGos = Object.FindObjectsByType<GameObject>(FindObjectsInactive.Include);
         foreach (var go in allGos)
         {
             if (go == null) continue;

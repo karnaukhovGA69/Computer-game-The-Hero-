@@ -1,0 +1,28 @@
+{
+    "asset": "fde6fe679eb95e941acfbab40c6d801b",
+    "fileName": "019e17ec-196d-7979-8900-969719fdbda4.png",
+    "prompt": "2D top-down fantasy map tileset, meadow biome, 4x4 grid of grass tiles, different variations of green grass and small flowers, flat top-down view, clean stylized art style, vibrant colors, for turn-based strategy game. Each tile is a square, seamless with each other. No perspective, strictly top-down.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

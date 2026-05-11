@@ -9,6 +9,8 @@ using Random = UnityEngine.Random;
 
 namespace TheHeroGenerated
 {
+    // Deprecated monolithic prototype runtime. Current scenes use TheHero.Generated
+    // scene-specific controllers and THManager/THGameState instead.
     public enum SceneKind
     {
         MainMenu,

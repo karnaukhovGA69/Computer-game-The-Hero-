@@ -5,6 +5,8 @@ using System.Linq;
 
 namespace TheHero.Generated
 {
+    // Deprecated runtime duplicate. Current MainMenu scene uses THCleanMainMenuController.
+    // Kept for old manual editor builders only; do not attach in active scenes.
     public class THMainMenuController : MonoBehaviour
     {
         public GameObject ConfirmationPanel;

@@ -22,7 +22,7 @@ public class TheHeroFixMapCombatAndDarkLord : EditorWindow
         EditorSceneManager.OpenScene("Assets/Scenes/Map.unity");
         
         // 1. Hover Labels Cleanup
-        var allObjects = Object.FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        var allObjects = Object.FindObjectsByType<GameObject>(FindObjectsInactive.Include);
         foreach (var go in allObjects)
         {
             if (go.name == "Tooltip" || go.name == "Tooltip(Clone)" || go.name.Contains("HoverLabel") || go.name == "MapHoverLabel")
@@ -44,7 +44,7 @@ public class TheHeroFixMapCombatAndDarkLord : EditorWindow
         var objectsRoot = GameObject.Find("MapRoot/Objects") ?? GameObject.Find("Objects");
         if (objectsRoot == null) objectsRoot = new GameObject("Objects");
 
-        var mapObjects = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include, FindObjectsSortMode.None).ToList();
+        var mapObjects = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include).ToList();
         
         // Mine Fix: Remove broken and add one good
         var mines = mapObjects.Where(o => o != null && o.type == THMapObject.ObjectType.Mine).ToList();
@@ -60,7 +60,7 @@ public class TheHeroFixMapCombatAndDarkLord : EditorWindow
             foreach (var bg in brokenGuards) Undo.DestroyObjectImmediate(bg.gameObject);
             
             // Re-fetch current objects for precise check
-            var currentObjects = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            var currentObjects = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include);
             bool hasGuard = currentObjects.Any(o => o != null && o.type == THMapObject.ObjectType.Enemy && 
                 Vector2.Distance(o.transform.position, mine.transform.position) < 1.5f && 
                 o.GetComponent<SpriteRenderer>()?.sprite != null);
@@ -72,14 +72,14 @@ public class TheHeroFixMapCombatAndDarkLord : EditorWindow
         }
 
         // Add guards for other resources
-        var resources = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+        var resources = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include)
             .Where(o => o != null && o.type != THMapObject.ObjectType.Enemy && o.type != THMapObject.ObjectType.Base).ToList();
             
         foreach (var res in resources)
         {
             if (res == null) continue;
 
-            var currentObjects = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            var currentObjects = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include);
             bool hasGuard = currentObjects.Any(o => o != null && o.type == THMapObject.ObjectType.Enemy && Vector2.Distance(o.transform.position, res.transform.position) < 1.5f);
             
             if (!hasGuard)
@@ -97,7 +97,7 @@ public class TheHeroFixMapCombatAndDarkLord : EditorWindow
         }
 
         // 3. Dark Lord Sprite & Logic
-        var darkLord = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+        var darkLord = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include)
             .FirstOrDefault(o => o.isDarkLord || o.displayName.Contains("Лорд"));
             
         if (darkLord != null)
@@ -121,7 +121,7 @@ public class TheHeroFixMapCombatAndDarkLord : EditorWindow
         }
 
         // Enable blockers on all enemies
-        var allEnemies = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+        var allEnemies = Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include)
             .Where(o => o.type == THMapObject.ObjectType.Enemy).ToList();
         foreach (var e in allEnemies)
         {
@@ -194,7 +194,7 @@ public class TheHeroFixMapCombatAndDarkLord : EditorWindow
             if (finishBtn == null)
             {
                  // Search in whole scene and move it in
-                 var allButtons = Object.FindObjectsByType<Button>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+                 var allButtons = Object.FindObjectsByType<Button>(FindObjectsInactive.Include);
                  foreach (var b in allButtons)
                  {
                      if (b.name == "FinishBattleButton" || b.name == "FinishButton" || b.GetComponentInChildren<Text>()?.text.Contains("ЗАВЕРШИТЬ") == true)

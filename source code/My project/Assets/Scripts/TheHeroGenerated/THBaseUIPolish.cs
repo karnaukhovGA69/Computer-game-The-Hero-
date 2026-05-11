@@ -28,6 +28,13 @@ namespace TheHero.Generated
         private void Start()
         {
             _controller = GetComponent<THBaseController>();
+            if (_controller == null)
+            {
+                Debug.Log("[THBaseUIPolish] Deprecated polish skipped: active Base scene uses THBaseRuntime.");
+                enabled = false;
+                return;
+            }
+
             SetupUI();
             RefreshSelection();
         }
