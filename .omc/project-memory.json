@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1778334018711,
+  "lastScanned": 1778522910287,
   "projectRoot": "/mnt/c/Users/HYPERPC/Computer-game-The-Hero-",
   "techStack": {
     "languages": [],
@@ -36,7 +36,7 @@
       "path": "Architecture",
       "purpose": null,
       "fileCount": 9,
-      "lastAccessed": 1778334018692,
+      "lastAccessed": 1778522910193,
       "keyFiles": [
         "architecture.aux",
         "architecture.fdb_latexmk",
@@ -45,12 +45,125 @@
         "architecture.out"
       ]
     },
+    "Examples": {
+      "path": "Examples",
+      "purpose": "Example code",
+      "fileCount": 0,
+      "lastAccessed": 1778522910204,
+      "keyFiles": []
+    },
     "source code": {
       "path": "source code",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1778334018695,
+      "lastAccessed": 1778522910208,
       "keyFiles": []
+    },
+    "ОПИСАНИЕ": {
+      "path": "ОПИСАНИЕ",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1778522910215,
+      "keyFiles": [
+        "Описание.pdf"
+      ]
+    },
+    "ПЗ": {
+      "path": "ПЗ",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1778522910220,
+      "keyFiles": [
+        "README.md",
+        "build.ps1",
+        "ПЗ.pdf",
+        "ПРИМЕР_ПЗ.pdf"
+      ]
+    },
+    "ПМИ": {
+      "path": "ПМИ",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1778522910226,
+      "keyFiles": [
+        "README.md",
+        "build.ps1",
+        "ПМИ.pdf",
+        "ПРИМЕР_ПМИ.pdf"
+      ]
+    },
+    "РО": {
+      "path": "РО",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1778522910232,
+      "keyFiles": [
+        "README.md",
+        "build.ps1",
+        "ПРИМЕР_РО.pdf",
+        "РО.pdf"
+      ]
+    },
+    "ТЗ": {
+      "path": "ТЗ",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1778522910237,
+      "keyFiles": [
+        "ТЗ.pdf"
+      ]
+    },
+    "ТП": {
+      "path": "ТП",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1778522910243,
+      "keyFiles": [
+        "README.md",
+        "build.ps1",
+        "ПРИМЕР_ТП.pdf",
+        "ТП.pdf"
+      ]
+    },
+    "ПЗ/src": {
+      "path": "ПЗ/src",
+      "purpose": "Source code",
+      "fileCount": 2,
+      "lastAccessed": 1778522910263,
+      "keyFiles": [
+        "body.typ",
+        "main.typ"
+      ]
+    },
+    "ПМИ/src": {
+      "path": "ПМИ/src",
+      "purpose": "Source code",
+      "fileCount": 2,
+      "lastAccessed": 1778522910270,
+      "keyFiles": [
+        "body.typ",
+        "main.typ"
+      ]
+    },
+    "РО/src": {
+      "path": "РО/src",
+      "purpose": "Source code",
+      "fileCount": 2,
+      "lastAccessed": 1778522910277,
+      "keyFiles": [
+        "body.typ",
+        "main.typ"
+      ]
+    },
+    "ТП/src": {
+      "path": "ТП/src",
+      "purpose": "Source code",
+      "fileCount": 2,
+      "lastAccessed": 1778522910287,
+      "keyFiles": [
+        "body.typ",
+        "main.typ"
+      ]
     }
   },
   "hotPaths": [
@@ -346,6 +459,12 @@
       "path": "source code/My project/Assets/Resources/Config/map_config.json",
       "accessCount": 1,
       "lastAccessed": 1777315573698,
+      "type": "file"
+    },
+    {
+      "path": "source code/My project/Assets/Scripts/TheHeroGenerated/THTile.cs",
+      "accessCount": 1,
+      "lastAccessed": 1778524328595,
       "type": "file"
     }
   ],

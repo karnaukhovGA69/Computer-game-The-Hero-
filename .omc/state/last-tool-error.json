@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"pip3 install --quiet pypdf 2>&1 | tail -3; python3 -c \\\"import pypdf; print('OK', pypdf.__version__)\\\"\",\"description\":\"Install pypdf for text extraction\"}",
-  "error": "Exit code 1\n/bin/bash: line 1: pip3: command not found\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'pypdf'",
-  "timestamp": "2026-05-09T15:21:46.661Z",
-  "retry_count": 2
-}

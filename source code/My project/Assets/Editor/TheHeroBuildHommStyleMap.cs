@@ -78,17 +78,20 @@ namespace TheHero.Editor
             var mapRoot = EnsureRoot("MapRoot");
             var tilesRoot = EnsureChild(mapRoot.transform, "Tiles");
             var objectsRoot = EnsureChild(mapRoot.transform, "Objects");
-            var highlightsRoot = EnsureChild(mapRoot.transform, "Highlights");
-
-            ClearChildren(tilesRoot);
-            ClearChildren(objectsRoot);
-            ClearChildren(highlightsRoot);
-
             var resourcesRoot = EnsureChild(objectsRoot, "Resources");
             var enemiesRoot = EnsureChild(objectsRoot, "Enemies");
             var buildingsRoot = EnsureChild(objectsRoot, "Buildings");
             var artifactsRoot = EnsureChild(objectsRoot, "Artifacts");
             var specialRoot = EnsureChild(objectsRoot, "Special");
+            var highlightsRoot = EnsureChild(mapRoot.transform, "Highlights");
+
+            ClearChildren(tilesRoot);
+            ClearChildren(resourcesRoot);
+            ClearChildren(enemiesRoot);
+            ClearChildren(buildingsRoot);
+            ClearChildren(artifactsRoot);
+            ClearChildren(specialRoot);
+            ClearChildren(highlightsRoot);
             Debug.Log("[TheHeroMapBuilder] Map cleared");
 
             var cells = BuildTerrain();
