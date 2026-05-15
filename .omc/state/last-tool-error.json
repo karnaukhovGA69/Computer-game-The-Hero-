@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"cat \\\"/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/source code/My project/Assets/Scripts/TheHeroGenerated/THMapObject.cs\\\" | head -50\\necho \\\"---\\\"\\nls \\\"/mnt/c/Users/HYPERPC/Computer-game...",
-  "error": "Exit code 2\nusing System.Collections.Generic;\nusing UnityEngine;\nusing UnityEngine.UI;\nusing UnityEngine.EventSystems;\nusing System.Linq;\n\nnamespace TheHero.Generated\n{\n    public class THMapObject : MonoBehaviour, IPointerDownHandler\n    {\n        public enum ObjectType { GoldResource, WoodResource, StoneResource, ManaResource, Enemy, Base, Mine, NeutralBuilding, Treasure, Shrine, ArtifactChest, Artifact }\npublic string id;\npublic ObjectType type;\npublic THEnemyDifficulty difficulty = THEnemyDi...",
-  "timestamp": "2026-05-15T15:14:10.257Z",
-  "retry_count": 1
-}

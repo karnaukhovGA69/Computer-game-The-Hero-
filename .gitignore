@@ -35,3 +35,8 @@ ExportedObj/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# IDE and Development Tools
+.claude/
+.omc/
+.continue/
