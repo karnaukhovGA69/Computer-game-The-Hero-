@@ -1,0 +1,95 @@
+using UnityEditor;
+using UnityEngine;
+using System.IO;
+
+public class ExternalAssetsImportPostprocessor : AssetPostprocessor
+{
+    private void OnPreprocessTexture()
+    {
+        // Only apply to ExternalAssets folder
+        if (!assetPath.Contains("Assets/ExternalAssets"))
+            return;
+
+        TextureImporter importer = (TextureImporter)assetImporter;
+
+        // Apply common settings for all sprites
+        importer.textureType = TextureImporterType.Sprite;
+        importer.spritePixelsPerUnit = 64;
+        importer.filterMode = FilterMode.Point;
+
+        // Compression settings
+        TextureImporterPlatformSettings platformSettings = importer.GetDefaultPlatformTextureSettings();
+        platformSettings.textureCompression = TextureImporterCompression.Uncompressed;
+        importer.SetPlatformTextureSettings(platformSettings);
+
+        // Set sprite mode based on filename patterns
+        // Most files are Single mode by default
+        importer.spriteImportMode = SpriteImportMode.Single;
+
+        // Special cases: Spritesheets (Multiple mode)
+        if (IsSpritesheetFile(assetPath))
+        {
+            importer.spriteImportMode = SpriteImportMode.Multiple;
+        }
+    }
+
+    private bool IsSpritesheetFile(string path)
+    {
+        // List of known spritesheets
+        string[] spritesheets = new[]
+        {
+            "Buttons.png",
+            "Icons.png",
+            "Equipment.png",
+            "Inventory.png",
+            "Bridges.png",
+            "Action_panel.png",
+            "Circle_menu.png",
+            "Craft.png",
+            "Decorative_cracks.png",
+            "character_panel.png",
+            // Character animation sheets — must stay Multiple after slicing.
+            "Warrior_Idle.png",
+            "Warrior_Run.png",
+            "Warrior_Attack1.png",
+            "Warrior_Attack2.png",
+            "Skeleton Warrior.png",
+            "Skeleton Mage.png",
+            "FR_121_CursedWolf.png",
+            "FR_122_ClockworkBat.png",
+            "FR_123_MadDoctor.png",
+            "FR_124_BloodGargoyle.png",
+            "FR_125_DemonChips.png",
+            "FR_126_HellfireBrazier.png",
+            "FR_127_DarkTroll.png",
+            "FR_128_TemptressWitch.png",
+            "FR_129_WeepingMadonna.png",
+            "FR_130_UnderworldKing.png",
+            // Tile atlases that already ship with sliced sub-sprites.
+            "TX Tileset Grass.png",
+            "TX Plant.png",
+            "TX Props.png",
+            "Main_tiles.png",
+            "walls_floor.png",
+            "Interior.png",
+            "ground_grass_details.png",
+            "Trees_animation.png",
+            "Water_animation.png",
+            "free_pixel_16_woods.png",
+            "house_details.png",
+            "Tilemap_color1.png",
+            "Tilemap_color2.png",
+            "Tilemap_color3.png",
+            "Tilemap_color4.png",
+            "Tilemap_color5.png",
+        };
+
+        foreach (string spritesheet in spritesheets)
+        {
+            if (path.EndsWith(spritesheet, System.StringComparison.OrdinalIgnoreCase))
+                return true;
+        }
+
+        return false;
+    }
+}

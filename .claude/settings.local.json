@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -v \" 1\\\\.png$\")",
+      "Bash(mkdir -p '/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/source code/My project/Assets/CodeAudit')",
+      "Bash(mkdir -p \"/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/.omc/handoffs\")",
+      "Bash(python3 -c 's=open\\('\\\\''/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/source code/My project/Assets/Editor/TheHeroBuildMapFromTodayGeneratedAssets.cs'\\\\''\\).read\\(\\); print\\('\\\\''open{:'\\\\'',s.count\\('\\\\''{'\\\\''\\),'\\\\''close}:'\\\\'',s.count\\('\\\\''}'\\\\''\\),'\\\\'' open\\(:'\\\\'',s.count\\('\\\\''\\('\\\\''\\),'\\\\''close\\):'\\\\'',s.count\\('\\\\''\\)'\\\\''\\)\\)')",
+      "Bash(python3 -c 's=open\\('\\\\''/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/source code/My project/Assets/Editor/TheHeroFixTileGapsAndProperMap.cs'\\\\''\\).read\\(\\); print\\('\\\\''{:'\\\\'',s.count\\('\\\\''{'\\\\''\\),'\\\\''}:'\\\\'',s.count\\('\\\\''}'\\\\''\\),'\\\\'' \\(:'\\\\'',s.count\\('\\\\''\\('\\\\''\\),'\\\\''\\):'\\\\'',s.count\\('\\\\''\\)'\\\\''\\)\\)')",
+      "Bash(find '/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/source code/My project/Assets' -maxdepth 5 -iname *cainos* -o -iname *top*down* -o -iname *pixel*art*top*)",
+      "Bash(awk -F/ '{print $2}')",
+      "Bash(tasklist.exe)",
+      "Bash(wait)",
+      "Bash(sed -n '1,30p' THCameraFollow.cs)",
+      "Bash(sed -n '1,80p' THSingleMapHoverLabel.cs)",
+      "mcp__plugin_oh-my-claudecode_t__state_clear",
+      "Skill(oh-my-claudecode:cancel)",
+      "Bash(find .omc/state -name \"*autopilot*\" -o -name \"skill-active*\" -o -name \"cancel-signal*\")",
+      "Bash(rm -f .omc/state/autopilot-state.json .omc/state/sessions/*/autopilot-state.json .omc/state/sessions/*/skill-active-state.json .omc/state/skill-active-state.json)",
+      "Bash(ls .omc/state/)",
+      "mcp__plugin_oh-my-claudecode_t__state_list_active",
+      "mcp__plugin_oh-my-claudecode_t__state_write",
+      "Bash(rm -f Assets/CodeAudit/Make_Game_Playable_BatchExit.txt unity_batch.log)",
+      "Bash(\"/mnt/c/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Unity.exe\" -batchmode -nographics -quit -projectPath \"C:\\\\Users\\\\HYPERPC\\\\Computer-game-The-Hero-\\\\source code\\\\My project\" -executeMethod TheHeroPlayableBatch.MakeAndValidate -logFile \"C:\\\\Users\\\\HYPERPC\\\\Computer-game-The-Hero-\\\\source code\\\\My project\\\\unity_batch.log\")",
+      "Bash(echo \"EXIT=$?\")",
+      "Bash(\"/mnt/c/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Unity.exe\" -batchmode -nographics -quit -projectPath \"C:\\\\Users\\\\HYPERPC\\\\Computer-game-The-Hero-\\\\source code\\\\My project\" -executeMethod TheHeroPlayableBatch.PatchAndValidate -logFile \"C:\\\\Users\\\\HYPERPC\\\\Computer-game-The-Hero-\\\\source code\\\\My project\\\\unity_batch.log\")"
+    ]
+  }
+}

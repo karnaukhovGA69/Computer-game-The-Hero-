@@ -25,7 +25,7 @@ public int rewardWood;
         public string displayName;
         public bool isDarkLord = false;
 
-        public int GetArmyPower() => enemyArmy.Sum(u => u.GetPower());
+        public int GetArmyPower() => THBalanceConfig.CalculateArmyPower(enemyArmy);
 
         private void Awake()
         {
@@ -48,12 +48,13 @@ public int rewardWood;
             if (THMapController.Instance == null || THMapController.Instance.HeroMover == null) return;
             if (THMapController.Instance.HeroMover.IsMoving) return;
 
-            if (isDarkLord)
+            if (type == ObjectType.Enemy)
             {
-                int playerPower = THMapController.Instance.State.army.Sum(u => u.GetPower());
+                THBalanceConfig.ConfigureMapObjectBalance(this);
+                int playerPower = THBalanceConfig.CalculateArmyPower(THMapController.Instance.State.army);
                 int enemyPower = GetArmyPower();
                 
-                if (playerPower < enemyPower * 0.8f)
+                if (enemyPower > 0 && (isDarkLord || difficulty == THEnemyDifficulty.Deadly || (difficulty == THEnemyDifficulty.Strong && playerPower < enemyPower) || playerPower < enemyPower * 0.75f))
                 {
                     THMapController.Instance.ShowConfirmation("Враг очень силён. Вы уверены?", () => {
                         THMapController.Instance.HeroMover.TryMoveTo(targetX, targetY, this);
@@ -76,6 +77,8 @@ public int rewardWood;
             {
                 if (type == ObjectType.Enemy)
                 {
+                    THBalanceConfig.ConfigureMapObjectBalance(this);
+                    int enemyPower = GetArmyPower();
                     string diffStr = difficulty switch
                     {
                         THEnemyDifficulty.Weak => "<color=green>Слабый</color>",
@@ -86,6 +89,7 @@ public int rewardWood;
                     };
                     
                     string info = $"<b>{displayName}</b>\nСила: {diffStr}";
+                    info += $"\nPower: {enemyPower} ({THBalanceConfig.GetPowerTierLabel(enemyPower)})";
                     if (rewardExp > 0 || rewardGold > 0)
                         info += $"\nНаграда: {(rewardExp > 0 ? $"{rewardExp} XP " : "")}{(rewardGold > 0 ? $"{rewardGold} Gold" : "")}";
                     

@@ -1,0 +1,138 @@
+{
+  "tileSize": 64,
+  "ppu": 64,
+  "categories": {
+    "grass": [
+      "Grass/grass_01.png",
+      "Grass/grass_02.png",
+      "Grass/grass_03.png",
+      "Grass/grass_04.png",
+      "Grass/grass_dry_01.png",
+      "Grass/grass_dry_02.png",
+      "Grass/grass_flowers_01.png",
+      "Grass/grass_flowers_02.png"
+    ],
+    "road": [
+      "Road/road_cross.png",
+      "Road/road_horizontal.png",
+      "Road/road_turn_ne.png",
+      "Road/road_turn_nw.png",
+      "Road/road_turn_se.png",
+      "Road/road_turn_sw.png",
+      "Road/road_t_e.png",
+      "Road/road_t_n.png",
+      "Road/road_t_s.png",
+      "Road/road_t_w.png",
+      "Road/road_vertical.png"
+    ],
+    "river": {
+      "center": [
+        "River/river_center_01.png",
+        "River/river_center_02.png",
+        "River/river_vertical.png",
+        "River/river_horizontal.png"
+      ],
+      "banks": [
+        "River/river_bank_e.png",
+        "River/river_bank_inner_ne.png",
+        "River/river_bank_inner_nw.png",
+        "River/river_bank_inner_se.png",
+        "River/river_bank_inner_sw.png",
+        "River/river_bank_n.png",
+        "River/river_bank_outer_ne.png",
+        "River/river_bank_outer_nw.png",
+        "River/river_bank_outer_se.png",
+        "River/river_bank_outer_sw.png",
+        "River/river_bank_s.png",
+        "River/river_bank_w.png"
+      ],
+      "corners": [
+        "River/river_corner_ne.png",
+        "River/river_corner_nw.png",
+        "River/river_corner_se.png",
+        "River/river_corner_sw.png"
+      ]
+    },
+    "forest": {
+      "center": [
+        "Forest/forest_center_01.png",
+        "Forest/forest_center_02.png",
+        "Forest/forest_center_03.png",
+        "Forest/forest_dense_01.png",
+        "Forest/forest_dense_02.png",
+        "Forest/forest_light_01.png",
+        "Forest/forest_light_02.png"
+      ],
+      "edges": [
+        "Forest/forest_edge_e.png",
+        "Forest/forest_edge_n.png",
+        "Forest/forest_edge_s.png",
+        "Forest/forest_edge_w.png"
+      ],
+      "corners": [
+        "Forest/forest_inner_ne.png",
+        "Forest/forest_inner_nw.png",
+        "Forest/forest_inner_se.png",
+        "Forest/forest_inner_sw.png",
+        "Forest/forest_outer_ne.png",
+        "Forest/forest_outer_nw.png",
+        "Forest/forest_outer_se.png",
+        "Forest/forest_outer_sw.png"
+      ]
+    },
+    "mountain": {
+      "center": [
+        "Mountain/mountain_center_01.png",
+        "Mountain/mountain_center_02.png",
+        "Mountain/mountain_center_03.png",
+        "Mountain/mountain_peak_01.png",
+        "Mountain/mountain_peak_02.png"
+      ],
+      "edges": [
+        "Mountain/mountain_edge_e.png",
+        "Mountain/mountain_edge_n.png",
+        "Mountain/mountain_edge_s.png",
+        "Mountain/mountain_edge_w.png"
+      ],
+      "corners": [
+        "Mountain/mountain_inner_ne.png",
+        "Mountain/mountain_inner_nw.png",
+        "Mountain/mountain_inner_se.png",
+        "Mountain/mountain_inner_sw.png",
+        "Mountain/mountain_outer_ne.png",
+        "Mountain/mountain_outer_nw.png",
+        "Mountain/mountain_outer_se.png",
+        "Mountain/mountain_outer_sw.png"
+      ]
+    },
+    "darkland": [
+      "Darkland/darkland_01.png",
+      "Darkland/darkland_02.png",
+      "Darkland/darkland_03.png",
+      "Darkland/darkland_cracked_01.png",
+      "Darkland/darkland_cracked_02.png",
+      "Darkland/darkland_dead_grass_01.png",
+      "Darkland/darkland_dead_grass_02.png",
+      "Darkland/darkland_edge_e.png",
+      "Darkland/darkland_edge_n.png",
+      "Darkland/darkland_edge_s.png",
+      "Darkland/darkland_edge_w.png"
+    ],
+    "objects": {
+      "artifact": "Objects/obj_artifact.png",
+      "castle": "Objects/obj_castle.png",
+      "chest": "Objects/obj_chest.png",
+      "darklord": "Objects/obj_darklord.png",
+      "goblin": "Objects/obj_goblin.png",
+      "gold": "Objects/obj_gold.png",
+      "hero": "Objects/obj_hero.png",
+      "mana": "Objects/obj_mana.png",
+      "mine": "Objects/obj_mine.png",
+      "orc": "Objects/obj_orc.png",
+      "skeleton": "Objects/obj_skeleton.png",
+      "stone": "Objects/obj_stone.png",
+      "wolf": "Objects/obj_wolf.png",
+      "wood": "Objects/obj_wood.png"
+    }
+  }
+}

@@ -40,6 +40,8 @@ namespace TheHero.Generated
             {
                 transform.position = new Vector3(x, y, 0);
             }
+
+            LogHeroPosition();
         }
 
         public void TryMoveTo(int x, int y, THMapObject interaction = null)
@@ -108,7 +110,7 @@ namespace TheHero.Generated
             var sr = GetComponent<SpriteRenderer>();
             if (sr == null) sr = gameObject.AddComponent<SpriteRenderer>();
             sr.enabled = true;
-            sr.sortingOrder = 50;
+            sr.sortingOrder = 100;
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }
 
@@ -397,6 +399,7 @@ Vector3 targetPos = tile.transform.position;
 
                 THManager.Instance.Data.heroX = currentX;
                 THManager.Instance.Data.heroY = currentY;
+                LogHeroPosition();
             }
 
             THManager.Instance.Data.movementPoints = Mathf.Max(0, THManager.Instance.Data.movementPoints - spentCost);
@@ -451,6 +454,11 @@ sr.color = color;
         {
             foreach (var m in _pathMarkers) Destroy(m);
             _pathMarkers.Clear();
+        }
+
+        private void LogHeroPosition()
+        {
+            Debug.Log($"[TheHeroMovement] Hero grid: {currentX},{currentY} world: {transform.position.x:0.###},{transform.position.y:0.###}");
         }
     }
 }

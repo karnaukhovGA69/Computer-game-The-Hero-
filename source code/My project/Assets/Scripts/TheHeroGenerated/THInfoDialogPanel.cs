@@ -22,6 +22,11 @@ namespace TheHero.Generated
             if (ContinueButton) ContinueButton.onClick.AddListener(Close);
         }
 
+        private void OnDestroy()
+        {
+            if (Instance == this) Instance = null;
+        }
+
         public void Show(string title, string content, Action callback = null)
         {
             if (!Panel) return;

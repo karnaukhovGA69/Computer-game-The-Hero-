@@ -1,0 +1,1282 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.4/staging' branch; Version is '6000.4.1f1 (8535861f39e1) revision 8729990'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-HYPERPC" at "2026-05-14T19:16:43.8737272Z"
+OS: 'Windows 11  (10.0.26200) Core' Language: 'ru' Physical Memory: 32557 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-05-14T19:16:43Z
+
+COMMAND LINE ARGUMENTS:
+Unity.exe
+-batchmode
+-nographics
+-quit
+-projectPath
+C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project
+-executeMethod
+TheHeroFixTileGapsAndProperMap.Run
+-logFile
+C:\Users\HYPERPC\Computer-game-The-Hero-\unity_build.log
+Successfully changed project path to: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project
+C:/Users/HYPERPC/Computer-game-The-Hero-/source code/My project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [33788]  Target information:
+
+Player connection [33788]  * "[IP] 10.99.25.20 [Port] 55504 [Flags] 2 [Guid] 1174122366 [EditorId] 1174122366 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5TNIE0I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [33788]  * "[IP] 172.25.112.1 [Port] 55504 [Flags] 2 [Guid] 1174122366 [EditorId] 1174122366 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5TNIE0I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [33788]  * "[IP] 172.18.0.1 [Port] 55504 [Flags] 2 [Guid] 1174122366 [EditorId] 1174122366 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5TNIE0I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [33788] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [33788] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-29380" after 0.4 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-HYPERPC"
+[Licensing::IpcConnector] LicenseClient-HYPERPC channel disconnected successfully.
+[Licensing::IpcConnector] Channel LicenseClient-HYPERPC-6000.4.1 doesn't exist
+[Licensing::Module] Successfully launched the LicensingClient (PId: 1132)
+Starting IPC server.
+Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-HYPERPC-6000.4.1, press Ctrl-C to exit.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-HYPERPC-6000.4.1" at "2026-05-14T19:16:45.1948328Z"
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              13cb255159b44bdfb2a22ed504ea91c5
+  Correlation Id:          df4cfe0d52ea4d2a7365eee7c3a7f57a
+  External correlation Id: 1580839395596328960
+  Machine Id:              2bcfagqq1DNenXtoR+usphFc6NE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-HYPERPC-6000.4.1" (connect: 0.25s, validation: 0.04s, handshake: 0.87s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-HYPERPC-6000.4.1-notifications" at "2026-05-14T19:16:46.1051306Z"
+[Licensing::Module] Connected to LicensingClient (PId: 1132, launch time: 0.01, total connection time: 1.16s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 9072390612952-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 2.26s
+[Licensing::Module] Licensing is initialized (took 1.59s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 2.29 ms, found 0 plugins.
+Initialize engine version: 6000.4.1f1 (8535861f39e1)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/HYPERPC/Computer-game-The-Hero-/source code/My project/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56380
+CodeReloadManager initialized
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002080 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.412 seconds
+Domain Reload Profiling: 835ms
+	BeginReloadAssembly (112ms)
+		CreateAndSetChildDomain (4ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (62ms)
+	LoadAllAssembliesAndSetupDomain (199ms)
+		LoadAssemblies (107ms)
+		AnalyzeDomain (190ms)
+			TypeCache.Refresh (189ms)
+				TypeCache.ScanAssembly (175ms)
+	FinalizeReload (414ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (54ms)
+			BeforeProcessingInitializeOnLoad (82ms)
+			ProcessInitializeOnLoadAttributes (112ms)
+			ProcessInitializeOnLoadMethodAttributes (94ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 76 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.2d.animation@14.0.3 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.animation@a6f2f1d22eb5)
+    com.unity.2d.aseprite@4.0.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.aseprite@151b68d46c40)
+    com.unity.2d.psdimporter@13.0.2 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.psdimporter@11a0e04e0561)
+    com.unity.2d.spriteshape@14.0.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.spriteshape@da3647ffbbd7)
+    com.unity.2d.tilemap.extras@7.0.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.tilemap.extras@66df903b3633)
+    com.unity.2d.tooling@2.0.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.tooling@baa4133dcff2)
+    com.unity.ai.assistant@2.8.0-pre.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.ai.assistant@667f49aff9c0)
+    com.unity.ai.inference@2.6.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.ai.inference@9a123aee5df7)
+    com.unity.collab-proxy@2.12.4 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.collab-proxy@0b1559bcd34e)
+    com.unity.ide.rider@3.0.39 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.ide.rider@4504839d03f7)
+    com.unity.ide.visualstudio@2.0.27 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.ide.visualstudio@dc1ddd4f09b6)
+    com.unity.inputsystem@1.19.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.microsoft.gdk@1.6.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.microsoft.gdk@343e03cd89b8)
+    com.unity.microsoft.gdk.tools@1.6.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.microsoft.gdk.tools@5ae7d42b911f)
+    com.unity.purchasing@5.3.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.purchasing@c1f2e55dc464)
+    com.unity.services.levelplay@9.4.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.services.levelplay@4902ed73074e)
+    com.unity.timeline@1.8.12 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.timeline@8cd8509afae5)
+    com.unity.visualscripting@1.9.11 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.visualscripting@8bed5ad90189)
+    com.unity.services.core@1.16.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.services.core@8ba50f624741)
+    com.unity.microsoft.gdk.discovery@1.3.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.microsoft.gdk.discovery@9c2d1c88cf7f)
+    com.unity.burst@1.8.28 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.burst@07790c2d06d9)
+    com.unity.dt.app-ui@2.1.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.dt.app-ui@8ac7e730dd5d)
+    com.unity.nuget.newtonsoft-json@3.2.2 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.nuget.newtonsoft-json@4dfd81071c64)
+    com.unity.mathematics@1.3.3 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.mathematics@19a9377c4ffa)
+    com.unity.cloud.gltfast@6.14.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.cloud.gltfast@0847aee0f6da)
+    com.unity.2d.common@13.0.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.common@49d8bea2bff3)
+    com.unity.searcher@4.9.4 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.searcher@d45a78918735)
+    com.unity.nuget.mono-cecil@1.11.6 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.2.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.test-framework.performance@0840f58e4562)
+  Built-in packages:
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.sprite@929df5adbb1f)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.tilemap@c457c5249013)
+    com.unity.multiplayer.center@1.0.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a)
+    com.unity.render-pipelines.universal@17.4.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.render-pipelines.universal@580a03820d50)
+    com.unity.test-framework@1.6.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.test-framework@76560ee600cb)
+    com.unity.ugui@2.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.ugui@d8a2716f3013)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.0.5 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
+    com.unity.render-pipelines.core@17.4.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.render-pipelines.core@e6c93b445dd3)
+    com.unity.shadergraph@17.4.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.shadergraph@6ab0d236faac)
+    com.unity.render-pipelines.universal-config@17.4.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.render-pipelines.universal-config@0db4263b9e6b)
+    com.unity.collections@6.4.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.collections@538ace9075bc)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+Duplicate assembly 'System.Runtime.CompilerServices.Unsafe.dll' with different versions detected, using 'Packages/com.unity.ai.assistant/Plugins/Shared/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' and ignoring 'Packages/com.unity.collections/Unity.Collections.Tests/System.Runtime.CompilerServices.Unsafe/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:80
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 27.3857ms
+Refreshing native plugins compatible for Editor in 18.47 ms, found 7 plugins.
+Starting: C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/HYPERPC/Computer-game-The-Hero-/source code/My project
+Duplicate assembly 'System.Runtime.CompilerServices.Unsafe.dll' with different versions detected, using 'Packages/com.unity.ai.assistant/Plugins/Shared/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' and ignoring 'Packages/com.unity.collections/Unity.Collections.Tests/System.Runtime.CompilerServices.Unsafe/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll"
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Unity.Burst.Cecil, Version=0.11.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library\PackageCache\com.unity.burst@07790c2d06d9\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Mono.Cecil, Version=0.11.5.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff\Mono.Cecil.dll
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 55.4056ms
+DisplayProgressbar: Compiling Scripts
+Starting: C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/HYPERPC/Computer-game-The-Hero-/source code/My project
+ExitCode: 4 Duration: 0s406ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[1605/2137  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra requires additional run (0.37 seconds), 1 items updated, 1604 evaluated
+ExitCode: 0 Duration: 2s420ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/HYPERPC/Computer-game-The-Hero-/source code/My project
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Current configuration matches the requested one, skipping
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 4.2283ms
+ExitCode: 0 Duration: 0s892ms
+Finished compiling graph: 2141 nodes, 46307 flattened edges (37159 ToBuild, 366 ToUse), maximum node priority 2445
+[1605/2137  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra build success (0.86 seconds), 1 items updated, 2137 evaluated
+AssetDatabase: script compilation time: 4.199389s
+Begin MonoManager ReloadAssembly
+Duplicate assembly 'System.Runtime.CompilerServices.Unsafe.dll' with different versions detected, using 'Packages/com.unity.ai.assistant/Plugins/Shared/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' and ignoring 'Packages/com.unity.collections/Unity.Collections.Tests/System.Runtime.CompilerServices.Unsafe/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly GdkToolsEditModeTests.dll at Library/ScriptAssemblies/GdkToolsEditModeTests.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Aseprite.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Aseprite.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.AI.Assistant.Integrations.Sample.Editor.dll at Library/ScriptAssemblies/Unity.AI.Assistant.Integrations.Sample.Editor.dll not valid. Loading of assembly skipped.
+Assembly Unity.AppUI.Editor.Tests.dll at Library/ScriptAssemblies/Unity.AppUI.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.AppUI.Tests.dll at Library/ScriptAssemblies/Unity.AppUI.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Microsoft.GDK.Discovery.EditModeTests.dll at Library/ScriptAssemblies/Unity.Microsoft.GDK.Discovery.EditModeTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Microsoft.GDK.Tests.dll at Library/ScriptAssemblies/Unity.Microsoft.GDK.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Purchasing.Apple.dll at Library/ScriptAssemblies/Unity.Purchasing.Apple.dll not valid. Loading of assembly skipped.
+Assembly Unity.Purchasing.AppleMacos.dll at Library/ScriptAssemblies/Unity.Purchasing.AppleMacos.dll not valid. Loading of assembly skipped.
+Assembly Unity.Purchasing.Security.dll at Library/ScriptAssemblies/Unity.Purchasing.Security.dll not valid. Loading of assembly skipped.
+Assembly Unity.Purchasing.TransactionVerifier.dll at Library/ScriptAssemblies/Unity.Purchasing.TransactionVerifier.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 15.44 ms, found 7 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[THStartup] Set Play Mode start scene to: Assets/Scenes/MainMenu.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+THStartupSceneFixer:ApplyMainMenuStartScene () (at Assets/Editor/THStartupSceneFixer.cs:30)
+THStartupSceneFixer:.cctor () (at Assets/Editor/THStartupSceneFixer.cs:15)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Editor/THStartupSceneFixer.cs Line: 30)
+
+Refreshing native plugins compatible for Editor in 16.45 ms, found 7 plugins.
+Duplicate assembly 'System.Runtime.CompilerServices.Unsafe.dll' with different versions detected, using 'Packages/com.unity.ai.assistant/Plugins/Shared/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' and ignoring 'Packages/com.unity.collections/Unity.Collections.Tests/System.Runtime.CompilerServices.Unsafe/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.Refreshing native plugins compatible for Editor in 21.02 ms, found 7 plugins.
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  5.051 seconds
+Domain Reload Profiling: 6521ms
+	BeginReloadAssembly (327ms)
+		DisableScriptedObjects (11ms)
+		CreateAndSetChildDomain (177ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (119ms)
+	LoadAllAssembliesAndSetupDomain (971ms)
+		LoadAssemblies (525ms)
+		AnalyzeDomain (536ms)
+			TypeCache.Refresh (382ms)
+				TypeCache.ScanAssembly (362ms)
+			BuildScriptInfoCaches (140ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (5052ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (25ms)
+			BeforeProcessingInitializeOnLoad (235ms)
+			ProcessInitializeOnLoadAttributes (3981ms)
+			ProcessInitializeOnLoadMethodAttributes (613ms)
+			AfterProcessingInitializeOnLoad (6ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/UnifiedRayTracing/TraceRays.urtshader using Guid(1142bbad8b9e8c44c83a9775ff120d37) (ScriptedImporter)Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+
+Compiling Ray Tracing Shader "TraceRays.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'b61a11853fc2b01c85b821ba8aaf5c7e') in 0.0644987 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=46687cccdc33168fce57c46918914a0e DependenciesID=ba78a0469f42bfec0b01e12118e1a492 StaticDependenciesID=b7859538b7c8061be2c1df0681a26cec 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/RisEstimation.urtshader using Guid(713f6141bd66a134383b787f2eaa7c11) (ScriptedImporter)
+Compiling Ray Tracing Shader "RisEstimation.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'd7ac51d7078c9d0f4518515a4bd89058') in 0.0150262 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e10568ab6bce9a97b28d8c885dc887c9 DependenciesID=7bda994a1075ee45a05df5fd39078a40 StaticDependenciesID=1251c416255850dca778d66927462604 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapShadowMaskIntegration.urtshader using Guid(d19f4f8a13b6edb48b986a47ec96402e) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapShadowMaskIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '6206f4b63d9d1dd6323401f03425e922') in 0.0213844 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2b95ef19d50b21f939236f8de4f3b7c4 DependenciesID=3a4c5a758997883cb2c7a4dad415ebe1 StaticDependenciesID=dddefbaa39ba5d51a386df5433e82fa1 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapGBufferDebug.urtshader using Guid(737a1597422c12547a8714d76a9406ec) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapGBufferDebug.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'babf3e30592708beedda850f6a16aa60') in 0.0143509 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=091ab5fc811d0bb32fd83d24c76e3ade DependenciesID=a74f3d1e9dc51cb077ba856b7eab9889 StaticDependenciesID=62194a0448f2b8616e1214fb593272db 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapNormalIntegration.urtshader using Guid(1451d029813b192429211be28181beab) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapNormalIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '791a469038e49731e268afc65adafb0e') in 0.0144639 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ceb98ab71ac413b56190ee84e02cff03 DependenciesID=c40fff4210f4795126824cb6cbd960bd StaticDependenciesID=cbe3820d9825e61936c3967ec27e4e90 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/RenderingLayerMask/TraceRenderingLayerMask.urtshader using Guid(94a070d33e408384bafc1dea4a565df9) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceRenderingLayerMask.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '86f5f30a5cada56579762dd325614ad9') in 0.0143294 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1a05fb70609584037b92ffb7bbfa4513 DependenciesID=e4c04546dd7334f19deb336f5df7647d StaticDependenciesID=83d03f1fcc976b11b697d3bab0b97d8c 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/UniformEstimation.urtshader using Guid(94a39d12848d8d64ca962a72b74e7c50) (ScriptedImporter)
+Compiling Ray Tracing Shader "UniformEstimation.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '294fe8c4e2b40974f52434bf1a3e50d3') in 0.0143737 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=63829e09c8421943158a5c8e22d7fb1c DependenciesID=a3615acec63a8869e35ea1a076121cb4 StaticDependenciesID=f100dc97879ef35876f7ad5427566dd9 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/UnifiedRayTracing/TraceTransparentRays.urtshader using Guid(6513c3b892e933c4f8d00c19d5c47532) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceTransparentRays.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'ce98530d50922e273fe691dd13c2666f') in 0.0091794 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9a4f92c4b834443772f57e904b7b5318 DependenciesID=e2b5d4de0ad804a3b9ecae2a1ed8ba57 StaticDependenciesID=5e41b194f27d8b70c797e75555e2b1f0 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapIndirectIntegration.urtshader using Guid(7624adbeb148b5c48ab5ab660cc2602a) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapIndirectIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '7636fca688e599403be3d3b12c440c22') in 0.01771 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=331a21b109ee676710cbf634c8ef4c64 DependenciesID=a013b62f44319fe9498c0e871d3829fb StaticDependenciesID=6d19372de11b03798f093933090e79bb 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapGBufferIntegration.urtshader using Guid(e9f4de6d1e07fb94f9a60d35b618f724) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapGBufferIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '6b095755af600b25dba257b1420adcfa') in 0.0106988 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=88abca16d66a7184f4c4b47027b43f11 DependenciesID=7e07fd4aeea28b90cf80df010e477915 StaticDependenciesID=66dc06979910318021783fcb4ccd3ecc 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/DynamicGI/DynamicGISkyOcclusion.urtshader using Guid(5a2a534753fbdb44e96c3c78b5a6999d) (ScriptedImporter)
+Compiling Ray Tracing Shader "DynamicGISkyOcclusion.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '6f054e61c1371e27dad04f659288b92e') in 0.0106959 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d00095a4a55ff2ec22e939f29df9180b DependenciesID=ff1535c0e2997a6039c548982004dd93 StaticDependenciesID=18974378deb0e4fc540e6b2321b0ff13 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapDirectIntegration.urtshader using Guid(5bbebdef5916845478fcef13fa10d89f) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapDirectIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '16a5e83c3e0e5009ab394ab2b951fdd6') in 0.0173857 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a922f61de12ed04fdf9509350b340e48 DependenciesID=57ccbabcf65c829f2817a591a3ce9914 StaticDependenciesID=63188f79534be5f4b9e074ad4af5bfb7 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/UnifiedRayTracing/TraceRaysAndFetchAttributes.urtshader using Guid(fbc59f55df2416344b008dc23753cae2) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceRaysAndFetchAttributes.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'b176c8e4b623a9b1bca035cc8a457f3e') in 0.0115431 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3b313a6c864bac4a92bdbdf353437986 DependenciesID=d21a282b89a2e496dfcce7cde4fed2ac StaticDependenciesID=aa8291e86ea82085a643681c1c779d39 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapAOIntegration.urtshader using Guid(1c410815c01ce1d4d82c645c0cd45747) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapAOIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '9df1e187d4190f9957b2b561b03a969c') in 0.0156206 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5103f96431e842f7259bb0177de5374a DependenciesID=149050e4eae14bbf0824943226fef567 StaticDependenciesID=bcaf3aac9727a2ca27155e619d011e5f 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationValidity.urtshader using Guid(2c32233d92a2d0745930664c087c5c9a) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationValidity.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'bcf9a3db43d96e62931481948649ec6d') in 0.0304567 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7382f6ebace9db409d45bbf3f67db551 DependenciesID=c362f229ed9d3f4e8329bf893a13639b StaticDependenciesID=4aea10376946a8225ccdfdec15a70dac 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapValidityIntegration.urtshader using Guid(ace95ac84e213794891b4bd7c9b3c158) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapValidityIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '9cfefd2467c2f392ccaf70284f81d86a') in 0.0190522 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1e4e1f52bf9adcad13f0bcdba75cec3b DependenciesID=57d9d38cd2a047f8b92a9651c6724631 StaticDependenciesID=46d905dacc01197a8e043a8ad4f9d21d 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/RestirCandidateTemporal.urtshader using Guid(ad3a9f9982f8c4f4a839a78955e78458) (ScriptedImporter)
+Compiling Ray Tracing Shader "RestirCandidateTemporal.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'ee1f626977a9995fa6dc3fe2cae85133') in 0.022461 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0ee7e16793f63ad4fa9bacccbdab596d DependenciesID=a54e69929afed86f408abe0f3a11f5a4 StaticDependenciesID=2beaac54fac463ee5ee15c00b0990d01 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationIndirect.urtshader using Guid(5ecdabd800f05984696f22ba95284516) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationIndirect.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '889fc6615150a45fc63538a9546c0e35') in 0.0153074 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7b342ad6fce78607d4cb85fc02d9d19a DependenciesID=e68919762ba0a9e0f238cb17c5dcbebb StaticDependenciesID=83ecbbd61911181b4944eb7ac9eabee5 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Runtime/PathTracing/PathIteratorTest.urtshader using Guid(6e0b547bab30a804c8123974120d583f) (ScriptedImporter)
+Compiling Ray Tracing Shader "PathIteratorTest.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '57d947cae0e8003fbc981ad74169efaa') in 0.0164973 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=07420bf6446c0c205e272929d6eb81ee DependenciesID=594f11d35b7aba65962c7886d27a4981 StaticDependenciesID=cf2a33ce9b71ea08a4459556694e1323 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LiveGI.urtshader using Guid(ceb7a31b84722d144bbeff1c8cd88769) (ScriptedImporter)
+Compiling Ray Tracing Shader "LiveGI.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '12f1f33770683c6d22725c2f237e83ab') in 0.0157449 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c58ef83ec50830e9bfe040e930b3537e DependenciesID=efbcc06b527755efc51f17180af96016 StaticDependenciesID=628001b751fe9fddf64a203b1446575e 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationOcclusion.urtshader using Guid(de3013e16d99f2746ab1735ec06a660b) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationOcclusion.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'b8fb97ca364825a954794a7a33584bbe') in 0.0149745 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=34ea5cef2db8063219dc8fd537498cc0 DependenciesID=b4bdf7721efc399300aba8c6c0cc6ced StaticDependenciesID=183f3d853e4af89ec08f4e79696e167d 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationDirect.urtshader using Guid(1f9bfe60b4ad75943a5281839c1a4e5c) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationDirect.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'f9e05b28fe00eb70f1cbd312b7b9c80e') in 0.0143802 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4cedefe6725f61ebfce8197635258855 DependenciesID=e4ee24474e83bb9a6d47c033a5149289 StaticDependenciesID=d3f99f9cc1ae2c0c0147c2fa8da668fc 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/VirtualOffset/TraceVirtualOffset.urtshader using Guid(ff2cbab5da58bf04d82c5f34037ed123) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceVirtualOffset.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '6f29081014305158ffc1f553fe9ac97c') in 0.0117521 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7915af89c97778059399f61159182492 DependenciesID=4529efd1d999f927776004ba32005281 StaticDependenciesID=f51ff46b48d84884c883ac486ebfd7f9 
+Refreshing native plugins compatible for Editor in 24.99 ms, found 7 plugins.
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=aa0efcb382aaf53449d238c4102f6c4f): Total: 13.182 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=9 ms, native=6252 ms
+		Asset DB Callback time: managed=808 ms, native=345 ms
+		Scripting: domain reloads=1, domain reload time=1476 ms, compile time=4201 ms, other=89 ms
+		Project Asset Count: scripts=2911, non-scripts=6838
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 27.554ms
+	ApplyChangesToAssetFolders: 0.885ms
+	Scan: 190.635ms
+	CategorizeScriptCompilationAssets: 97.015ms
+	ProcessAssetsWithTransientArtifactChanges: 112.218ms
+	CategorizeAssets: 106.481ms
+	CompileScripts: 4200.705ms
+	ImportOutOfDateAssets: 5542.891ms (5099.597ms without children)
+		ImportManagerImport: 438.940ms (1.701ms without children)
+		ReloadNativeAssets: 0.063ms
+		UnloadImportedAssets: 1.149ms
+		ReloadImportedAssets: 15.813ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 2.415ms
+		OnDemandSchedulerStart: 0.715ms
+	PostProcessAllAssets: 1099.815ms
+		ComputeShaderImportPostprocess 144.646ms
+		RaytracingShaderImportPostprocess 141.727ms
+		XRBuildSystem.XRAssetImported 2.552ms
+		VCAutoAddAssetPostprocess 1.103ms
+		SpriteAtlasDatabase.OnAssetPostprocessCallback 0.058ms
+		MonoPostProcessAllAssets: 808.266ms
+			AssetPostprocessor.OnPostprocessAllAssets 144.288ms
+			AssetReferenceReimportMonitor.OnPostprocessAllAssets 35.431ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 25.642ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 10.674ms
+			PackageManagerResolver.OnPostprocessAllAssets 7.572ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.911ms
+			SyncVS.PostprocessSyncProject 4.678ms
+			GraphRefreshPostprocessor.OnPostprocessAllAssets 2.356ms
+			VersionHandlerImpl.OnPostprocessAllAssets 2.031ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.871ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.861ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.852ms
+			AssetChangeDetector.OnPostprocessAllAssets 1.472ms
+			AssetChangedListener.OnPostprocessAllAssets 1.466ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.165ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.104ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.726ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.694ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.638ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.615ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.537ms
+			AssetProcessor.OnPostprocessAllAssets 0.495ms
+			IOSResolver.OnPostprocessAllAssets 0.494ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.492ms
+			PlayServicesResolver.OnPostprocessAllAssets 0.436ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.431ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.420ms
+			PostProcessor.OnPostprocessAllAssets 0.419ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.410ms
+			ModelAssetProcessor.OnPostprocessAllAssets 0.364ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.337ms
+			GdkAssemblyAssetProcessor.OnPostprocessAllAssets 0.326ms
+			SkillsProjectAssetPostprocessor.OnPostprocessAllAssets 0.323ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.273ms
+			AssetEvents.OnPostprocessAllAssets 0.258ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.228ms
+			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.201ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.196ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.191ms
+			PSDImportPostProcessor.OnPostprocessAllAssets 0.189ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.185ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.176ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.156ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.141ms
+			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.132ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.073ms
+			TrackSelectedAssetsProcessor.OnPostprocessAllAssets 0.067ms
+	PostAssetChangesProfiler: 27.578ms
+	UnloadStreamsBegin: 3.551ms
+	PersistCurrentRevisions: 0.482ms
+	GenerateScriptTypeHashes: 3.252ms
+	GenerateScriptTypeSerializationHashes: 5.652ms
+	Untracked: 1768.946ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 3.780ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-The Hero
+GetVirtualKey: Could not map char: z (122) to any virtual key
+GetVirtualKey: Could not map char: y (121) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: l (108) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: k (107) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: G (71) to any virtual key
+GetVirtualKey: Could not map char: G (71) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: g (103) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: o (111) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: u (117) to any virtual key
+Unloading 93 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 13077 unused Assets / (6.6 MB). Loaded Objects now: 13814.
+Memory consumption went from 306.5 MB to 299.8 MB.
+Total: 22.136700 ms (FindLiveObjects: 0.903200 ms CreateObjectMapping: 1.239500 ms MarkObjects: 15.542700 ms  DeleteObjects: 4.448900 ms)
+
+GetVirtualKey: Could not map char: z (122) to any virtual key
+GetVirtualKey: Could not map char: y (121) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: l (108) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: k (107) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: G (71) to any virtual key
+GetVirtualKey: Could not map char: G (71) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: g (103) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: o (111) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: u (117) to any virtual key
+[TheHeroMapFix] === Fix Tile Gaps And Rebuild Proper Map ===
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:74)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+[TheHeroMapFix] Scene backup -> Assets/Scenes/Map_backup_before_tilegap_fix.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:82)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+[TheHeroMapFix] Today assets: 104
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:89)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+[TheHeroMapFix] Catalog OK
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:106)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+Start importing Assets/Scenes/Map_backup_before_tilegap_fix.unity using Guid(d68fbaabe1228e14887b7fa5ca06a025) (DefaultImporter) -> (Import Result ID: '7b8526b1f061469a2a54aab1fa8d69ac') in 0.0149968 seconds [static dependencies only]. Details - ImportResultOutputID=cea0d7646f47bf5cce1a90ca5d877bdf DependenciesID=6ff45afb4ea3ec162e7d662d8c579f90 StaticDependenciesID=01ed00edb885352570642a2db2ef4607 
+Refreshing native plugins compatible for Editor in 18.97 ms, found 7 plugins.
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=315e591624ad058429c2ead356faa3f6): Total: 0.451 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=199 ms
+		Asset DB Callback time: managed=200 ms, native=49 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=2911, non-scripts=6839
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	ApplyChangesToAssetFolders: 0.179ms
+	Scan: 35.880ms
+	OnSourceAssetsModified: 0.973ms
+	ProcessAssetsWithTransientArtifactChanges: 0.333ms
+	CategorizeAssets: 71.028ms
+	ImportOutOfDateAssets: 32.765ms (14.643ms without children)
+		ImportManagerImport: 16.050ms (0.634ms without children)
+		UnloadImportedAssets: 0.227ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.137ms
+		OnDemandSchedulerStart: 0.661ms
+	PostProcessAllAssets: 228.433ms
+		XRBuildSystem.XRAssetImported 30.137ms
+		MonoPostProcessAllAssets: 198.158ms
+			VersionHandlerImpl.OnPostprocessAllAssets 194.925ms
+			AssetPostprocessor.OnPostprocessAllAssets 1.562ms
+			SyncVS.PostprocessSyncProject 0.436ms
+			SkillsProjectAssetPostprocessor.OnPostprocessAllAssets 0.216ms
+			PackageManagerResolver.OnPostprocessAllAssets 0.164ms
+			GraphRefreshPostprocessor.OnPostprocessAllAssets 0.113ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.079ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.066ms
+			ModelAssetProcessor.OnPostprocessAllAssets 0.057ms
+	PostAssetChangesProfiler: 20.330ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.372ms
+	UnloadStreamsBegin: 1.127ms
+	PersistCurrentRevisions: 0.489ms
+	UnloadStreamsEnd: 0.530ms
+	Untracked: 36.205ms
+
+Start importing Assets/Sprites/GeneratedToday/Grass/Grass_00.png using Guid(361837c9be2dc634bafc60ba64aa4998) (TextureImporter) -> (Import Result ID: '17e82ca91a67746f02b7fa57c0deeb90') in 0.0528018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e96eb604653a5388de56caf6085eee85 DependenciesID=ddd720ae3d30838e5fe0fcb56e2f5845 StaticDependenciesID=23d6d3a9e3a9eb1448d332962b69a63a 
+Refreshing native plugins compatible for Editor in 17.33 ms, found 7 plugins.
+Asset Pipeline Refresh (id=25f68cb6cd2b16043af36440518bc99a): Total: 0.141 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Grass/Grass_01.png using Guid(2ac004965091d0c4094787867aac5669) (TextureImporter) -> (Import Result ID: 'dd92784c9aefb1e2dd708385e41c5aa1') in 0.0323947 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=33b0ce230b197c558ae97afd3ece6bd3 DependenciesID=7ab50aa7b4bfd38cd5ad9a28c017cc39 StaticDependenciesID=382125d60f26a2a8b6c04dce632b4a92 
+Refreshing native plugins compatible for Editor in 17.39 ms, found 7 plugins.
+Asset Pipeline Refresh (id=57662c83a2e8ba442b1ce73201716eca): Total: 0.239 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Grass/Grass_02.png using Guid(0c2e846a189c60348bfa8a79ab0e90ba) (TextureImporter) -> (Import Result ID: '1e6ce375fb3e03e27c4fc54f1ecfb47d') in 0.0369174 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=50ac4c896ffb2b8cfb335233a3a75462 DependenciesID=6d7f0d2b65ade5cdba1704eee12be21d StaticDependenciesID=89a2e35290f308db5803273550dceaa9 
+Refreshing native plugins compatible for Editor in 18.61 ms, found 7 plugins.
+Asset Pipeline Refresh (id=7d4a0fab9145f0d47bc8e61941ad531e): Total: 0.125 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Grass/Grass_03.png using Guid(bd0d5970bf694b044b5dd7bb55b74a19) (TextureImporter) -> (Import Result ID: 'e7e0ebc21d11bfc649103d865178cf4d') in 0.0362071 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ea83ae6f52824065235af36ad8026bf8 DependenciesID=8eb569332ff282965717a5e54b107d27 StaticDependenciesID=eb9977fb9eefac931dca48289b431c6e 
+Refreshing native plugins compatible for Editor in 16.03 ms, found 7 plugins.
+Asset Pipeline Refresh (id=0e2e06656304f034ca83fe1ebdd0e93e): Total: 0.235 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Grass/Grass_04.png using Guid(4e2d3d0e30c9f9a4aaf3f6f6efb41c5c) (TextureImporter) -> (Import Result ID: 'e397a716572958e8a3e0e2542230ac17') in 0.0329919 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e4ca957a1f004f6bcc47ae4d6dc6505a DependenciesID=d5d533540608252a5c2d4881914e2b99 StaticDependenciesID=0594465397f3b8f30f3be1fb60eac4c2 
+Refreshing native plugins compatible for Editor in 18.81 ms, found 7 plugins.
+Asset Pipeline Refresh (id=4e6fdd1612d13eb45a398e0948875567): Total: 0.118 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Grass/Grass_05.png using Guid(c358e9780e6e3df47be699ae64c03a90) (TextureImporter) -> (Import Result ID: '58cfaee4e8fb6581ff57d1c0a32d4e09') in 0.0325767 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=54255f7ea5459937fda32221d5096661 DependenciesID=1b9ee8657cdb28867f009a8a61c17499 StaticDependenciesID=dd9eacb734ba5362b9e95ae6b29ed9da 
+Refreshing native plugins compatible for Editor in 19.58 ms, found 7 plugins.
+Asset Pipeline Refresh (id=d10c9c327cee36641a223a8e3554d388): Total: 0.243 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/GrassDry/GrassDry_00.png using Guid(68632cccd0e22dd4ca77688b5a012d61) (TextureImporter) -> (Import Result ID: 'e716f39c86d30e1a8c476d6d07244ab3') in 0.0352128 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=32c3be85f450e7b96fc5da43f55a04e5 DependenciesID=01a9cd4f517d96e6d8cebb13daf85815 StaticDependenciesID=907f848f0be82a2ae1af23e749636077 
+Refreshing native plugins compatible for Editor in 17.57 ms, found 7 plugins.
+Asset Pipeline Refresh (id=71e64e2662332134fb04a83afc737dc4): Total: 0.123 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/GrassDry/GrassDry_01.png using Guid(3f97fe50968a4e14db7985c9d16e601b) (TextureImporter) -> (Import Result ID: 'bd5f196c3c973b1a56f6e31c4ec5a127') in 0.0314573 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=acd6d7365562ea137da1aa358592d383 DependenciesID=a0b524982d24db78552ee39862318c27 StaticDependenciesID=db2bc103c557f4d00a74c339d8deb0a4 
+Refreshing native plugins compatible for Editor in 15.55 ms, found 7 plugins.
+Asset Pipeline Refresh (id=14ce5e7afe392bf49b6058c3f5df46a5): Total: 0.232 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Road/Road_00.png using Guid(cac641f45ec8d7943b1ee485cc546720) (TextureImporter) -> (Import Result ID: 'af7de09952f9444010692e4b515f2d2d') in 0.0339777 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=753acee1e33993873fe28595dc4c96fd DependenciesID=67ba4d64e1b6e6e4d3292e2acc25441e StaticDependenciesID=9c582877d219325eef802095d8575273 
+Refreshing native plugins compatible for Editor in 16.57 ms, found 7 plugins.
+Asset Pipeline Refresh (id=ca5e300d93266794797660f0f3d3b32d): Total: 0.117 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Road/Road_01.png using Guid(f7db51a5c0180084388e0e1b175e71fa) (TextureImporter) -> (Import Result ID: '44196ce283329d98812381eb0c39748c') in 0.0345485 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cf4412a3109bd5b5084749f4f4d21f68 DependenciesID=52a0dead5acad9c0ff45a0dbea2957f0 StaticDependenciesID=2a8e73685b758da3470ab6afeff987bd 
+Refreshing native plugins compatible for Editor in 15.90 ms, found 7 plugins.
+Asset Pipeline Refresh (id=f16791034ae81a446bbdc328d1612e6c): Total: 0.252 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RoadTurn/RoadTurn_00.png using Guid(b3925f68014592d4f8e92ba0431dec96) (TextureImporter) -> (Import Result ID: '5d1fe2a93bef111b1989263fbbcee3a7') in 0.0335941 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7a650ba51b65b027ab936fd9bcdc45dd DependenciesID=d6f57d8a046535d23dfb3dee6dac9ceb StaticDependenciesID=908b6d3bc1fefeb372db9313c721f8b6 
+Refreshing native plugins compatible for Editor in 16.61 ms, found 7 plugins.
+Asset Pipeline Refresh (id=4335ae295a66e6e41b43a334643f21f7): Total: 0.116 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RoadTurn/RoadTurn_01.png using Guid(248571fe8c130b74bb2d7b545dc2f29e) (TextureImporter) -> (Import Result ID: '42423d7930542ba9a512e526be138cf1') in 0.0355138 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1ca0e6a5c5cf65eb884ad7c6cf94398b DependenciesID=dc9d9de935d597b489c0741c32a43cad StaticDependenciesID=9014bac6cdfb6b7e3dd6c456e04209fb 
+Refreshing native plugins compatible for Editor in 17.16 ms, found 7 plugins.
+Asset Pipeline Refresh (id=329dfe1471e3065438aae6fc415c096e): Total: 0.249 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RoadTurn/RoadTurn_02.png using Guid(c0c01de27f298f54b837abdbc0cd0610) (TextureImporter) -> (Import Result ID: '9bb7ea5757869f6e5cb44387c3d72551') in 0.0343584 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0ced35f7196b3d2e673faf9cbe5f95e9 DependenciesID=8a9306aab4447ee83f82414d0762da3a StaticDependenciesID=85b81484afd0c6f3dc1efef77114899a 
+Refreshing native plugins compatible for Editor in 18.87 ms, found 7 plugins.
+Asset Pipeline Refresh (id=3dbae87166250fd49879288ac6487998): Total: 0.122 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RoadTurn/RoadTurn_03.png using Guid(a0a4fb2d95cb64e47be4112ccab3ee38) (TextureImporter) -> (Import Result ID: '8914c044898f4b0db30d10a3576f7494') in 0.0330121 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8ad9259c763b810b00b99f9fdf198c55 DependenciesID=e74f813972ac57a8ed1f0d1d38a817d7 StaticDependenciesID=31105ef8bd4e89f9b6fdb69a0192da55 
+Refreshing native plugins compatible for Editor in 17.70 ms, found 7 plugins.
+Asset Pipeline Refresh (id=9ead30e7c144b56428acde3c54e41df0): Total: 0.237 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RoadT/RoadT_00.png using Guid(4efcffe9d5e92af428f034a19ddb8304) (TextureImporter) -> (Import Result ID: 'cfc4cd7f49e9e08a0ff6a266ddca2a0a') in 0.0330377 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cde6935687173c4263ce2185b040de34 DependenciesID=4be8b9cb84215f8a03e24dd1b42ad96b StaticDependenciesID=032be38cd21de932b12c37d2fbc3f589 
+Refreshing native plugins compatible for Editor in 18.57 ms, found 7 plugins.
+Asset Pipeline Refresh (id=e2982ded2f78b2145b77af267e688099): Total: 0.116 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RoadT/RoadT_01.png using Guid(d2daee0abf70a074f8d55b3a113d6e7a) (TextureImporter) -> (Import Result ID: 'bb28b7f835dffe78c4375e6facd638d2') in 0.0330188 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fafc4ea037031051f021dc663ea0526a DependenciesID=3fc65fff659041c55c38b70b7f71507e StaticDependenciesID=63748252d1f884060cd6e959e07c6fe0 
+Refreshing native plugins compatible for Editor in 16.72 ms, found 7 plugins.
+Asset Pipeline Refresh (id=33e02e7d0145a634a833e075e9a376d2): Total: 0.237 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RoadT/RoadT_02.png using Guid(da945b76eac0eb94eb707a7909c2a466) (TextureImporter) -> (Import Result ID: 'b13766dc7dcdaa8d7d2601734e0e4e3e') in 0.0332523 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=404963fa6faeec6f249c9df80af81c92 DependenciesID=c8e09394f858733ff4371f039777402c StaticDependenciesID=777b1bbd21333877005c8726bf29e74c 
+Refreshing native plugins compatible for Editor in 17.83 ms, found 7 plugins.
+Asset Pipeline Refresh (id=80ad23420afa9cd498806d0e10c6a694): Total: 0.126 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RoadT/RoadT_03.png using Guid(1d7728638059e544bbb25b76e8ce544e) (TextureImporter) -> (Import Result ID: 'b9dfc7dea79015017f71681c419aff81') in 0.0328844 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=839a5a784f5faec98ca17436b95a600e DependenciesID=55442b6f3ac6d500597ede0ee86ab8c7 StaticDependenciesID=323508fc79608a6f3567cb8fbbe55f83 
+Refreshing native plugins compatible for Editor in 18.47 ms, found 7 plugins.
+Asset Pipeline Refresh (id=1628ba9090ad6d24584708dd7cd38666): Total: 0.244 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RoadCross/RoadCross_00.png using Guid(24053b1e0ebd39849bf6ba19bb83944f) (TextureImporter) -> (Import Result ID: '17e27e92c59a79341a86cf23322fec7e') in 0.0339488 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1a4b23062f93eb3decf5357ce35d448e DependenciesID=37ef0327cd2bd81b9e9c13974b84060e StaticDependenciesID=a461e807fdd9b9b5c2f31bd86d4238d5 
+Refreshing native plugins compatible for Editor in 15.86 ms, found 7 plugins.
+Asset Pipeline Refresh (id=4a1dbf1199ed9ab49a055f66f0d41252): Total: 0.114 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Forest/Forest_00.png using Guid(642df048805fcad46b89b5e8e1ba4dae) (TextureImporter) -> (Import Result ID: '7e0ba77a5b9fcb102417fe61a71ffe19') in 0.0336383 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d9cf85150d42572f6bf9f3dd3ebb607a DependenciesID=8e3a651b3cf46342175073dc5c475b00 StaticDependenciesID=6568d7e9a5ec54326e5e9a07d656bb94 
+Refreshing native plugins compatible for Editor in 17.80 ms, found 7 plugins.
+Asset Pipeline Refresh (id=c119b13360c2f2a4397964ad1a2a78cd): Total: 0.235 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Forest/Forest_01.png using Guid(ad1cbf6240310334e99661d402d156d1) (TextureImporter) -> (Import Result ID: 'f68bc8bf842ba1a41ed5fb68edb39099') in 0.0343158 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7ef3b7f107eaf7c667f57f226bd9b825 DependenciesID=aab845d79778c1eceb69601ded50a446 StaticDependenciesID=1145d7d0f6b4a1a3372eea550f222822 
+Refreshing native plugins compatible for Editor in 19.64 ms, found 7 plugins.
+Asset Pipeline Refresh (id=ad1f0af2741ee2b428665a5cc0c6752e): Total: 0.123 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Forest/Forest_02.png using Guid(440cb77e370b9da4696c363462e5a2dc) (TextureImporter) -> (Import Result ID: '03c0639ffb545eb730f0d177c48ffa52') in 0.0363871 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=95807c982eff7ccf0c8e08d92c7d5d2f DependenciesID=b67cc2880f939aedf285eb6c4bf7e074 StaticDependenciesID=e2086b3b8c66d20d0e37ffdbdd647bad 
+Refreshing native plugins compatible for Editor in 16.67 ms, found 7 plugins.
+Asset Pipeline Refresh (id=c7ecdb7cd5c2af140ad834341a1a3da9): Total: 0.260 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Forest/Forest_03.png using Guid(bd186d775159d304da5eea6c3d10521e) (TextureImporter) -> (Import Result ID: '0eb9e9308e2063ddad653c03cfd580cc') in 0.0363086 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=72fd336fd6756dc64cebe72fcbe0e5a9 DependenciesID=99839f067c64a7d4ac807f4bff2d5a83 StaticDependenciesID=23a5d44a79f809ee0a9403983d364bd7 
+Refreshing native plugins compatible for Editor in 16.34 ms, found 7 plugins.
+Asset Pipeline Refresh (id=7da906dc95b92524bb18e8d4e700b79b): Total: 0.117 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Forest/Forest_04.png using Guid(31580631a0ccdb44bb862a4274ca9a73) (TextureImporter) -> (Import Result ID: '3701e8317bb24ede3248193c7967efe0') in 0.0358228 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2d03a6e110f606e228ceba8521b451de DependenciesID=972f978675100ef032ecfb255764f31d StaticDependenciesID=54b826d98214eded376bab79e35e02d8 
+Refreshing native plugins compatible for Editor in 15.62 ms, found 7 plugins.
+Asset Pipeline Refresh (id=80e0a6aa9abd40e4ba9b442ab5cdf1cb): Total: 0.240 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Forest/Forest_05.png using Guid(3dbd3c44cefa1aa428d0987e3a05fc55) (TextureImporter) -> (Import Result ID: '6b8462970925b9bb400986b16eed5dc4') in 0.0384727 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d85df519355ed33a1f9cc3990e5c69fb DependenciesID=5ffdb0000ec5b3875be78b46e6490079 StaticDependenciesID=d63f1245b452cf0c8e18cb5f512b1b62 
+Refreshing native plugins compatible for Editor in 20.02 ms, found 7 plugins.
+Asset Pipeline Refresh (id=053ab0252634dc74788746363d29d429): Total: 0.132 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Forest/Forest_06.png using Guid(9d26d40a2aa7f634ebdb385b87d22106) (TextureImporter) -> (Import Result ID: '75abfca20093893f14b55ab0fe87ef72') in 0.0347609 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c9c715d689c6425d28c59e3b67e902cd DependenciesID=ccb9da4a107e4be51691b6797e856a3a StaticDependenciesID=27adad859a55f07badbd1d0b0ed1d1b8 
+Refreshing native plugins compatible for Editor in 22.61 ms, found 7 plugins.
+Asset Pipeline Refresh (id=9fd8b97e7028e5447ada758ebdfc836a): Total: 0.252 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestEdge/ForestEdge_00.png using Guid(7cdb8f8977535fd44a8f12ed27fe96ba) (TextureImporter) -> (Import Result ID: '51aee47550702f0f10976f6d9d4cd99f') in 0.0360123 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=61e32ec5ce08281eb5f3a9b383160419 DependenciesID=0b834ffbb15a4c8e86679a4d01c2306a StaticDependenciesID=c2a651c0669a3c8a944483a6c6ae84b1 
+Refreshing native plugins compatible for Editor in 17.58 ms, found 7 plugins.
+Asset Pipeline Refresh (id=ad0ff1e807306d540a42df886c4beb63): Total: 0.133 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestEdge/ForestEdge_01.png using Guid(690399b8e119006468d7ccd501cc1060) (TextureImporter) -> (Import Result ID: '68b084f40df1d00e67e2ad70350c784b') in 0.033658 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5f4f5033734f67b7e54cb2f4c0b22f57 DependenciesID=4b19456ef9aea932d04590740faebdce StaticDependenciesID=c9f45db5226b2e0119d729e7303745e3 
+Refreshing native plugins compatible for Editor in 17.76 ms, found 7 plugins.
+Asset Pipeline Refresh (id=9aea851e3a44d7c4491c8accd91d6e46): Total: 0.247 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestEdge/ForestEdge_02.png using Guid(e7476cd76194a7c44be0219743ae1edc) (TextureImporter) -> (Import Result ID: '8b7e67d81129759be71eea322709b140') in 0.0334496 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=128223176cf8983275280d3d76693a50 DependenciesID=105acab539202b0ef072614f184751fa StaticDependenciesID=5965725f9ebede9cef262be24d643d7f 
+Refreshing native plugins compatible for Editor in 16.09 ms, found 7 plugins.
+Asset Pipeline Refresh (id=7f40c742feccb9c4493e662f8e5c3ce4): Total: 0.124 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestEdge/ForestEdge_03.png using Guid(4667d15250d220640bd478ac927ac453) (TextureImporter) -> (Import Result ID: 'edf203cd78d74a15f22ee3963f6bea6c') in 0.0331778 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=158a2e14ad3d3ff154f6deef2082ef89 DependenciesID=f69df7916a923821076b96503af85f7f StaticDependenciesID=538bd89908e5d8d19a7ef0e58c182014 
+Refreshing native plugins compatible for Editor in 16.97 ms, found 7 plugins.
+Asset Pipeline Refresh (id=3ea7e10af223e2849a7a8ba7bff2553f): Total: 0.235 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestCornerInner/ForestCornerInner_00.png using Guid(525d7e8b23cd947479331237fced138b) (TextureImporter) -> (Import Result ID: '11fed7a4a2c672132fc1e1cfd2719acb') in 0.0361953 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ee9af21f3bf60af1de379257a2c81f7b DependenciesID=578405e67f30a2ff8e4250765ebc9dcb StaticDependenciesID=7c603ce6810b6ae487e57e77f926fe1c 
+Refreshing native plugins compatible for Editor in 16.85 ms, found 7 plugins.
+Asset Pipeline Refresh (id=eb715d4e78ea1154babcf7c087855f13): Total: 0.118 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestCornerInner/ForestCornerInner_01.png using Guid(e764d25067ec44542913fb46c2a6f553) (TextureImporter) -> (Import Result ID: 'a9dccaccf024db2f6b2cdf544463f399') in 0.032922 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=22afb0188966a3452610a764de0e7fea DependenciesID=52187d009eaaa88489396299abb0b167 StaticDependenciesID=3d984b93e3e2a5cec0b64c0227c9dd6a 
+Refreshing native plugins compatible for Editor in 16.44 ms, found 7 plugins.
+Asset Pipeline Refresh (id=c8e5e1990899a0f41989f66c18469372): Total: 0.231 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestCornerInner/ForestCornerInner_02.png using Guid(961ae379387e2ad46964f65566e77ed4) (TextureImporter) -> (Import Result ID: '0b246d2f58b1ade4d303132a07245ccc') in 0.0332206 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=309a35f650cd59ebae6440b31c906a25 DependenciesID=ca827df0597b0266dd6fff2f5df0be0c StaticDependenciesID=2fd0cba96d2516f9fc6c314abe6a102f 
+Refreshing native plugins compatible for Editor in 19.26 ms, found 7 plugins.
+Asset Pipeline Refresh (id=bf9e6d2fc70d6a24d85e64d50e61ecff): Total: 0.118 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestCornerInner/ForestCornerInner_03.png using Guid(259d98db7ce90b843b2ffd7af92bcfb0) (TextureImporter) -> (Import Result ID: 'd63d4e103dac0ca2dada873d457e15cb') in 0.0311184 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a37c6eaabe637b02db886612e5e32d48 DependenciesID=954f8e8ea5662f268f6f4b7c71a5914d StaticDependenciesID=d73c2618b44e47907b2e0a0fc5ffed0f 
+Refreshing native plugins compatible for Editor in 16.34 ms, found 7 plugins.
+Asset Pipeline Refresh (id=6d8e2a77bc31c8847ab56f366ec89eac): Total: 0.237 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestCornerInner/ForestCornerInner_04.png using Guid(1e35c6adf8c44b24082f8409d4724d26) (TextureImporter) -> (Import Result ID: '3acc0ed5f0dfa7825556688d44d1d08d') in 0.034138 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7dd113ce654b73523befbd9e34d9ed72 DependenciesID=46bb0db6b53c0f8de3ca9c4c0952473b StaticDependenciesID=06e0dc02e2f995acba077448d0ee9006 
+Refreshing native plugins compatible for Editor in 17.90 ms, found 7 plugins.
+Asset Pipeline Refresh (id=a2cadb3e41348bc40ada125a9a67dd59): Total: 0.119 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestCornerInner/ForestCornerInner_05.png using Guid(2fa8378663d03bc4d8b328294edea86a) (TextureImporter) -> (Import Result ID: 'bbd284bd122689b3fde5b2c21d0d6d5e') in 0.0362852 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5420839e226a40474867a859b6451d4d DependenciesID=9b120d8439ae8e9cfde86ece5d66a993 StaticDependenciesID=f763c999eb4a33a27668696e21ffc635 
+Refreshing native plugins compatible for Editor in 18.94 ms, found 7 plugins.
+Asset Pipeline Refresh (id=ef36fb1d43dc8e74eabfa2dd0fc74bc0): Total: 0.240 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestCornerOuter/ForestCornerOuter_00.png using Guid(3478712503a13744b93c6b3725ad07d2) (TextureImporter) -> (Import Result ID: 'a3b22e880484571f143041ca2fa7b5cd') in 0.0360963 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=062c8c793f41750f02b53c64f1ebe2b0 DependenciesID=3d100ede409823d0d07671bad59dbe1a StaticDependenciesID=5e778d5abad61965d26f84652581ab7d 
+Refreshing native plugins compatible for Editor in 16.90 ms, found 7 plugins.
+Asset Pipeline Refresh (id=565526fc533ef0b4b9da7c8256817736): Total: 0.119 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestCornerOuter/ForestCornerOuter_01.png using Guid(ec974f1da9b8c264090b3f95b66b42cd) (TextureImporter) -> (Import Result ID: 'ef3a694ab3ad05200d6a2c4260d27d33') in 0.0365722 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5bfa58d0bbb4589d916f6dc655748d3d DependenciesID=a795258edb6f68095af8e6822fba6697 StaticDependenciesID=b3f521a00215861791d23e3d9f3a69f5 
+Refreshing native plugins compatible for Editor in 17.20 ms, found 7 plugins.
+Asset Pipeline Refresh (id=459497b3205a02d48b9dbe361c847cbf): Total: 0.245 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestCornerOuter/ForestCornerOuter_02.png using Guid(d60c932f7f560e842936a7b0dfd39dda) (TextureImporter) -> (Import Result ID: '4022fb718110216f368b53b8980dfd2d') in 0.0340399 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1520dfbc5c1a6c4c7067d71e27116db0 DependenciesID=9d6a62a1fcd631d921508ffd4f73c770 StaticDependenciesID=dec93e050032f4672721053d0ad5d185 
+Refreshing native plugins compatible for Editor in 16.10 ms, found 7 plugins.
+Asset Pipeline Refresh (id=44fbb6c0caa239f4dafbe54b778ae43a): Total: 0.115 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestCornerOuter/ForestCornerOuter_03.png using Guid(dd08e0f5fd881f446bed4665883ddc64) (TextureImporter) -> (Import Result ID: 'b474d7205eadfde4a3c9f251c53ad4e8') in 0.0318842 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0fcad1c93384f873f7d892a5d55d2f49 DependenciesID=1790c195dda4bb254c43003212845d00 StaticDependenciesID=6eaab1144f9f98e698ce42f1de668f43 
+Refreshing native plugins compatible for Editor in 17.59 ms, found 7 plugins.
+Asset Pipeline Refresh (id=85f7a57f8810ec64492cc2192ec91268): Total: 0.234 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestCornerOuter/ForestCornerOuter_04.png using Guid(95105efa29d7ad04a849c361189be1c8) (TextureImporter) -> (Import Result ID: '35fcb88d2bcbd1c7e00111ecfa63c4a3') in 0.0340713 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=83cb79dac35f83119da8588f72a2f893 DependenciesID=e9ec8e10f23161e51dbb350e4a327367 StaticDependenciesID=558edc88e1bd62b9e1906eee505673fb 
+Refreshing native plugins compatible for Editor in 16.84 ms, found 7 plugins.
+Asset Pipeline Refresh (id=12066e74c6855fb4689b85b1135ac8e9): Total: 0.120 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/ForestCornerOuter/ForestCornerOuter_05.png using Guid(780c8bcee45253c40ad901ef856eef95) (TextureImporter) -> (Import Result ID: '2b9b731ed4df571744da2d805fa6e855') in 0.0347783 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b276884097e6095d42bca3924e5ddd4c DependenciesID=dba337ebefc298ae8f0381a319612311 StaticDependenciesID=01c385898fd63ccc04d1db86e3ec7e76 
+Refreshing native plugins compatible for Editor in 18.13 ms, found 7 plugins.
+Asset Pipeline Refresh (id=33a9a8e79d5deaa4895128cc17d6249e): Total: 0.237 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Mountain/Mountain_00.png using Guid(fa85d99235780fd43abc698d45e94d07) (TextureImporter) -> (Import Result ID: '3bc38cca0598dfa7b81b91c4875320fd') in 0.0339214 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e08fb7c75d350b3e918e0b3347ea8ce1 DependenciesID=8bb0ab04ea9c6347159a9f68997b7f71 StaticDependenciesID=82bbd5fd1635fc5ca8c4038e9ef4268f 
+Refreshing native plugins compatible for Editor in 14.97 ms, found 7 plugins.
+Asset Pipeline Refresh (id=33bf364dfcb39c24297264f2973c20ee): Total: 0.115 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Mountain/Mountain_01.png using Guid(af7ba2e49d806ce4ea1d3b2a9cb206a8) (TextureImporter) -> (Import Result ID: 'a0d772d94e885696ce1949046460ca6c') in 0.0348612 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bdbeb2a5b587323b41cc8111b3fb8f9c DependenciesID=163a3edb9a716e89aec4848f063adc4e StaticDependenciesID=444fdff4ff40bb60dc3572571729d082 
+Refreshing native plugins compatible for Editor in 18.91 ms, found 7 plugins.
+Asset Pipeline Refresh (id=57d60d08384bc1a4c97599aa7727d964): Total: 0.244 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainEdge/MountainEdge_00.png using Guid(ad0c681d8887c6d408b5a7289b0711ed) (TextureImporter) -> (Import Result ID: '5e348a2e8a2d621eedfbf0b29a28b68d') in 0.0332255 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=06e8899ac4288412f03b9169dd38ef4c DependenciesID=6435d495e71d69332184e7106bdacad5 StaticDependenciesID=53f1e4f6e45fc61ac9dd1896e8bdd260 
+Refreshing native plugins compatible for Editor in 17.23 ms, found 7 plugins.
+Asset Pipeline Refresh (id=ff8c757d13fa4844eba9b403b350554e): Total: 0.116 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainEdge/MountainEdge_01.png using Guid(02af6876884aa3444b50a2a51e8ac37b) (TextureImporter) -> (Import Result ID: 'a9df8397e3fd488cd2151211cc2fba3f') in 0.0341751 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=08f7b3f6f3139d4d9a09de34be95a009 DependenciesID=df8c9c278586e973a4ea0a8e5a53030c StaticDependenciesID=5fc3a2ac96fd1e05126db19eaf922911 
+Refreshing native plugins compatible for Editor in 17.75 ms, found 7 plugins.
+Asset Pipeline Refresh (id=73bc1053856e2b44d9b0eb683337e36a): Total: 0.242 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainEdge/MountainEdge_02.png using Guid(0b91e36eb0ea30d46838422f6b635733) (TextureImporter) -> (Import Result ID: '7bef082178229ddfd0744946ad3dae66') in 0.0346156 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=38f3e5e1f5440b89582e46798d0cb7e6 DependenciesID=a802ae3f3ca6ea41781fb4a7c5e16aad StaticDependenciesID=422be954030b16a96e1e4516b6fcdc09 
+Refreshing native plugins compatible for Editor in 16.17 ms, found 7 plugins.
+Asset Pipeline Refresh (id=c14725bf77ed78443a9890537e89b5ce): Total: 0.116 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainEdge/MountainEdge_03.png using Guid(f4cfad1ff5744dc44bea8a4acd89a0dd) (TextureImporter) -> (Import Result ID: 'd1e219c86d1396f1204dffa891a8f590') in 0.035322 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=031ae93bcd7507820b36477029a6d319 DependenciesID=96cb13ee57bbd3f23b8d8f0c7065444a StaticDependenciesID=dd257f4956d4d1ad3e1947acbc4115ef 
+Refreshing native plugins compatible for Editor in 17.57 ms, found 7 plugins.
+Asset Pipeline Refresh (id=9e9dae10c474ee34ab606062419b98bb): Total: 0.240 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainCornerInner/MountainCornerInner_00.png using Guid(81edbbd9273ca4b4395b73d95f906e5f) (TextureImporter) -> (Import Result ID: 'd95ea5b66f31a0f5980fe0ce790bfe41') in 0.0339048 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6cd13eba159d66a0b148e95705cbc7a3 DependenciesID=c9a4b2eb55bbd3dbfb17ca7acdd7bab5 StaticDependenciesID=1d53899c34048c09c6c5f8da3541ee18 
+Refreshing native plugins compatible for Editor in 15.53 ms, found 7 plugins.
+Asset Pipeline Refresh (id=32f9e8a1676e6db46a1601f488b290fd): Total: 0.119 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainCornerInner/MountainCornerInner_01.png using Guid(d624c501c8807d84fb5c0e6a70228db4) (TextureImporter) -> (Import Result ID: '28a1807d7a4b3767b73a5523009c302e') in 0.0322852 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=df08c6add22288a19f02a624119c18dc DependenciesID=809afb8e9fc2c9ed7273e06e55e33f9d StaticDependenciesID=baca136f5fe30770275fc362783eafea 
+Refreshing native plugins compatible for Editor in 16.54 ms, found 7 plugins.
+Asset Pipeline Refresh (id=43380d10825998442a55f83d8fd5c2ba): Total: 0.234 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainCornerInner/MountainCornerInner_02.png using Guid(d269c7ddec02ee843b1fefdd3bb30334) (TextureImporter) -> (Import Result ID: 'd868d7d93719be7bf4f3f11f79c49c9b') in 0.0339871 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=70962198b843baae09d3f01cb75c4cd0 DependenciesID=0890cf75b018a0e29cf92c46891726d8 StaticDependenciesID=dff45793710994f90f1c05db2ea22fbe 
+Refreshing native plugins compatible for Editor in 15.43 ms, found 7 plugins.
+Asset Pipeline Refresh (id=ef5cb11158ec4cf45bc156d84fd399dc): Total: 0.114 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainCornerInner/MountainCornerInner_03.png using Guid(813a299061cd59f49a1b2877cf61c1e4) (TextureImporter) -> (Import Result ID: '3ecfe1426861af7e3b714b72491b3c7b') in 0.0330913 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f236d4380d67e98a2a78a929d7189bc6 DependenciesID=26989611cb693208a1f4b74f77fe1d5b StaticDependenciesID=37dea40005ec93b61239aa679dbfe62c 
+Refreshing native plugins compatible for Editor in 16.28 ms, found 7 plugins.
+Asset Pipeline Refresh (id=0514d15b29d641d47bf628f69f90814c): Total: 0.229 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainCornerOuter/MountainCornerOuter_00.png using Guid(6f10a17daa71eb34ab23e51c52fdf22d) (TextureImporter) -> (Import Result ID: '60d779797d14e742c6c0407e5efc9e2d') in 0.0334067 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=67323bf15b9d46acbd1cc2dcf32317bf DependenciesID=279e7def348e178b80657fcc28bf24df StaticDependenciesID=499a1ae0ad382e40d47fb578f732d759 
+Refreshing native plugins compatible for Editor in 18.01 ms, found 7 plugins.
+Asset Pipeline Refresh (id=ebad9fafa64316d4f9ab7d555ef690bf): Total: 0.116 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainCornerOuter/MountainCornerOuter_01.png using Guid(e060415000ce91a4f9035f5c85b69a36) (TextureImporter) -> (Import Result ID: 'fbe6fd2417eace9a4c60c8fb31258da1') in 0.0340174 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=42ce3265f0601a3492055687775880b3 DependenciesID=63038a9b7aee2f6b9fb5dbbf28556b0b StaticDependenciesID=8ba6ac867c4e4eca998665024e48bdac 
+Refreshing native plugins compatible for Editor in 17.32 ms, found 7 plugins.
+Asset Pipeline Refresh (id=02def7a9bcc7be74aa1366fdd126cd51): Total: 0.242 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainCornerOuter/MountainCornerOuter_02.png using Guid(b9137c90794758e4db458add66553d48) (TextureImporter) -> (Import Result ID: '4deb82126e17659507a54e5785b6abd4') in 0.0345987 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f2afebe9406fdcaf5e121b85689886d8 DependenciesID=67a6bb499f80ba718ef5069b6b253cbb StaticDependenciesID=aa59b2568ae7083765c7ceeaaf865f7c 
+Refreshing native plugins compatible for Editor in 15.14 ms, found 7 plugins.
+Asset Pipeline Refresh (id=24cbb11a72e9e224d8c7aed9d5822032): Total: 0.116 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainCornerOuter/MountainCornerOuter_03.png using Guid(1eddb033a7ffefb4488ebe002ab33955) (TextureImporter) -> (Import Result ID: 'd997a3dd3b56ac042938dbff21ccfb77') in 0.0335299 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=db8e004776b96bbe02621d170d0b4b29 DependenciesID=6f129ef76bdaf845c6c8725039d62efe StaticDependenciesID=8556113fb71853f4d7b16f5b10c972b5 
+Refreshing native plugins compatible for Editor in 19.02 ms, found 7 plugins.
+Asset Pipeline Refresh (id=f1722171bef841b49acd5f4069627242): Total: 0.239 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainPeak/MountainPeak_00.png using Guid(6a0a4af8d6a82c148a8ac09e02c3c5b5) (TextureImporter) -> (Import Result ID: 'fdb83e392b133867b3f65ce2e7846b84') in 0.0356875 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f4ed9ac1357bb2b2f27941b6dd216735 DependenciesID=f8992d466379b8043b52293f6477eefe StaticDependenciesID=17f6de311d4ebe80a4dc65709181ead6 
+Refreshing native plugins compatible for Editor in 15.28 ms, found 7 plugins.
+Asset Pipeline Refresh (id=0fbe3c6d7b6cc9346b65b91992fcc2f4): Total: 0.121 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainPeak/MountainPeak_01.png using Guid(2438ebcfe016b6644838e0d521ab22d6) (TextureImporter) -> (Import Result ID: 'f514a66597cea5198dc3ab9769ee529f') in 0.033829 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=66fb8c213b60c6aaaeda3b19a6df7f81 DependenciesID=2303358b8dede353b72ae774d044f48a StaticDependenciesID=79d169ce9f61b3b661b1812b53064616 
+Refreshing native plugins compatible for Editor in 18.31 ms, found 7 plugins.
+Asset Pipeline Refresh (id=241410e9cbba2fb4388afaa0bdf99bfe): Total: 0.237 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/MountainPeak/MountainPeak_02.png using Guid(41fb0d42380b17b4190db40cc396703e) (TextureImporter) -> (Import Result ID: '9ea4d1b930ca6de85a0524d1c5234974') in 0.0329208 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0d336924a820099be64552f9d3827a82 DependenciesID=af66ffe8d5656dc2dc3fa309426004ed StaticDependenciesID=aebcbab594aad37e9b4b3e36cd86fb1a 
+Refreshing native plugins compatible for Editor in 15.41 ms, found 7 plugins.
+Asset Pipeline Refresh (id=ea5248a4a5dfb5d42a45573354f1b36e): Total: 0.117 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/River/River_00.png using Guid(b8d9131453211e04face1b842fa7aff7) (TextureImporter) -> (Import Result ID: 'c8678ff90afb0ba08e384f5539e07eba') in 0.0332502 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e73d14eb9a3e48ed5e5b9d34bd7ef01b DependenciesID=b81d7af1b8359d7ac7786c31c114dfe0 StaticDependenciesID=e601f49b299e6c20eda890b26625d22a 
+Refreshing native plugins compatible for Editor in 16.35 ms, found 7 plugins.
+Asset Pipeline Refresh (id=cd3ba844a86aa2f4ea6bb42fdc748b7f): Total: 0.245 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/River/River_01.png using Guid(bd083c5727ce9b34ca9467c960dd8bee) (TextureImporter) -> (Import Result ID: '70fce33b6986936d1dbbe1f0b2486387') in 0.0309576 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5c7d29a0be83dc7b7df0cac9a3563578 DependenciesID=3d7e337d553fbe48e559589b9518844d StaticDependenciesID=97fa4c4129efef9a2b155ddb3eb14568 
+Refreshing native plugins compatible for Editor in 17.78 ms, found 7 plugins.
+Asset Pipeline Refresh (id=742455076d6f9d146b032236743c888f): Total: 0.113 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/River/River_02.png using Guid(dc3d9a10b5bbc83489b3f66e41c20dfe) (TextureImporter) -> (Import Result ID: '3b3d3c6fe8cf60f941ee62df9f9a51d0') in 0.0319593 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c7c73cfe2d17f5238dc5af02c6895a8d DependenciesID=16da7770679bdee66f7f91d08205c9ef StaticDependenciesID=b14194ee668361cb16d1d1219c976719 
+Refreshing native plugins compatible for Editor in 16.75 ms, found 7 plugins.
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=dd9fc369966aaae40a459554ebea6ad4): Total: 0.307 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=93 ms
+		Asset DB Callback time: managed=192 ms, native=19 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=2911, non-scripts=6839
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 5
+	ApplyChangesToAssetFolders: 0.200ms
+	Scan: 15.601ms
+	OnSourceAssetsModified: 0.063ms
+	ProcessAssetsWithTransientArtifactChanges: 0.282ms
+	CategorizeAssets: 30.746ms
+	ImportOutOfDateAssets: 39.490ms (0.451ms without children)
+		ImportManagerImport: 37.027ms (0.593ms without children)
+		UnloadImportedAssets: 0.243ms
+		ReloadImportedAssets: 4.116ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.108ms
+		OnDemandSchedulerStart: 0.626ms
+	PostProcessAllAssets: 195.367ms
+		XRBuildSystem.XRAssetImported 2.825ms
+		MonoPostProcessAllAssets: 192.427ms
+			VersionHandlerImpl.OnPostprocessAllAssets 191.265ms
+			SyncVS.PostprocessSyncProject 0.344ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.091ms
+			GraphRefreshPostprocessor.OnPostprocessAllAssets 0.081ms
+			PackageManagerResolver.OnPostprocessAllAssets 0.074ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.060ms
+	PostAssetChangesProfiler: 16.904ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.328ms
+	PersistCurrentRevisions: 0.353ms
+	Untracked: 7.548ms
+
+Start importing Assets/Sprites/GeneratedToday/RiverEdge/RiverEdge_00.png using Guid(82cc23456ea79b14ba637de9dc0ee576) (TextureImporter) -> (Import Result ID: '407a01486983395fec97a3062c3596c7') in 0.0388196 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=886494e5923301d5981462f0807cb994 DependenciesID=f70e5ee99f454eeba2aa04adf76124be StaticDependenciesID=e09f2201d379f0c49493905dfa1ee13e 
+Refreshing native plugins compatible for Editor in 16.95 ms, found 7 plugins.
+Asset Pipeline Refresh (id=035fdc4627527064490d6782bc036594): Total: 0.123 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverEdge/RiverEdge_01.png using Guid(665bfccf43b89394bae4228e5952354d) (TextureImporter) -> (Import Result ID: 'f4757ada8695e9907f6f8217b918fe84') in 0.0318726 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3b652aadb03b21cf4a3a6275db440cba DependenciesID=0eb8ba829e802fd16e79619e56fc41ca StaticDependenciesID=79f33a6166167358e836126428bfb297 
+Refreshing native plugins compatible for Editor in 19.26 ms, found 7 plugins.
+Asset Pipeline Refresh (id=4d34e3d66cee6d14f81f1076ba4db59b): Total: 0.238 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverEdge/RiverEdge_02.png using Guid(447bc313e17e9c54c974f9f8971c47d9) (TextureImporter) -> (Import Result ID: 'be59c24cffc4d5afc094daecba6ba28e') in 0.0329317 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e4c8f487808b29292863eb544d5fea2c DependenciesID=60672b0197c9e56d2cca30c483e2a2c4 StaticDependenciesID=b9793453be97ba7f8d9f3a19cfadcfda 
+Refreshing native plugins compatible for Editor in 19.33 ms, found 7 plugins.
+Asset Pipeline Refresh (id=43d1794e483221d43a8e8fe93e80f7b4): Total: 0.117 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverEdge/RiverEdge_03.png using Guid(4f67b4dc93adb2948a0597668147ee0e) (TextureImporter) -> (Import Result ID: '038ac766e7615dd15ae2cb5c40199aaa') in 0.0336599 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d6e1e69f0be000717e41d6baa9590967 DependenciesID=62889bb225e1e0180e012b9b76bd3089 StaticDependenciesID=c9bf98633d8ca30f17511f22e7f9e444 
+Refreshing native plugins compatible for Editor in 16.87 ms, found 7 plugins.
+Asset Pipeline Refresh (id=c17413286bea16c41b44d4ea9c5dd722): Total: 0.236 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverEdge/RiverEdge_04.png using Guid(b777eaaf7b3aa1546b6adff7e3429314) (TextureImporter) -> (Import Result ID: '2869e25d0f758a855db317a2b03f84f5') in 0.0327927 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=341bbbb0373c8764c655a5b58ea131cf DependenciesID=a271014800d06940216dc72dc017299e StaticDependenciesID=5ccc1ee6fb9bb90d41699988597dca06 
+Refreshing native plugins compatible for Editor in 14.67 ms, found 7 plugins.
+Asset Pipeline Refresh (id=dde02a64f72fe1a4abbb1cb7f1329eb1): Total: 0.112 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverCornerInner/RiverCornerInner_00.png using Guid(ff342906c630dc040adacbf42187a18a) (TextureImporter) -> (Import Result ID: '9036443bfd7851357de3a29c123be595') in 0.0318613 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4130032ea735312b9848d4641089804d DependenciesID=d7cc7da449ef739efee9017f24d57a7d StaticDependenciesID=12c1726ecf00250e2bbd5907f08de425 
+Refreshing native plugins compatible for Editor in 15.40 ms, found 7 plugins.
+Asset Pipeline Refresh (id=7ba04938095216c429d4157cc52d2f10): Total: 0.226 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverCornerInner/RiverCornerInner_01.png using Guid(031e219d3e1e4cc40b9e4f61f8bc75e2) (TextureImporter) -> (Import Result ID: '21d3c0fc8231738744d984c0ca28c9a7') in 0.0342405 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=430f9c44fd705457e93f60890002e91e DependenciesID=34c070b1754505d1e2082fdf482fe401 StaticDependenciesID=e918056cb35e6e05219f15d8d03bfc32 
+Refreshing native plugins compatible for Editor in 14.98 ms, found 7 plugins.
+Asset Pipeline Refresh (id=a640dfe25779d0249b3416b2fb4a22f0): Total: 0.113 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverCornerInner/RiverCornerInner_02.png using Guid(e47d1bc55d5b01f4aad740aeefd6b7d8) (TextureImporter) -> (Import Result ID: '331e337424067a0858994e6760be34cf') in 0.0311614 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=186c76564d9cd882b749adbfb4fb1a11 DependenciesID=ffd4e1576a59aef7eda967cf45ec3eb8 StaticDependenciesID=0b698f19e207169040e2066f4c414be7 
+Refreshing native plugins compatible for Editor in 21.20 ms, found 7 plugins.
+Asset Pipeline Refresh (id=fed2caada1371a44f8bdbb308de5918c): Total: 0.232 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverCornerInner/RiverCornerInner_03.png using Guid(14459ee254fb1d2428828f186c350ff4) (TextureImporter) -> (Import Result ID: '46e0bb028089285a117a52a6206f2f1e') in 0.0330054 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3fab1bba0f7fe39941cbacea47d91c38 DependenciesID=64055b34ca1540a592e713dff7c19e27 StaticDependenciesID=fbee02da93f8521892c5a2559c41e25c 
+Refreshing native plugins compatible for Editor in 16.88 ms, found 7 plugins.
+Asset Pipeline Refresh (id=a4f788698d7f30e499d738e5ae52010c): Total: 0.119 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverCornerOuter/RiverCornerOuter_00.png using Guid(4c2f9e8591432f34cb91e042689978ac) (TextureImporter) -> (Import Result ID: '240e6cdcadfbbd87e86d76e833202d82') in 0.0331425 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=01dfce3bfdebfe0f980f99bfd2f07138 DependenciesID=42b9cecd5e2217d66a1c34e506fb6093 StaticDependenciesID=b779ae88adb7c09c6c92724f99cc7eb5 
+Refreshing native plugins compatible for Editor in 18.86 ms, found 7 plugins.
+Asset Pipeline Refresh (id=4de788b2f76626a40b30d708862c4854): Total: 0.236 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverCornerOuter/RiverCornerOuter_01.png using Guid(588b464713976454eb6adcd85b77dd90) (TextureImporter) -> (Import Result ID: 'a98723625b8250e867c39c1f6d8b3f99') in 0.0339646 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c2a03b627a15abdd806b82d5af817d01 DependenciesID=3e44972bf0a4cc5aedfd14e020fcbe1f StaticDependenciesID=85a92847623271362a1abf6525c1b3ae 
+Refreshing native plugins compatible for Editor in 17.26 ms, found 7 plugins.
+Asset Pipeline Refresh (id=f5678af660ba22a4c8debd21809f3931): Total: 0.114 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverCornerOuter/RiverCornerOuter_02.png using Guid(da29a7e63e0fad9429007088fc7f65b3) (TextureImporter) -> (Import Result ID: '73f37ffaa12df7424c858cf1173aafdc') in 0.034048 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=38db8eb31d365267bdf67ea5d5c627e6 DependenciesID=048d3d348765c0068cd0de49ec32fd18 StaticDependenciesID=21884da93ecc83207ca5a33cd129d076 
+Refreshing native plugins compatible for Editor in 18.64 ms, found 7 plugins.
+Asset Pipeline Refresh (id=26faf706e1ac6fa459919c954027171a): Total: 0.237 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverCornerOuter/RiverCornerOuter_03.png using Guid(2170759909ad96c4e95469181e938c93) (TextureImporter) -> (Import Result ID: 'e5f3c93e0c3f394615407480619f9b10') in 0.0321479 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bb21572d415678c24c0afe8493b1d7e6 DependenciesID=2ca72b6ec14f5f2c800de2e843f86baf StaticDependenciesID=e9321ee75877182520c8a3828accd2e9 
+Refreshing native plugins compatible for Editor in 16.30 ms, found 7 plugins.
+Asset Pipeline Refresh (id=2096c95e7077a3943bf1008cddec8e84): Total: 0.113 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverDiagCorner/RiverDiagCorner_00.png using Guid(3bd4a1146f1637346abea3f26dcdf667) (TextureImporter) -> (Import Result ID: '3cca1f7112fea4990e9c7afdfc536e44') in 0.0331052 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c096e718bbe7b6c5c12c0c04bef0de9b DependenciesID=1033dd04789ae3a30d87398b7f02161c StaticDependenciesID=3ca4b0aaa36c8d729e0c23a5c9137eef 
+Refreshing native plugins compatible for Editor in 17.98 ms, found 7 plugins.
+Asset Pipeline Refresh (id=dade51161fdcad14aba279a6f2eec702): Total: 0.236 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverDiagCorner/RiverDiagCorner_01.png using Guid(19eb957c5b1bebd49be77779cc1b9e8b) (TextureImporter) -> (Import Result ID: '6b95e4f2e74bf5331b0875dbbe4e7b88') in 0.0340167 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c3dfaa0b6aa3c381d59d71d6c87c866a DependenciesID=7e049b56950cb73a7f47f64c5f7f5a99 StaticDependenciesID=f8e601f0fe66ab2fa0d213a5e10ecff8 
+Refreshing native plugins compatible for Editor in 16.96 ms, found 7 plugins.
+Asset Pipeline Refresh (id=cc6f580f5cb745a4f90a3b55d0c1b2bb): Total: 0.117 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverDiagCorner/RiverDiagCorner_02.png using Guid(45aefd8bc5278124d8e9e714dbd12ce0) (TextureImporter) -> (Import Result ID: '2c7214eaab87052b6d70e48d23acf621') in 0.0334054 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ee5042bed869bffbae7404943fcd7667 DependenciesID=22baa206758d6b4a3bad92515332b09c StaticDependenciesID=f585f75534dca6bc50048ecbd169c238 
+Refreshing native plugins compatible for Editor in 16.21 ms, found 7 plugins.
+Asset Pipeline Refresh (id=691025fd0e864924bada6aa10279890a): Total: 0.244 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/RiverDiagCorner/RiverDiagCorner_03.png using Guid(87f920703c706f64ba39863e8fc57641) (TextureImporter) -> (Import Result ID: '1b9dbc0837e7daed0df82881c3da3864') in 0.0319054 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2ca4009bc35c361fee45fd19e618388b DependenciesID=da34b3bdff945ca97deceec2b73e6c76 StaticDependenciesID=3cbf1fbedbd6efe082bb9421321dcb0d 
+Refreshing native plugins compatible for Editor in 17.35 ms, found 7 plugins.
+Asset Pipeline Refresh (id=046e4a4d08383974294babbe0e4d8f32): Total: 0.118 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Dark/Dark_00.png using Guid(2071c74bfba746e4dbbdf262c9cfbed5) (TextureImporter) -> (Import Result ID: 'cf1ae4044f7eb71720667a622e447a3e') in 0.0348854 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=33a5d36c30bb4ebb14f3247e580205fb DependenciesID=d37b12854c5c10d38532cf6a818bd29f StaticDependenciesID=8b3e128ed7c11971c8853915445faf82 
+Refreshing native plugins compatible for Editor in 16.44 ms, found 7 plugins.
+Asset Pipeline Refresh (id=8d3eaab72a875d84abd5d32235c11129): Total: 0.232 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Dark/Dark_01.png using Guid(aa86e64c0dc243443841d144338bcf18) (TextureImporter) -> (Import Result ID: 'bb51e8af5f7674078099340c9df15d83') in 0.0328129 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0487372c7cfea406facbdfc565ec30e5 DependenciesID=8d04e85ec47ccb61920808756129520a StaticDependenciesID=424c1ea2737200cb3976d80a58bae9a1 
+Refreshing native plugins compatible for Editor in 17.19 ms, found 7 plugins.
+Asset Pipeline Refresh (id=fbf53a62771ec3c439f20dd9246b4317): Total: 0.116 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Dark/Dark_02.png using Guid(d456ba9480ccdbc47b1106973f6faecc) (TextureImporter) -> (Import Result ID: 'c6a3ef239d0eed7c292239a4cda6d431') in 0.0337189 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d66130004cad45db63c67924791ce0a2 DependenciesID=f82f3b5e071e1f1cdf83e7ef3fd60546 StaticDependenciesID=902a1606009231c15800029529ab0a65 
+Refreshing native plugins compatible for Editor in 16.06 ms, found 7 plugins.
+Asset Pipeline Refresh (id=5a1b5d2a14cd34348b3aa74e50d1fbea): Total: 0.239 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Dark/Dark_03.png using Guid(40c6cfbf2aaab2d4b80a515ee5161894) (TextureImporter) -> (Import Result ID: '32626fe5f50abca2c288d0c5ec6e7347') in 0.0339479 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5402372c538be35b3787edce8e4bcc6b DependenciesID=7c5a9f76f42560e75f62ad36f564163f StaticDependenciesID=2ea9958794b4f694d0e992e26e1b38bc 
+Refreshing native plugins compatible for Editor in 19.56 ms, found 7 plugins.
+Asset Pipeline Refresh (id=4f1dde269f679a0419af97983110a0cf): Total: 0.121 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Dark/Dark_04.png using Guid(a5b8fe78537a87049b14b2c6061a605e) (TextureImporter) -> (Import Result ID: '2b7bb0150450db0f669897f6afc2428d') in 0.0338761 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ca454a0abf27b533860585b4b7d416a2 DependenciesID=6af323ff003819d563143173c7118c70 StaticDependenciesID=0565ba5279c1bb985ac2de6ca88590af 
+Refreshing native plugins compatible for Editor in 16.44 ms, found 7 plugins.
+Asset Pipeline Refresh (id=1f4d6f5c2f5064d4f9d2646ea52c2acf): Total: 0.235 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Dark/Dark_05.png using Guid(c4cf41f2acefdaa45b3363221e7d2835) (TextureImporter) -> (Import Result ID: 'a184659abe9429721c371c3d124d839d') in 0.0337231 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=98000bdcb007999483c7439b79bb6521 DependenciesID=e5039bcc3b90fac03d0f8d7fcff102ae StaticDependenciesID=d54e9c02500c8f62cfcb941f2b03a89a 
+Refreshing native plugins compatible for Editor in 15.17 ms, found 7 plugins.
+Asset Pipeline Refresh (id=3c2d424ea5c57224ca06b62cfa935295): Total: 0.113 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Dark/Dark_06.png using Guid(613f8eaf6b32e1547a7b4a25b0d6c1d6) (TextureImporter) -> (Import Result ID: '8617048c9e7cf2c01180cb9fa853dfc5') in 0.0340397 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1e30188230b4436f09b5d5ad933ffa64 DependenciesID=9aa494f81434b90a685c8dedf89d4ea6 StaticDependenciesID=6d02125a3f5f5320afd7037d81d533c3 
+Refreshing native plugins compatible for Editor in 18.75 ms, found 7 plugins.
+Asset Pipeline Refresh (id=2ab57431381db444cb8133210cabffe3): Total: 0.236 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/DarkEdge/DarkEdge_00.png using Guid(06378bdcd89d4c54a8278906d88446d1) (TextureImporter) -> (Import Result ID: 'f83341c357ad5ebfea091f1fe1535bdb') in 0.0340592 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3e3582d749a3b0c5d75a853b64cb226c DependenciesID=b35b613586b1dcf5c32fdb8905dd7ee1 StaticDependenciesID=ecfad21ecb3046fb08f233fb840a170c 
+Refreshing native plugins compatible for Editor in 17.39 ms, found 7 plugins.
+Asset Pipeline Refresh (id=44046d4821afe0b4d842507a54e9bab5): Total: 0.118 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/DarkEdge/DarkEdge_01.png using Guid(cd427dee10463b848b1eef0977ac61cf) (TextureImporter) -> (Import Result ID: '20224ea16b51b580dd2ff59a2e404186') in 0.0345753 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dd73bae1b5bae2357c92b629199facff DependenciesID=98b804bcb5db069bee74c57337089c19 StaticDependenciesID=5d3fe35a2e9bf610de4f9692f260d35e 
+Refreshing native plugins compatible for Editor in 15.74 ms, found 7 plugins.
+Asset Pipeline Refresh (id=c8b2c33bf7067834c8b4c07d2f4ad9ec): Total: 0.232 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/DarkEdge/DarkEdge_02.png using Guid(e289ba8f43971e04bb9ed53d3df08ebb) (TextureImporter) -> (Import Result ID: '92945ec04ad732fa7caf09597df0cb32') in 0.0365559 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=db7fdc26e39b753f84b151052a27d426 DependenciesID=1520e995a9b1b5feac6e4a004005b167 StaticDependenciesID=8c40683566d3a0dc611f6b88923e9891 
+Refreshing native plugins compatible for Editor in 17.47 ms, found 7 plugins.
+Asset Pipeline Refresh (id=2a2404038a7555e4a9c6b796efe460bd): Total: 0.119 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/DarkEdge/DarkEdge_03.png using Guid(120b3395f5acfe84aae8576def9befdc) (TextureImporter) -> (Import Result ID: '0faa41256736dc07fcd78919304a5da6') in 0.0347351 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0d954b764e58077e6f57d05f6b43c5b7 DependenciesID=29cc081e92716b9eb9d4538081430c4b StaticDependenciesID=11609ede23ba3c5f8052afd58adea969 
+Refreshing native plugins compatible for Editor in 17.29 ms, found 7 plugins.
+Asset Pipeline Refresh (id=39492777109ea7b46b71eb276d853d57): Total: 0.237 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Castle/Castle_00.png using Guid(a65bb915c19be1d499a11a1ad50de942) (TextureImporter) -> (Import Result ID: 'd6b125c67e3510b496cb8e57a847f476') in 0.0333633 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=10d13355719484630b7845270ec5cc6b DependenciesID=63b012c055264923f4d63dd978073616 StaticDependenciesID=d685f489904714b1e1bacc205933da1e 
+Refreshing native plugins compatible for Editor in 14.98 ms, found 7 plugins.
+Asset Pipeline Refresh (id=75f649ac9767efd46815b058ed4a2437): Total: 0.114 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Hero/Hero_00.png using Guid(4bd4a502e8fdfa44d835c9a589ad6017) (TextureImporter) -> (Import Result ID: '9e1e1b6e61dd985be290cbe0078c0c99') in 0.0351946 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=75ec9b0e219d42322a46a8d1072be613 DependenciesID=c34104631d83b4a4893d656450e262cf StaticDependenciesID=9986f0b529c1a2531dc5bce22b7af316 
+Refreshing native plugins compatible for Editor in 16.25 ms, found 7 plugins.
+Asset Pipeline Refresh (id=3316159d6d6bff6498341c6fc8a06457): Total: 0.237 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Chest/Chest_00.png using Guid(235867b9440bec1409395be1c6c08d64) (TextureImporter) -> (Import Result ID: '67753054bd8be6d329de1ae111b0b573') in 0.0339657 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=502e71234e1f657d522adb0284954024 DependenciesID=d195832bcd6d0a2abaefd66f686f6516 StaticDependenciesID=c6ddc03c09c3a090764de401ad63a1ef 
+Refreshing native plugins compatible for Editor in 18.76 ms, found 7 plugins.
+Asset Pipeline Refresh (id=512eebdd07e2417448a26b0e48d8bd1e): Total: 0.118 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Artifact/Artifact_00.png using Guid(997295aeeae41f04d8a15e8d1f633209) (TextureImporter) -> (Import Result ID: '69c767f0571456e842d07a0607970029') in 0.0386711 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a2f603a4495f4c25f3592bbfde7d2736 DependenciesID=6f065e9aade5315980bfac6934937ca2 StaticDependenciesID=336b3be99c1aa31e5b9f0bc69ab2e921 
+Refreshing native plugins compatible for Editor in 15.78 ms, found 7 plugins.
+Asset Pipeline Refresh (id=abc6a3a3ff1445045bfb84974dc4d614): Total: 0.271 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Mine/Mine_00.png using Guid(ed4fc42ecf4d6e0408a5554fa9e772a3) (TextureImporter) -> (Import Result ID: '37e66318bddba764c0d81277f2ee0a36') in 0.0331476 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5b2e799f8403a0664a641aed3c9f4623 DependenciesID=ffe4de75357a2f5db5aa74436d9d551e StaticDependenciesID=12dd8f73193aa5584d891b0f1b0a0c84 
+Refreshing native plugins compatible for Editor in 16.26 ms, found 7 plugins.
+Asset Pipeline Refresh (id=a388784052b60f345a173d3d2e1054e9): Total: 0.115 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Gold/Gold_00.png using Guid(afd01d47bd6dbb940bddf2d0cca2a4ca) (TextureImporter) -> (Import Result ID: '73348d91097bd36fdb793d1978bfdc1f') in 0.0351025 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=332a70da75ba29cc34741ac19298f5d3 DependenciesID=a615551ba800d65cd39ab630b658b2b3 StaticDependenciesID=de10878edc2d0455f41c68cb73f085e7 
+Refreshing native plugins compatible for Editor in 16.44 ms, found 7 plugins.
+Asset Pipeline Refresh (id=657a200645d50184d972f2a370b88f43): Total: 0.235 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Wood/Wood_00.png using Guid(46e110d79d654ab4ab1e36f73c503cba) (TextureImporter) -> (Import Result ID: '8d10f0c5a8e7936e939b60da8d358429') in 0.0325438 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7064fa28ca1afd48ca1f0c274c0d5fde DependenciesID=b471bb5669667ec14ea5fe3998aa6ffe StaticDependenciesID=0cfe33f6039d44c8c9e04b2c5f11e4d5 
+Refreshing native plugins compatible for Editor in 18.78 ms, found 7 plugins.
+Asset Pipeline Refresh (id=760c70bb3c333ad4d95feef52e9ee2d7): Total: 0.120 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Stone/Stone_00.png using Guid(e778aa6369c232f48baadc2a03a408c5) (TextureImporter) -> (Import Result ID: 'd1cf46dcb9d6e4550443c469ee17df6b') in 0.0345708 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dcdde413d81ecc6efe9fb76a345ccb8b DependenciesID=1a0a0dd1de3e4a7b4b9a29ced8ebbd24 StaticDependenciesID=f580c4d883da5f6f3ab840a6b759343c 
+Refreshing native plugins compatible for Editor in 17.07 ms, found 7 plugins.
+Asset Pipeline Refresh (id=5a74c86944c24dd4ea4c8f268d6166b1): Total: 0.235 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/Mana/Mana_00.png using Guid(326a25a2c35774f4cbcf95d125851b73) (TextureImporter) -> (Import Result ID: '5c3937cfd62562b40a6c91f00bbdbddf') in 0.0341897 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=48de42bd2e417a44eb588cfeb59eb45f DependenciesID=f5d5d1c2821dac17ce8ffcf3474f2406 StaticDependenciesID=655b69b50d5e9304bdffea1189ad56e0 
+Refreshing native plugins compatible for Editor in 19.53 ms, found 7 plugins.
+Asset Pipeline Refresh (id=b706ecb9e9518e3488139efc7697cc04): Total: 0.121 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/EnemyWeak/EnemyWeak_00.png using Guid(69d9ddb46c1531f4aa90977d74dc4fa1) (TextureImporter) -> (Import Result ID: 'b3d4aa9e3e592cc7ea7772b95503732e') in 0.0342715 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0c49699f9a8fbcce2b19b56f9d9c05dc DependenciesID=e5adf050f01f730025014711e90718b5 StaticDependenciesID=15a8bb51ead179fa3964eb94f6aa3f75 
+Refreshing native plugins compatible for Editor in 19.82 ms, found 7 plugins.
+Asset Pipeline Refresh (id=80f2e6c4b0a9e9b4dbb4040687400719): Total: 0.244 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/EnemyWeak/EnemyWeak_01.png using Guid(4f87d99232f294248a468b53d21cb5e1) (TextureImporter) -> (Import Result ID: 'b2b9f2dc3b99c011eb01bde56131a061') in 0.0324733 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=16d1ab8491537c8e55ac7add713617c7 DependenciesID=84882486046423fee182199f451d5a2a StaticDependenciesID=7f3e9ce709e8809ef53d77a739359af4 
+Refreshing native plugins compatible for Editor in 16.33 ms, found 7 plugins.
+Asset Pipeline Refresh (id=d7a29fbe22d04754085928e2e5246261): Total: 0.114 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/EnemyMedium/EnemyMedium_00.png using Guid(b38b8aa2726ae9e43938e4eb6bcb79d5) (TextureImporter) -> (Import Result ID: 'dd923762e662c7f74bbf280b3b9d9b7c') in 0.0309919 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4aa9f0339cb95ae6cf7cf796aa6c6d5e DependenciesID=cb631eb6abdf38379249a850114264ad StaticDependenciesID=ae6d4bf65369c85deae601b29ba59859 
+Refreshing native plugins compatible for Editor in 20.09 ms, found 7 plugins.
+Asset Pipeline Refresh (id=193dbabe34fc17246825d15aa0a76ff2): Total: 0.235 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/EnemyStrong/EnemyStrong_00.png using Guid(116a4ca27fb79e54bba663ce39507387) (TextureImporter) -> (Import Result ID: '3e777964f56d59add2183e2d8a0fa7f9') in 0.0340115 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4111432e4e3294f65064a310fdc7b5d5 DependenciesID=30822a41b22e04adefabdb51f8ce2281 StaticDependenciesID=2576aec065e03e70031b687786d1fd48 
+Refreshing native plugins compatible for Editor in 17.58 ms, found 7 plugins.
+Asset Pipeline Refresh (id=f0916c624e9d1194f9928d2fa9f68a66): Total: 0.118 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Sprites/GeneratedToday/EnemyBoss/EnemyBoss_00.png using Guid(d456c03980860074f83177391889e30a) (TextureImporter) -> (Import Result ID: '6b65f24d738d9d5fe03298ffc9cace2d') in 0.0342557 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=529aa15ca86c7a2f823a9587f7e79f7b DependenciesID=6f29268f959d36ea3305bbe35a5c7a5c StaticDependenciesID=de04d182af64a3503feefec897a56a2e 
+Refreshing native plugins compatible for Editor in 16.63 ms, found 7 plugins.
+Asset Pipeline Refresh (id=5655f18d7fbc442468492c7dfb39f6f2): Total: 0.235 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=0055748fbbf858442a30ec8143ab8bd2): Total: 0.015 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=ad201558c9e699845a13e95f82a0e846): Total: 0.005 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[TheHeroMapFix] Sprites imported with FullRect mesh, PPU=1024, no extrude
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:112)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+Opening scene 'Assets/Scenes/Map.unity'
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Map.unity'
+	Deserialize:            74.133 ms
+	Integration:            287.698 ms
+	Integration of assets:  0.054 ms
+	Thread Wait Time:       0.032 ms
+	Total Operation Time:   361.918 ms
+Unloading 225 unused Assets / (428.1 MB). Loaded Objects now: 18613.
+Memory consumption went from 1.23 GB to 0.81 GB.
+Total: 26.910000 ms (FindLiveObjects: 0.753000 ms CreateObjectMapping: 0.446200 ms MarkObjects: 17.678900 ms  DeleteObjects: 8.030700 ms)
+
+[TheHeroMapFix] Old (preview-style) map content cleared
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:121)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+[TheHeroMapFix] Tile spacing fixed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:135)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+[TheHeroMapFix] Base layer filled (864 tiles)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:136)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+[TheHeroMapFix] Overlay layer created (269 tiles)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:137)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+[TheHeroMapFix] Transparent terrain handled (scaled 0 sprites to 1x1)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:138)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+[TheHeroMapFix] Preview grid removed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:139)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+[TheHeroMapFix] Objects placed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:143)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+[TheHeroMapFix] Map validation passed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:150)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+Start importing ProjectSettings/EditorBuildSettings.asset using Guid(0000000000000000b000000000000000) (LibraryAssetImporter) -> (Import Result ID: '43674381fd8e9a1cd41776e8bdc55500') in 0.002226 seconds [static dependencies only]. Details - ImportResultOutputID=d777934f36c664454d62eda103573334 DependenciesID=fad2d62ea62c3315f0a8ffde90ed65bd StaticDependenciesID=5e3acde9a26ad93ec16cf6f648a8894a 
+Refreshing native plugins compatible for Editor in 14.55 ms, found 7 plugins.
+Asset Pipeline Refresh (id=fd92bf234ae8a8b4bbf5a6bbd68e5539): Total: 0.063 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Scenes/Map.unity using Guid(da3978d33114ad24f80626786b253bde) (DefaultImporter) -> (Import Result ID: 'e7a82f087a2a05a379d8e4df62357ddd') in 0.0007929 seconds [static dependencies only]. Details - ImportResultOutputID=d949174f9816b137f0bc0117a2b6642b DependenciesID=232746065aa9b7bbcde98ce754c41ded StaticDependenciesID=c166f2c5eabdfc3dff3b87cb028e0b4f 
+Refreshing native plugins compatible for Editor in 15.79 ms, found 7 plugins.
+Asset Pipeline Refresh (id=79898f19c368c53479f5653505cc9121): Total: 0.190 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[TheHeroMapFix] Map saved
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Log (string) (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:748)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:155)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 748)
+
+Start importing Assets/CodeAudit/TileGap_MapFix_Report.md using Guid(635074ac774060b45b706f1bb68550ce) (TextScriptImporter) -> (Import Result ID: '722bf87c6c8253316c672d53c8bd2514') in 0.0102523 seconds [static dependencies only]. Details - ImportResultOutputID=572ef50b3039475ce7848f72295f4187 DependenciesID=cbaecd392adebdcde2275ed580092957 StaticDependenciesID=c599e3490cdfea30192eea394c8bc6e9 
+Refreshing native plugins compatible for Editor in 16.18 ms, found 7 plugins.
+Asset Pipeline Refresh (id=799b443793a342041b8a2e766b761959): Total: 0.108 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[TheHeroMapFix] Done. See Assets/CodeAudit/TileGap_MapFix_Report.md
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixTileGapsAndProperMap:Run () (at Assets/Editor/TheHeroFixTileGapsAndProperMap.cs:159)
+
+(Filename: Assets/Editor/TheHeroFixTileGapsAndProperMap.cs Line: 159)
+
+Batchmode quit successfully invoked - shutting down!
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-HYPERPC-6000.4.1-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-HYPERPC-6000.4.1 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Shut down.
+Cleanup mono
+CodeReloadManager destroyed
+abort_threads: Failed aborting id: 0000000000002298, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000003CC8, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000002298, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000003CC8, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 3308
+Exiting batchmode successfully now!
+Exiting without the bug reporter. Application will terminate with return code 0

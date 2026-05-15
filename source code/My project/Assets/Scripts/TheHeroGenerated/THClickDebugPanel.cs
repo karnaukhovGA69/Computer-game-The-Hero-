@@ -19,6 +19,11 @@ namespace TheHero.Generated
             CreateUI();
         }
 
+        private void OnDestroy()
+        {
+            if (Instance == this) Instance = null;
+        }
+
         private void CreateUI()
         {
             var canvas = Object.FindAnyObjectByType<Canvas>();

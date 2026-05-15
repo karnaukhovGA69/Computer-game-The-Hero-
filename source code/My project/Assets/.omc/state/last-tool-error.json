@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"test -f \\\"/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/source code/My project/Temp/UnityLockfile\\\" && echo \\\"RUNNING\\\" || echo \\\"DONE\\\"; ls -la \\\"/mnt/c/Users/HYPERPC/Computer-game-The-Her...",
+  "error": "Exit code 2\nRUNNING\n-rwxrwxrwx 1 glebini glebini 66705 May 15  2026 /mnt/c/Users/HYPERPC/Computer-game-The-Hero-/source code/My project/unity_batch.log\nls: cannot access '/mnt/c/Users/HYPERPC/Computer-game-The-Hero-/source code/My project/Assets/CodeAudit/Make_Game_Playable_BatchExit.txt': No such file or directory",
+  "timestamp": "2026-05-14T23:31:06.699Z",
+  "retry_count": 1
+}

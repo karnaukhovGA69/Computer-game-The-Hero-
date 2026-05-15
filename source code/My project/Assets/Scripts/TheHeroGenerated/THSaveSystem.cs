@@ -46,7 +46,11 @@ namespace TheHero.Generated
             {
                 string json = File.ReadAllText(SavePath);
                 var state = JsonUtility.FromJson<THGameState>(json);
-                if (ValidateSave(state)) return state;
+                if (ValidateSave(state))
+                {
+                    THBalanceConfig.NormalizeLoadedState(state);
+                    return state;
+                }
                 else return TryLoadBackup();
             }
             catch (Exception e)
@@ -66,6 +70,7 @@ namespace TheHero.Generated
                 var state = JsonUtility.FromJson<THGameState>(json);
                 if (ValidateSave(state)) 
                 {
+                    THBalanceConfig.NormalizeLoadedState(state);
                     if (THMessageSystem.Instance != null) THMessageSystem.Instance.ShowWarning("Загружен бэкап");
                     return state;
                 }
@@ -116,51 +121,15 @@ namespace TheHero.Generated
             ClearAllSaveDataForNewGame();
 
             var state = new THGameState();
-            state.gameVersion = "1.0.0-release";
-            state.gold = 500;
-            state.wood = 20;
-            state.stone = 10;
-            state.mana = 5;
-            
-            state.heroLevel = 1;
-            state.heroExp = 0;
-            state.heroX = 4; // Near Castle_Player on the rebuilt 36x24 adventure map.
-            state.heroY = 3;
-            state.movementPoints = 20;
-state.maxMovementPoints = 20;
-            
-            state.day = 1;
-            state.week = 1;
-            state.gameCompleted = false;
+            THBalanceConfig.ConfigureNewGameState(state);
             state.mapSeed = UnityEngine.Random.Range(1, 999999);
-
-            // Default Army
-            state.army.Clear();
-            state.army.Add(new THArmyUnit { id = "unit_swordsman", name = "Swordsman", count = 12, hpPerUnit = 30, attack = 5, defense = 2, initiative = 5 });
-            state.army.Add(new THArmyUnit { id = "unit_archer", name = "Archer", count = 8, hpPerUnit = 20, attack = 7, defense = 1, initiative = 7 });
-            state.army.Add(new THArmyUnit { id = "unit_mage", name = "Mage", count = 0, hpPerUnit = 25, attack = 10, defense = 2, initiative = 8 });
-
-            // Default Buildings
-state.buildings.Clear();
-            state.buildings.Add(new THBuildingData { id = "unit_swordsman", name = "Barracks", level = 1, recruitsAvailable = 18, goldCost = 60 });
-            state.buildings.Add(new THBuildingData { id = "unit_archer", name = "Archery Range", level = 1, recruitsAvailable = 12, goldCost = 80, woodCost = 1 });
-            state.buildings.Add(new THBuildingData { id = "unit_mage", name = "Mage Tower", level = 1, recruitsAvailable = 6, goldCost = 120, manaCost = 2 });
-
-            // Clear lists explicitly just in case
-            state.collectedObjectIds.Clear();
-            state.defeatedEnemyIds.Clear();
-            state.capturedObjectIds.Clear();
-            state.visitedShrineIds.Clear();
-            state.shownDialogueIds.Clear();
-            state.heroArtifactIds.Clear();
-            state.currentEnemyArmy.Clear();
 
             state.tutorialShown = PlayerPrefs.GetInt("TheHero_TutorialShown", 0) == 1;
             PlayerPrefs.SetInt("TheHero_IsStartingNewGame", 1);
             PlayerPrefs.Save();
 
             Debug.Log($"[TheHeroNewGame] Resources: Gold={state.gold} Wood={state.wood} Stone={state.stone} Mana={state.mana}");
-            Debug.Log($"[TheHeroNewGame] Army: Swordsman=12 Archer=8 Mage=0");
+            Debug.Log($"[TheHeroNewGame] Army: Swordsman={THBalanceConfig.StartingSwordsman} Archer={THBalanceConfig.StartingArcher} Mage={THBalanceConfig.StartingMage}");
             Debug.Log("[TheHeroNewGame] CollectedObjects cleared");
             Debug.Log("[TheHeroNewGame] DefeatedEnemies cleared");
             Debug.Log("[TheHeroNewGame] CapturedObjects cleared");

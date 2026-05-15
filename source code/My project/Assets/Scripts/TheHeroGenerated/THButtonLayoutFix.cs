@@ -44,6 +44,12 @@ namespace TheHero.Generated
             if (canvas == null) return;
             EnsureCanvasScaler(canvas);
 
+            if (canvas.GetComponent<THMapUIRuntime>() != null && FindRect(canvas, "TopHUD") != null)
+            {
+                ApplyRestoredMapHud(canvas);
+                return;
+            }
+
             var row = EnsureRect(canvas.transform, "MapButtonRow");
             Anchor(row, new Vector2(1, 1), new Vector2(1, 1), new Vector2(1, 1), new Vector2(-24, -18), new Vector2(600, 48));
 
@@ -65,8 +71,42 @@ namespace TheHero.Generated
             {
                 var rt = castle.GetComponent<RectTransform>();
                 rt.SetParent(canvas.transform, false);
-                Anchor(rt, new Vector2(0, 0), new Vector2(0, 0), new Vector2(0, 0), new Vector2(24, 24), new Vector2(170, 52));
+                Anchor(rt, new Vector2(0, 0), new Vector2(0, 0), new Vector2(0, 0), new Vector2(24, 24), new Vector2(150, 50));
             }
+        }
+
+        private static void ApplyRestoredMapHud(Canvas canvas)
+        {
+            var topHud = FindRect(canvas, "TopHUD");
+            if (topHud != null)
+            {
+                Anchor(topHud, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), Vector2.zero, new Vector2(0, 64));
+            }
+
+            SetButtonSizeIfFound(canvas, "SaveButton", 110, 44, topHud);
+            SetButtonSizeIfFound(canvas, "LoadButton", 110, 44, topHud);
+            SetButtonSizeIfFound(canvas, "EndTurnButton", 150, 44, topHud);
+            SetButtonSizeIfFound(canvas, "MenuButton", 110, 44, topHud);
+
+            var castle = FindButton(canvas, "CastleButton");
+            if (castle != null)
+            {
+                var rt = castle.GetComponent<RectTransform>();
+                if (rt != null)
+                {
+                    rt.SetParent(canvas.transform, false);
+                    Anchor(rt, new Vector2(0, 0), new Vector2(0, 0), new Vector2(0, 0), new Vector2(24, 24), new Vector2(140, 48));
+                }
+            }
+        }
+
+        private static void SetButtonSizeIfFound(Canvas canvas, string name, float width, float height, RectTransform requiredParent)
+        {
+            var button = FindButton(canvas, name);
+            if (button == null) return;
+            if (requiredParent != null && button.transform.parent != requiredParent)
+                button.transform.SetParent(requiredParent, false);
+            SetButtonSize(button, width, height);
         }
 
         public static void ApplyCombat()

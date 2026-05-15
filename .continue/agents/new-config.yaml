@@ -1,0 +1,14 @@
+name: ClaudeHub
+version: 1.0.0
+schema: v1
+models:
+  - name: Claude Sonnet 4.6
+    provider: openai
+    model: claude-sonnet-4.6
+    apiBase: https://api.claudehub.fun/v1
+    apiKey: sk-hub-JajqoI2vh8HSqG6nf8u6HV6sxQ0wDzyi
+  - name: Claude Haiku 4.5
+    provider: openai
+    model: claude-haiku-4.5
+    apiBase: https://api.claudehub.fun/v1
+    apiKey: sk-hub-JajqoI2vh8HSqG6nf8u6HV6sxQ0wDzyi

@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Linq;
 
 namespace TheHero.Generated
 {
@@ -25,22 +24,18 @@ namespace TheHero.Generated
             var state = THManager.Instance.Data;
             if (state == null) return;
 
-            // Base Income
-            int gold = 300;
-            int wood = 10;
-            int stone = 6;
-            int mana = 2;
+            int gold = THBalanceConfig.BaseWeeklyGoldIncome;
+            int wood = THBalanceConfig.BaseWeeklyWoodIncome;
+            int stone = THBalanceConfig.BaseWeeklyStoneIncome;
+            int mana = THBalanceConfig.BaseWeeklyManaIncome;
 
-            // Add building income
             foreach (var buildingId in state.capturedObjectIds)
             {
-                // This would ideally check the object type in a real database,
-                // for now we'll use naming conventions or check actual map objects
-                if (buildingId.ToLower().Contains("goldmine")) gold += 250;
-                else if (buildingId.ToLower().Contains("lumbermill")) wood += 20;
-                else if (buildingId.ToLower().Contains("stonequarry")) stone += 15;
-                else if (buildingId.ToLower().Contains("manaspring")) mana += 8;
-                else if (buildingId.ToLower().Contains("mine")) gold += 150; // Generic fallback
+                string key = (buildingId ?? string.Empty).ToLower();
+                if (key.Contains("goldmine") || key.Contains("gold_mine") || key.Contains("mine")) gold += THBalanceConfig.CapturedGoldMineWeeklyGold;
+                else if (key.Contains("lumbermill") || key.Contains("lumber") || key.Contains("woodmill")) wood += THBalanceConfig.CapturedLumberMillWeeklyWood;
+                else if (key.Contains("stonequarry") || key.Contains("quarry")) stone += THBalanceConfig.CapturedStoneQuarryWeeklyStone;
+                else if (key.Contains("manaspring") || key.Contains("mana_source") || key.Contains("mana")) mana += THBalanceConfig.CapturedManaSourceWeeklyMana;
             }
 
             state.gold += gold;
@@ -48,10 +43,10 @@ namespace TheHero.Generated
             state.stone += stone;
             state.mana += mana;
 
-            string msg = $"Новая неделя! Доход: +{gold} Gold, +{wood} Wood, +{stone} Stone, +{mana} Mana";
+            string msg = $"Новая неделя. Казна пополнена. +{gold} Gold, +{wood} Wood, +{stone} Stone, +{mana} Mana";
             if (THMessageSystem.Instance != null)
                 THMessageSystem.Instance.ShowMessage(msg);
-            
+
             Debug.Log($"[TheHeroIncome] {msg}");
         }
     }

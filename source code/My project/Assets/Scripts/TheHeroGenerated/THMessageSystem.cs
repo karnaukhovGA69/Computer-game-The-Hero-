@@ -70,6 +70,12 @@ namespace TheHero.Generated
 
         public void ShowMessage(string text, Color? color = null)
         {
+            if (THMapUIRuntime.Instance != null)
+            {
+                THMapUIRuntime.Instance.ShowMessage(text, 3f);
+                return;
+            }
+
             StartCoroutine(MessageRoutine(text, color ?? Color.white));
         }
 

@@ -1,0 +1,11 @@
+{
+  "active": true,
+  "started_at": "2026-05-15T16:16:49.994Z",
+  "original_prompt": "/autopilot Ты работаешь с Unity-проектом The Hero.\n\nНужно собрать нормальную playable Map-сцену.\n\nОсновной источник ассетов:\n1. Assets/ExternalAssets/MainAssets/\n\nFallback-источники, если в MainAssets нет подходящего ассета:\n2. Assets/Cainos/\n3. Assets/Tiny Swords/\n4. Assets/TinySwords/\n5. Assets/ExternalAssets/TinySwords/\n6. Assets/ExternalAssets/*Tiny*\n7. Assets/ExternalAssets/*Cainos*\n\nВАЖНО:\n- Сначала всегда пробовать MainAssets.\n- Если подходящего ассета нет в MainAssets — можно брать из...",
+  "session_id": "92e51498-3039-4ca9-8e71-917ec81d3d32",
+  "project_path": "/mnt/c/Users/HYPERPC/Computer-game-The-Hero-",
+  "reinforcement_count": 0,
+  "awaiting_confirmation": true,
+  "awaiting_confirmation_set_at": "2026-05-15T16:16:49.994Z",
+  "last_checked_at": "2026-05-15T16:16:49.994Z"
+}

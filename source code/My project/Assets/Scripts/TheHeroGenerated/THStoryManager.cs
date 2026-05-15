@@ -63,7 +63,7 @@ namespace TheHero.Generated
                 mainMenuButton.onClick.RemoveAllListeners();
                 mainMenuButton.onClick.AddListener(() => {
                     Time.timeScale = 1f;
-                    SceneManager.LoadScene("MainMenu");
+                    THSceneLoader.Instance.LoadMainMenu();
                 });
             }
         }

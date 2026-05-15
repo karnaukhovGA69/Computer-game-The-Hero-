@@ -13,6 +13,7 @@ namespace TheHero.Generated
         public string displayName;
         public int count;
         public int maxCount;
+        public int currentTotalHp;
         public int hpPerUnit;
         public int attack;
         public int defense;
@@ -88,6 +89,11 @@ namespace TheHero.Generated
             ConnectResultButtons();
         }
 
+        private void OnDestroy()
+        {
+            if (Instance == this) Instance = null;
+        }
+
         private void OnEnable()
         {
             ConnectButtons();
@@ -135,14 +141,14 @@ namespace TheHero.Generated
             if (isLeavingCombat) return;
             isLeavingCombat = true;
             if (combatFinished) ApplyCombatResultIfNeeded();
-            SceneManager.LoadScene("Map");
+            THSceneLoader.Instance.LoadMap();
         }
 
         public void ReturnToMainMenu()
         {
             Debug.Log("[TheHeroCombat] Returning to MainMenu");
             if (combatFinished) ApplyCombatResultIfNeeded();
-            SceneManager.LoadScene("MainMenu");
+            THSceneLoader.Instance.LoadMainMenu();
         }
 
         public void OnAutoBattleClicked()
@@ -334,16 +340,32 @@ namespace TheHero.Generated
 
         private void PerformAttack(THCombatUnit attacker, THCombatUnit defender)
         {
-            int damage = Mathf.Max(1, attacker.attack * attacker.count - (defender.defense * defender.count / 3));
-            int killed = damage / defender.hpPerUnit;
-            if (killed < 1 && damage > 0) killed = 1;
-            if (killed > defender.count) killed = defender.count;
+            EnsureCurrentHp(attacker);
+            EnsureCurrentHp(defender);
 
-            defender.count -= killed;
+            int beforeCount = defender.count;
+            int damage = THBalanceConfig.CalculateDamage(attacker, defender);
+            defender.currentTotalHp = Mathf.Max(0, defender.currentTotalHp - damage);
+            defender.count = defender.currentTotalHp <= 0 ? 0 : Mathf.CeilToInt(defender.currentTotalHp / (float)defender.hpPerUnit);
+            int killed = Mathf.Max(0, beforeCount - defender.count);
             
             string side = attacker.isPlayer ? "Игрок" : "Враг";
             string msg = $"{attacker.displayName} атакует {defender.displayName}. Урон: {damage}. Потери: {killed}.";
             Log(msg);
+        }
+
+        private void EnsureCurrentHp(THCombatUnit unit)
+        {
+            if (unit == null) return;
+            if (unit.count <= 0)
+            {
+                unit.currentTotalHp = 0;
+                return;
+            }
+
+            int maxPossibleHp = unit.count * unit.hpPerUnit;
+            if (unit.currentTotalHp <= 0 || unit.currentTotalHp > maxPossibleHp)
+                unit.currentTotalHp = maxPossibleHp;
         }
 
         public void AutoBattle()
@@ -466,6 +488,7 @@ namespace TheHero.Generated
         {
             var state = THManager.Instance.Data;
             enemyId = state?.lastEnemyId ?? "test_enemy";
+            if (state != null) THBalanceConfig.NormalizeLoadedState(state);
 
             if (state != null && state.army != null && state.army.Count > 0)
             {
@@ -474,8 +497,7 @@ namespace TheHero.Generated
             else
             {
                 Debug.Log("[TheHeroCombat] No player army found. Using test army.");
-                playerUnits.Add(new THCombatUnit { id="swordsman", displayName="Swordsman", count=12, maxCount=12, hpPerUnit=30, attack=5, defense=2, initiative=5, isPlayer=true });
-                playerUnits.Add(new THCombatUnit { id="archer", displayName="Archer", count=8, maxCount=8, hpPerUnit=20, attack=7, defense=1, initiative=7, isPlayer=true });
+                playerUnits = THBalanceConfig.CreateStartingArmy().Select(u => ConvertToCombatUnit(u, true)).ToList();
             }
 
             if (state != null && state.currentEnemyArmy != null && state.currentEnemyArmy.Count > 0)
@@ -485,16 +507,14 @@ namespace TheHero.Generated
             else
             {
                 Debug.Log("[TheHeroCombat] No enemy army context found. Using test enemy.");
-                enemyUnits.Add(new THCombatUnit { id="goblin", displayName="Goblin", count=10, maxCount=10, hpPerUnit=15, attack=4, defense=1, initiative=6, isPlayer=false });
+                enemyUnits = THBalanceConfig.CreateTier1GoblinArmy(8).Select(u => ConvertToCombatUnit(u, false)).ToList();
             }
 
             bool isBoss = enemyId.Contains("DarkLord") || enemyId.Contains("Boss") || enemyId.Contains("DarkBoss") || enemyId.Contains("Final") || PlayerPrefs.GetInt("Combat_DarkLord", 0) == 1;
 
             if (isBoss)
             {
-                enemyUnits.Clear();
-                enemyUnits.Add(new THCombatUnit { id="dark_lord", displayName="Dark Lord", count=1, maxCount=1, hpPerUnit=120, attack=18, defense=8, initiative=7, isPlayer=false });
-                enemyUnits.Add(new THCombatUnit { id="orc_guard", displayName="Orc Guard", count=8, maxCount=8, hpPerUnit=35, attack=6, defense=2, initiative=4, isPlayer=false });
+                enemyUnits = THBalanceConfig.CreateFinalBossArmy().Select(u => ConvertToCombatUnit(u, false)).ToList();
                 reward.isFinalVictory = true;
                 
                 if (infoText) infoText.text = "Финальная битва. Победите Тёмного Лорда.";
@@ -505,22 +525,36 @@ namespace TheHero.Generated
                 if (battleTitleText) battleTitleText.text = "БОЙ";
             }
 
-            reward.gold = 100;
-            reward.exp = 50;
+            reward.gold = state != null ? state.currentCombatRewardGold : 0;
+            reward.wood = state != null ? state.currentCombatRewardWood : 0;
+            reward.stone = state != null ? state.currentCombatRewardStone : 0;
+            reward.mana = state != null ? state.currentCombatRewardMana : 0;
+            reward.exp = state != null ? state.currentCombatRewardExp : 0;
+            reward.isFinalVictory = reward.isFinalVictory || (state != null && state.currentCombatIsFinal);
+
+            if (reward.gold == 0 && reward.wood == 0 && reward.stone == 0 && reward.mana == 0 && reward.exp == 0)
+            {
+                int enemyPower = THBalanceConfig.CalculateArmyPower(enemyUnits);
+                var difficulty = THBalanceConfig.GetDifficultyForPower(enemyPower);
+                reward.gold = difficulty == THEnemyDifficulty.Weak ? 80 : difficulty == THEnemyDifficulty.Medium ? 150 : difficulty == THEnemyDifficulty.Strong ? 260 : 500;
+                reward.exp = difficulty == THEnemyDifficulty.Weak ? 30 : difficulty == THEnemyDifficulty.Medium ? 70 : difficulty == THEnemyDifficulty.Strong ? 130 : 250;
+            }
         }
 
         private THCombatUnit ConvertToCombatUnit(THArmyUnit u, bool isPlayer)
         {
+            var balanced = THBalanceConfig.CreateUnit(THBalanceConfig.NormalizeUnitId(u.id, u.name), u.count);
             return new THCombatUnit
             {
-                id = u.id,
-                displayName = u.name,
-                count = u.count,
-                maxCount = u.count,
-                hpPerUnit = u.hpPerUnit,
-                attack = u.attack,
-                defense = u.defense,
-                initiative = u.initiative,
+                id = balanced.id,
+                displayName = balanced.name,
+                count = balanced.count,
+                maxCount = balanced.count,
+                currentTotalHp = Mathf.Max(0, balanced.count * balanced.hpPerUnit),
+                hpPerUnit = balanced.hpPerUnit,
+                attack = balanced.attack,
+                defense = balanced.defense,
+                initiative = balanced.initiative,
                 isPlayer = isPlayer
             };
         }
@@ -708,6 +742,9 @@ namespace TheHero.Generated
                 if (combatVictory)
                 {
                     state.gold += reward.gold;
+                    state.wood += reward.wood;
+                    state.stone += reward.stone;
+                    state.mana += reward.mana;
                     state.heroExp += reward.exp;
                     state.battlesWon++;
 
@@ -737,6 +774,7 @@ namespace TheHero.Generated
                 }
 
                 state.currentEnemyArmy.Clear();
+                THBalanceConfig.ClearCombatReward(state);
                 PlayerPrefs.DeleteKey("Combat_DarkLord");
                 
                 THSavePolicy.SaveOnBattleFinish();

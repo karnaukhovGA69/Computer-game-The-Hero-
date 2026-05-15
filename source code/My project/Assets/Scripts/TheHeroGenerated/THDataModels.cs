@@ -18,7 +18,7 @@ namespace TheHero.Generated
         public int initiative;
         public THArmyUnit Clone() => new THArmyUnit { id = id, name = name, count = count, hpPerUnit = hpPerUnit, attack = attack, defense = defense, initiative = initiative };
         
-        public int GetPower() => count * (hpPerUnit + attack * 4 + defense * 4 + initiative);
+        public int GetPower() => THBalanceConfig.CalculateUnitPower(count, hpPerUnit, attack, defense, initiative);
     }
 
     [Serializable]
@@ -62,10 +62,10 @@ namespace TheHero.Generated
     public class THGameState
     {
         public string gameVersion = "1.0.0-release";
-        public int gold = 500;
-        public int wood = 20;
-        public int stone = 10;
-        public int mana = 5;
+        public int gold = THBalanceConfig.StartingGold;
+        public int wood = THBalanceConfig.StartingWood;
+        public int stone = THBalanceConfig.StartingStone;
+        public int mana = THBalanceConfig.StartingMana;
         public int day = 1;
         public int week = 1;
         public string heroName = "Knight";
@@ -73,8 +73,8 @@ namespace TheHero.Generated
         public int heroExp = 0;
         public float heroX = 0;
         public float heroY = 0;
-        public int movementPoints = 20;
-        public int maxMovementPoints = 20;
+        public int movementPoints = THBalanceConfig.HeroMaxMovementPoints;
+        public int maxMovementPoints = THBalanceConfig.HeroMaxMovementPoints;
         
         public List<THArmyUnit> army = new List<THArmyUnit>();
         public List<THBuildingData> buildings = new List<THBuildingData>();
@@ -98,6 +98,12 @@ namespace TheHero.Generated
         public string lastEnemyId;
         public List<THArmyUnit> currentEnemyArmy = new List<THArmyUnit>();
         public string lastCombatRewardId;
+        public int currentCombatRewardGold;
+        public int currentCombatRewardWood;
+        public int currentCombatRewardStone;
+        public int currentCombatRewardMana;
+        public int currentCombatRewardExp;
+        public bool currentCombatIsFinal;
 
         // Statistics
         public int daysPassed = 0;
@@ -110,4 +116,3 @@ namespace TheHero.Generated
         public int savesCount = 0;
     }
 }
-

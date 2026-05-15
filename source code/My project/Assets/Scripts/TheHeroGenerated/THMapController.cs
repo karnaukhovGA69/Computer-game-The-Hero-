@@ -30,10 +30,17 @@ namespace TheHero.Generated
         {
             Instance = this;
             _isTransitioning = false;
+            EnsureHeroMover();
+        }
+
+        private void OnDestroy()
+        {
+            if (Instance == this) Instance = null;
         }
 
         private void Start()
         {
+            EnsureHeroMover();
             ApplyPersistence();
             
             bool isExplicitNewGame = PlayerPrefs.GetInt("TheHero_IsStartingNewGame", 0) == 1;
@@ -62,44 +69,23 @@ namespace TheHero.Generated
             if (cam != null && HeroMover != null)
             {
                 var follow = cam.GetComponent<THCameraFollow>() ?? cam.gameObject.AddComponent<THCameraFollow>();
-                follow.Target = HeroMover.transform;
-                var grid = THMapGridInput.Instance;
-                if (grid != null)
+                cam.orthographic = true;
+                cam.orthographicSize = 7.5f;
+                cam.transform.rotation = Quaternion.identity;
+
+                if (THCameraFollow.TryCalculateSceneMapBounds(out Bounds bounds))
                 {
-                    grid.RefreshGrid();
-                    float halfHeight = cam.orthographicSize;
-                    float halfWidth = halfHeight * cam.aspect;
-                    float minX = grid.MinX + halfWidth;
-                    float maxX = grid.MaxX - halfWidth;
-                    float minY = grid.MinY + halfHeight;
-                    float maxY = grid.MaxY - halfHeight;
-
-                    if (minX > maxX)
-                    {
-                        float midX = (grid.MinX + grid.MaxX) * 0.5f;
-                        minX = midX;
-                        maxX = midX;
-                    }
-
-                    if (minY > maxY)
-                    {
-                        float midY = (grid.MinY + grid.MaxY) * 0.5f;
-                        minY = midY;
-                        maxY = midY;
-                    }
-
-                    follow.MinBounds = new Vector2(minX, minY);
-                    follow.MaxBounds = new Vector2(maxX, maxY);
+                    follow.Configure(HeroMover.transform, bounds, true);
                 }
                 else
                 {
-                    follow.MinBounds = new Vector2(-18, -12);
-                    follow.MaxBounds = new Vector2(17, 11);
+                    follow.Target = HeroMover.transform;
+                    follow.useBounds = false;
+                    follow.CenterImmediately();
                 }
-                follow.SmoothSpeed = 10f;
-                
-                // Immediate focus on start
-                cam.transform.position = new Vector3(HeroMover.transform.position.x, HeroMover.transform.position.y, cam.transform.position.z);
+
+                follow.followSpeed = 8f;
+                follow.z = -10f;
             }
 
             UpdateUI();
@@ -124,6 +110,16 @@ namespace TheHero.Generated
             {
                 THStoryManager.Instance.ShowDialog("intro", "Начало пути", "Королевство пало во тьму. Соберите армию и победите Тёмного Лорда.", "Sprites/Units/unit_swordsman_portrait");
             }
+        }
+
+        private void EnsureHeroMover()
+        {
+            if (HeroMover != null)
+                return;
+
+            HeroMover = Object.FindObjectsByType<THStrictGridHeroMovement>(FindObjectsInactive.Exclude)
+                .OrderByDescending(m => m.name == "Hero")
+                .FirstOrDefault();
         }
 
         private void PlaceHeroNearCastleForNewGame()
@@ -186,6 +182,7 @@ namespace TheHero.Generated
 
         private void ApplyPersistence()
         {
+            NormalizeSceneBalance();
             var mapObjects = GetUniqueMapObjects(Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include));
             int activeResources = 0;
             int activeEnemies = 0;
@@ -224,6 +221,26 @@ namespace TheHero.Generated
             
             Debug.Log($"[TheHeroMap] Resources active: {activeResources}");
             Debug.Log($"[TheHeroMap] Enemies active: {activeEnemies}");
+        }
+
+        private void NormalizeSceneBalance()
+        {
+            THBalanceConfig.NormalizeLoadedState(State);
+
+            foreach (var tile in Object.FindObjectsByType<THTile>(FindObjectsInactive.Include))
+            {
+                if (tile != null) tile.ApplyMovementBalance();
+            }
+
+            foreach (var obj in Object.FindObjectsByType<THMapObject>(FindObjectsInactive.Include))
+            {
+                THBalanceConfig.ConfigureMapObjectBalance(obj);
+            }
+
+            foreach (var enemy in Object.FindObjectsByType<THEnemy>(FindObjectsInactive.Include))
+            {
+                THBalanceConfig.ConfigureEnemyComponentBalance(enemy);
+            }
         }
 
         private List<THMapObject> GetUniqueMapObjects(THMapObject[] mapObjects)
@@ -289,11 +306,21 @@ namespace TheHero.Generated
             if (data != null)
             {
                 THManager.Instance.Data = data;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                THSceneLoader.Instance.ReloadCurrentScene();
             }
         }
 
-        public void OpenPauseMenu() => THPauseMenu.Instance.Pause();
+        public void OpenPauseMenu()
+        {
+            var mapUi = THMapUIRuntime.Instance ?? Object.FindAnyObjectByType<THMapUIRuntime>();
+            if (mapUi != null)
+            {
+                mapUi.OpenPauseMenu();
+                return;
+            }
+
+            THPauseMenu.Instance.Pause();
+        }
         public void GoToBase() 
         {
             THSceneLoader.Instance.LoadBase();
@@ -342,11 +369,7 @@ namespace TheHero.Generated
                 State.day = 1;
                 State.week++;
                 
-                foreach(var b in State.buildings)
-                {
-                    int weeklyGrowth = b.id == "unit_mage" ? 2 : (b.id == "unit_archer" ? 4 : 5);
-                    b.recruitsAvailable = Mathf.Min(GetRecruitCap(b.id), b.recruitsAvailable + weeklyGrowth);
-                }
+                THBalanceConfig.AddWeeklyRecruitGrowth(State);
 
                 if (THWeeklyIncomeSystem.Instance != null)
                 {
@@ -358,9 +381,7 @@ namespace TheHero.Generated
                 }
             }
 
-            // Recalculate max movement in case artifacts were added
-            int bonusMove = THArtifactManager.Instance.GetTotalMoveBonus(State.heroArtifactIds);
-            State.maxMovementPoints = 20 + (State.heroLevel - 1) * 2 + bonusMove;
+            State.maxMovementPoints = THBalanceConfig.HeroMaxMovementPoints;
             State.movementPoints = State.maxMovementPoints;
             
             int artifactMana = THArtifactManager.Instance.GetTotalManaIncome(State.heroArtifactIds);
@@ -370,9 +391,9 @@ namespace TheHero.Generated
                 Log($"Artifact income: {artifactMana} mana.");
             }
 
-            if (State.capturedObjectIds.Count > 0)
+            if (State.capturedObjectIds.Count < 0)
             {
-                int income = State.capturedObjectIds.Count * 50;
+                int income = 0;
                 State.gold += income;
                 Log($"Новый день. Доход: {income} золота.");
             }
@@ -380,6 +401,9 @@ namespace TheHero.Generated
             {
                 Log("Новый день настал.");
             }
+
+            if (State.day == 1)
+                Log("Новая неделя. Казна пополнена.");
 
             // ONLY SAVE IF WEEK CHANGED
             THSavePolicy.SaveOnNewWeek(prevWeek, State.week);
@@ -391,15 +415,13 @@ namespace TheHero.Generated
         public void Log(string msg)
         {
             if (InfoText) InfoText.text = msg;
+            if (THMapUIRuntime.Instance != null) THMapUIRuntime.Instance.ShowMessage(msg, 2.5f);
             Debug.Log("[TH] " + msg);
         }
 
         private int GetRecruitCap(string buildingId)
         {
-            if (buildingId == "unit_swordsman") return 18;
-            if (buildingId == "unit_archer") return 12;
-            if (buildingId == "unit_mage") return 6;
-            return 10;
+            return int.MaxValue;
         }
 
         public void ShowConfirmation(string message, UnityEngine.Events.UnityAction onConfirm)
@@ -470,7 +492,7 @@ if (State.collectedObjectIds.Contains(obj.id) || State.defeatedEnemyIds.Contains
             switch (obj.type)
             {
                 case THMapObject.ObjectType.GoldResource:
-        int g = obj.rewardGold > 0 ? obj.rewardGold : 100;
+        int g = obj.rewardGold > 0 ? obj.rewardGold : THBalanceConfig.GoldPileSmallReward;
                     State.gold += g;
                     State.resourcesCollected++;
                     State.collectedObjectIds.Add(obj.id);
@@ -480,7 +502,7 @@ if (State.collectedObjectIds.Contains(obj.id) || State.defeatedEnemyIds.Contains
                     if (THAudioManager.Instance != null) THAudioManager.Instance.PlaySfx("resource_collect");
                     break;
         case THMapObject.ObjectType.WoodResource:
-                    int w = obj.rewardWood > 0 ? obj.rewardWood : 10;
+                    int w = obj.rewardWood > 0 ? obj.rewardWood : THBalanceConfig.WoodPileSmallReward;
                     State.wood += w;
                     State.resourcesCollected++;
                     State.collectedObjectIds.Add(obj.id);
@@ -489,7 +511,7 @@ if (State.collectedObjectIds.Contains(obj.id) || State.defeatedEnemyIds.Contains
                     THMessageSystem.Instance.ShowSuccess("Дерево собрано");
                     break;
                 case THMapObject.ObjectType.StoneResource:
-                    int s = obj.rewardStone > 0 ? obj.rewardStone : 8;
+                    int s = obj.rewardStone > 0 ? obj.rewardStone : THBalanceConfig.StonePileSmallReward;
                     State.stone += s;
                     State.resourcesCollected++;
                     State.collectedObjectIds.Add(obj.id);
@@ -498,7 +520,7 @@ if (State.collectedObjectIds.Contains(obj.id) || State.defeatedEnemyIds.Contains
                     THMessageSystem.Instance.ShowSuccess("Камень собран");
                     break;
                 case THMapObject.ObjectType.ManaResource:
-                    int m = obj.rewardMana > 0 ? obj.rewardMana : 5;
+                    int m = obj.rewardMana > 0 ? obj.rewardMana : THBalanceConfig.ManaCrystalReward;
                     State.mana += m;
                     State.resourcesCollected++;
                     State.collectedObjectIds.Add(obj.id);
@@ -507,10 +529,12 @@ if (State.collectedObjectIds.Contains(obj.id) || State.defeatedEnemyIds.Contains
                     THMessageSystem.Instance.ShowSuccess("Мана собрана");
                     break;
                 case THMapObject.ObjectType.Treasure:
-                    State.gold += 200;
-                    GainExp(50);
+                    int chestGold = obj.rewardGold > 0 ? obj.rewardGold : THBalanceConfig.ChestGoldReward;
+                    int chestExp = obj.rewardExp > 0 ? obj.rewardExp : THBalanceConfig.ChestExpReward;
+                    State.gold += chestGold;
+                    GainExp(chestExp);
                     State.collectedObjectIds.Add(obj.id);
-                    THMapObjectVisuals.SpawnRewardText(obj.transform.position, "+200 Gold & 50 XP", Color.yellow);
+                    THMapObjectVisuals.SpawnRewardText(obj.transform.position, $"+{chestGold} Gold & {chestExp} XP", Color.yellow);
                     obj.gameObject.SetActive(false);
                     THMessageSystem.Instance.ShowSuccess("Сокровище найдено!");
                     break;
@@ -537,7 +561,6 @@ if (State.collectedObjectIds.Contains(obj.id) || State.defeatedEnemyIds.Contains
                 case THMapObject.ObjectType.Mine:
                     if (!State.capturedObjectIds.Contains(obj.id))
                     {
-                        State.gold += 150;
                         State.capturedObjectIds.Add(obj.id);
                         obj.SetCaptured();
                         THMessageSystem.Instance.ShowSuccess("Шахта захвачена!");
@@ -558,8 +581,16 @@ if (State.collectedObjectIds.Contains(obj.id) || State.defeatedEnemyIds.Contains
 if (!State.defeatedEnemyIds.Contains(obj.id))
                     {
                         _isTransitioning = true;
+                        THBalanceConfig.ConfigureMapObjectBalance(obj);
                         State.lastEnemyId = obj.id;
                         State.currentEnemyArmy = obj.enemyArmy.Select(u => u.Clone()).ToList();
+                        State.lastCombatRewardId = obj.id;
+                        State.currentCombatRewardGold = obj.rewardGold;
+                        State.currentCombatRewardWood = obj.rewardWood;
+                        State.currentCombatRewardStone = obj.rewardStone;
+                        State.currentCombatRewardMana = obj.rewardMana;
+                        State.currentCombatRewardExp = obj.rewardExp;
+                        State.currentCombatIsFinal = obj.isDarkLord || obj.isFinalBoss;
                         PlayerPrefs.SetInt("Combat_DarkLord", obj.isDarkLord ? 1 : 0);
                         THSceneLoader.Instance.LoadCombat();
                     }
@@ -578,8 +609,7 @@ if (!State.defeatedEnemyIds.Contains(obj.id))
             {
                 State.heroLevel++;
                 State.heroExp -= nextLevelExp;
-                int bonusMove = THArtifactManager.Instance.GetTotalMoveBonus(State.heroArtifactIds);
-                State.maxMovementPoints = 20 + (State.heroLevel - 1) * 2 + bonusMove;
+                State.maxMovementPoints = THBalanceConfig.HeroMaxMovementPoints;
                 State.movementPoints = State.maxMovementPoints;
                 THMessageSystem.Instance.ShowSuccess($"Новый уровень: {State.heroLevel}");
             }

@@ -18,6 +18,11 @@ namespace TheHero.Generated
             Instance = this;
         }
 
+        private void OnDestroy()
+        {
+            if (Instance == this) Instance = null;
+        }
+
         public void UpdateUI()
         {
             if (THDemoCampaignController.Instance)

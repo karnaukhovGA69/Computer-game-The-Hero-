@@ -26,6 +26,11 @@ namespace TheHero.Generated
             Instance = this;
         }
 
+        private void OnDestroy()
+        {
+            if (Instance == this) Instance = null;
+        }
+
         private void Start()
         {
             CheckInitialStories();

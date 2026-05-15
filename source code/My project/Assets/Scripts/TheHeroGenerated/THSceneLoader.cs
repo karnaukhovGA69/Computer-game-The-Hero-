@@ -91,31 +91,55 @@ namespace TheHero.Generated
             _loadingPanel.SetActive(false);
         }
 
-        public void LoadMainMenu() => StartCoroutine(LoadRoutine(0));
-        public void LoadMap() => StartCoroutine(LoadRoutine(1));
-        public void LoadCombat() => StartCoroutine(LoadRoutine(2));
-        public void LoadBase() => StartCoroutine(LoadRoutine(3));
-        public void ReloadCurrentScene() => StartCoroutine(LoadRoutine(SceneManager.GetActiveScene().buildIndex));
+        public const string MainMenuSceneName = "MainMenu";
+        public const string MapSceneName      = "Map";
+        public const string CombatSceneName   = "Combat";
+        public const string BaseSceneName     = "Base";
 
-        private IEnumerator LoadRoutine(int index)
+        public void LoadMainMenu() => StartCoroutine(LoadRoutine(MainMenuSceneName));
+        public void LoadMap()      => StartCoroutine(LoadRoutine(MapSceneName));
+        public void LoadCombat()   => StartCoroutine(LoadRoutine(CombatSceneName));
+        public void LoadBase()     => StartCoroutine(LoadRoutine(BaseSceneName));
+        public void ReloadCurrentScene() => StartCoroutine(LoadRoutine(SceneManager.GetActiveScene().name));
+
+        private IEnumerator LoadRoutine(string sceneName)
         {
             // Scene transitions must not autosave. Save policy is centralized in
             // THSavePolicy: manual Save, new week, battle finish, and base actions.
             var hoverLabel = Object.FindAnyObjectByType<THSingleMapHoverLabel>();
             if (hoverLabel != null) hoverLabel.Hide();
 
-            _loadingPanel.SetActive(true);
-            _progressBar.value = 0;
+            if (string.IsNullOrEmpty(sceneName))
+            {
+                Debug.LogError("[TheHeroSceneLoader] Empty scene name; aborting load.");
+                yield break;
+            }
 
-            AsyncOperation op = SceneManager.LoadSceneAsync(index);
+            if (_loadingPanel != null) _loadingPanel.SetActive(true);
+            if (_progressBar != null) _progressBar.value = 0;
+
+            AsyncOperation op = null;
+            try { op = SceneManager.LoadSceneAsync(sceneName); }
+            catch (System.Exception ex)
+            {
+                Debug.LogError("[TheHeroSceneLoader] LoadSceneAsync threw for '" + sceneName + "': " + ex.Message);
+            }
+
+            if (op == null)
+            {
+                Debug.LogError("[TheHeroSceneLoader] Scene not available in Build Settings / active Build Profile: '" + sceneName + "'. Open File → Build Profiles and add Assets/Scenes/" + sceneName + ".unity.");
+                if (_loadingPanel != null) _loadingPanel.SetActive(false);
+                yield break;
+            }
+
             while (!op.isDone)
             {
-                _progressBar.value = op.progress / 0.9f;
+                if (_progressBar != null) _progressBar.value = op.progress / 0.9f;
                 yield return null;
             }
 
             yield return new WaitForSeconds(0.5f); // Smooth transition
-            _loadingPanel.SetActive(false);
+            if (_loadingPanel != null) _loadingPanel.SetActive(false);
         }
     }
 }

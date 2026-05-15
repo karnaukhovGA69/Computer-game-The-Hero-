@@ -27,7 +27,7 @@ namespace TheHero.Generated
             
             if (_sr != null)
             {
-                _sr.sortingOrder = 50;
+                _sr.sortingOrder = 100;
             }
         }
 

@@ -1,0 +1,919 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.4/staging' branch; Version is '6000.4.5f1 (cc83ebd631f8) revision 13403115'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) Core' Language: 'ru' Physical Memory: 32557 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-HYPERPC" at "2026-05-15T17:22:56.5242223Z"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-05-15T17:22:56Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.4.5f1\Editor\Unity.exe
+-batchmode
+-quit
+-projectPath
+.
+-executeMethod
+TheHeroFixFinalThreeMapValidationFails.Fix
+-logFile
+TheHero_Final3Fix.log
+Successfully changed project path to: C:/Users/HYPERPC/Computer-game-The-Hero-/source code/My project
+C:/Users/HYPERPC/Computer-game-The-Hero-/source code/My project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [22944]  Target information:
+
+Player connection [22944]  * "[IP] 10.99.25.20 [Port] 55504 [Flags] 2 [Guid] 2042230481 [EditorId] 2042230481 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5TNIE0I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [22944]  * "[IP] 172.25.112.1 [Port] 55504 [Flags] 2 [Guid] 2042230481 [EditorId] 2042230481 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5TNIE0I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [22944]  * "[IP] 172.18.0.1 [Port] 55504 [Flags] 2 [Guid] 2042230481 [EditorId] 2042230481 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5TNIE0I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [22944] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [22944] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-22560" after 0.2 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-HYPERPC"
+[Licensing::IpcConnector] LicenseClient-HYPERPC channel disconnected successfully.
+[Licensing::IpcConnector] Channel LicenseClient-HYPERPC-6000.4.5 doesn't exist
+[Licensing::Module] Successfully launched the LicensingClient (PId: 34832)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-HYPERPC-6000.4.5" at "2026-05-15T17:22:57.6245519Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 34832, path: "C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              0aaaf68e56754cc3ae647f6388d8f6e1
+  Correlation Id:          57f8073785a7f47e9dab8a5ed377ea79
+  External correlation Id: 4946806289882311654
+  Machine Id:              2bcfagqq1DNenXtoR+usphFc6NE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-HYPERPC-6000.4.5" (connect: 0.24s, validation: 0.21s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-HYPERPC-6000.4.5-notifications" at "2026-05-15T17:22:57.8404134Z"
+[Licensing::Module] Connected to LicensingClient (PId: 34832, launch time: 0.00, total connection time: 0.46s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 9072390612952-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.03
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 1.38s
+[Licensing::Module] Licensing is initialized (took 0.91s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 37 unused hashed content files
+Refreshing native plugins compatible for Editor in 2.06 ms, found 0 plugins.
+Initialize engine version: 6000.4.5f1 (cc83ebd631f8)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/HYPERPC/Computer-game-The-Hero-/source code/My project/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3050 (ID=0x2584)
+    Vendor:   NVIDIA
+    VRAM:     6002 MB
+    Driver:   32.0.15.9186
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56560
+CodeReloadManager initialized
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.004659 seconds.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.370 seconds
+Domain Reload Profiling: 777ms
+	BeginReloadAssembly (124ms)
+		CreateAndSetChildDomain (16ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (180ms)
+		LoadAssemblies (107ms)
+		AnalyzeDomain (172ms)
+			TypeCache.Refresh (171ms)
+				TypeCache.ScanAssembly (160ms)
+	FinalizeReload (372ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (79ms)
+			BeforeProcessingInitializeOnLoad (73ms)
+			ProcessInitializeOnLoadAttributes (103ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 76 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.2d.animation@14.0.3 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.animation@a6f2f1d22eb5)
+    com.unity.2d.aseprite@4.0.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.aseprite@151b68d46c40)
+    com.unity.2d.psdimporter@13.0.2 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.psdimporter@11a0e04e0561)
+    com.unity.2d.spriteshape@14.0.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.spriteshape@da3647ffbbd7)
+    com.unity.2d.tilemap.extras@7.0.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.tilemap.extras@66df903b3633)
+    com.unity.2d.tooling@2.0.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.tooling@baa4133dcff2)
+    com.unity.ai.assistant@2.8.0-pre.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.ai.assistant@667f49aff9c0)
+    com.unity.ai.inference@2.6.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.ai.inference@9a123aee5df7)
+    com.unity.collab-proxy@2.12.4 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.collab-proxy@0b1559bcd34e)
+    com.unity.ide.rider@3.0.39 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.ide.rider@4504839d03f7)
+    com.unity.ide.visualstudio@2.0.27 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.ide.visualstudio@dc1ddd4f09b6)
+    com.unity.inputsystem@1.19.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.microsoft.gdk@1.6.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.microsoft.gdk@343e03cd89b8)
+    com.unity.microsoft.gdk.tools@1.6.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.microsoft.gdk.tools@5ae7d42b911f)
+    com.unity.purchasing@5.3.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.purchasing@c1f2e55dc464)
+    com.unity.services.levelplay@9.4.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.services.levelplay@4902ed73074e)
+    com.unity.timeline@1.8.12 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.timeline@8cd8509afae5)
+    com.unity.visualscripting@1.9.11 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.visualscripting@8bed5ad90189)
+    com.unity.services.core@1.16.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.services.core@8ba50f624741)
+    com.unity.microsoft.gdk.discovery@1.3.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.microsoft.gdk.discovery@9c2d1c88cf7f)
+    com.unity.burst@1.8.29 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.burst@6bb9aca3ef38)
+    com.unity.dt.app-ui@2.1.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.dt.app-ui@8ac7e730dd5d)
+    com.unity.nuget.newtonsoft-json@3.2.2 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.nuget.newtonsoft-json@4dfd81071c64)
+    com.unity.mathematics@1.3.3 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.mathematics@19a9377c4ffa)
+    com.unity.cloud.gltfast@6.14.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.cloud.gltfast@0847aee0f6da)
+    com.unity.2d.common@13.0.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.common@49d8bea2bff3)
+    com.unity.searcher@4.9.4 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.searcher@d45a78918735)
+    com.unity.nuget.mono-cecil@1.11.6 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.4.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.test-framework.performance@aa81a99c4a75)
+  Built-in packages:
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.sprite@929df5adbb1f)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.2d.tilemap@c457c5249013)
+    com.unity.multiplayer.center@1.0.1 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a)
+    com.unity.render-pipelines.universal@17.4.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.render-pipelines.universal@4d008a28541a)
+    com.unity.test-framework@1.6.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.test-framework@76560ee600cb)
+    com.unity.ugui@2.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.ugui@d8a2716f3013)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.0.5 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
+    com.unity.render-pipelines.core@17.4.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.render-pipelines.core@2269be549234)
+    com.unity.shadergraph@17.4.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.shadergraph@cd28a7c13031)
+    com.unity.render-pipelines.universal-config@17.4.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.render-pipelines.universal-config@0db4263b9e6b)
+    com.unity.collections@6.4.0 (location: C:\Users\HYPERPC\Computer-game-The-Hero-\source code\My project\Library\PackageCache\com.unity.collections@9c2353fb96f6)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Duplicate assembly 'System.Runtime.CompilerServices.Unsafe.dll' with different versions detected, using 'Packages/com.unity.ai.assistant/Plugins/Shared/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' and ignoring 'Packages/com.unity.collections/Unity.Collections.Tests/System.Runtime.CompilerServices.Unsafe/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.Refreshing native plugins compatible for Editor in 25.60 ms, found 7 plugins.
+Starting: C:\Program Files\Unity\Hub\Editor\6000.4.5f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/HYPERPC/Computer-game-The-Hero-/source code/My project
+Duplicate assembly 'System.Runtime.CompilerServices.Unsafe.dll' with different versions detected, using 'Packages/com.unity.ai.assistant/Plugins/Shared/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' and ignoring 'Packages/com.unity.collections/Unity.Collections.Tests/System.Runtime.CompilerServices.Unsafe/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.DisplayProgressbar: Compiling Scripts
+Starting: C:\Program Files\Unity\Hub\Editor\6000.4.5f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.4.5f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/HYPERPC/Computer-game-The-Hero-/source code/My project
+ExitCode: 4 Duration: 2s402ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[1605/2138  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[1606/2138  2s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+*** Tundra requires additional run (2.36 seconds), 2 items updated, 1604 evaluated
+ExitCode: 0 Duration: 2s196ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.4.5f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/HYPERPC/Computer-game-The-Hero-/source code/My project
+ExitCode: 0 Duration: 3s70ms
+Finished compiling graph: 2142 nodes, 46481 flattened edges (37333 ToBuild, 366 ToUse), maximum node priority 2445
+[1606/2138  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[2135/2138  1s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll, with 142 defines and 412 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[2136/2138  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[2137/2138  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (3.04 seconds), 4 items updated, 2138 evaluated
+AssetDatabase: script compilation time: 8.157520s
+Begin MonoManager ReloadAssembly
+Duplicate assembly 'System.Runtime.CompilerServices.Unsafe.dll' with different versions detected, using 'Packages/com.unity.ai.assistant/Plugins/Shared/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' and ignoring 'Packages/com.unity.collections/Unity.Collections.Tests/System.Runtime.CompilerServices.Unsafe/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly GdkToolsEditModeTests.dll at Library/ScriptAssemblies/GdkToolsEditModeTests.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Aseprite.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Aseprite.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.AI.Assistant.Integrations.Sample.Editor.dll at Library/ScriptAssemblies/Unity.AI.Assistant.Integrations.Sample.Editor.dll not valid. Loading of assembly skipped.
+Assembly Unity.AppUI.Editor.Tests.dll at Library/ScriptAssemblies/Unity.AppUI.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.AppUI.Tests.dll at Library/ScriptAssemblies/Unity.AppUI.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Microsoft.GDK.Discovery.EditModeTests.dll at Library/ScriptAssemblies/Unity.Microsoft.GDK.Discovery.EditModeTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Microsoft.GDK.Tests.dll at Library/ScriptAssemblies/Unity.Microsoft.GDK.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Purchasing.Apple.dll at Library/ScriptAssemblies/Unity.Purchasing.Apple.dll not valid. Loading of assembly skipped.
+Assembly Unity.Purchasing.AppleMacos.dll at Library/ScriptAssemblies/Unity.Purchasing.AppleMacos.dll not valid. Loading of assembly skipped.
+Assembly Unity.Purchasing.Security.dll at Library/ScriptAssemblies/Unity.Purchasing.Security.dll not valid. Loading of assembly skipped.
+Assembly Unity.Purchasing.TransactionVerifier.dll at Library/ScriptAssemblies/Unity.Purchasing.TransactionVerifier.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Refreshing native plugins compatible for Editor in 15.40 ms, found 7 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 15.00 ms, found 7 plugins.
+Duplicate assembly 'System.Runtime.CompilerServices.Unsafe.dll' with different versions detected, using 'Packages/com.unity.ai.assistant/Plugins/Shared/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' and ignoring 'Packages/com.unity.collections/Unity.Collections.Tests/System.Runtime.CompilerServices.Unsafe/System.Runtime.CompilerServices.Unsafe.dll, AssemblyName=System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.Refreshing native plugins compatible for Editor in 21.10 ms, found 7 plugins.
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  5.668 seconds
+Domain Reload Profiling: 7604ms
+	BeginReloadAssembly (320ms)
+		DisableScriptedObjects (52ms)
+		CreateAndSetChildDomain (141ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (695ms)
+	LoadAllAssembliesAndSetupDomain (877ms)
+		LoadAssemblies (476ms)
+		AnalyzeDomain (482ms)
+			TypeCache.Refresh (347ms)
+				TypeCache.ScanAssembly (329ms)
+			BuildScriptInfoCaches (122ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (5669ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (32ms)
+			BeforeProcessingInitializeOnLoad (202ms)
+			ProcessInitializeOnLoadAttributes (4662ms)
+			ProcessInitializeOnLoadMethodAttributes (535ms)
+			AfterProcessingInitializeOnLoad (4ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/UnifiedRayTracing/TraceRays.urtshader using Guid(1142bbad8b9e8c44c83a9775ff120d37) (ScriptedImporter)Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+
+Compiling Ray Tracing Shader "TraceRays.urtshader", keywords = <no keywords>
+    finished in 0.02 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'cf7c04febc6be62fa93a9b4519d05eff') in 0.1873558 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=21e20c2f711ae19844630876d76b6f92 DependenciesID=aad2e6ef9dee815d799cb92e0a6b6775 StaticDependenciesID=b7859538b7c8061be2c1df0681a26cec 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/RisEstimation.urtshader using Guid(713f6141bd66a134383b787f2eaa7c11) (ScriptedImporter)
+Compiling Ray Tracing Shader "RisEstimation.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '1dd15efe1c4b83ea3528e7027e820fd4') in 0.1851275 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a82b30921765b6b760edc18ae26da013 DependenciesID=f3b053af63b22507009114238d81f9c7 StaticDependenciesID=1251c416255850dca778d66927462604 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapShadowMaskIntegration.urtshader using Guid(d19f4f8a13b6edb48b986a47ec96402e) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapShadowMaskIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '1264b2a4a908397d4bb7c47aa92a8a25') in 0.2065308 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9ddff4634ab63ac904d73e2405da4094 DependenciesID=ffc8722471d032207ad4475b198cdbdd StaticDependenciesID=dddefbaa39ba5d51a386df5433e82fa1 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapGBufferDebug.urtshader using Guid(737a1597422c12547a8714d76a9406ec) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapGBufferDebug.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'b35177ed952a51fc283df3159d44faaf') in 0.0351192 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b679e100aa63bd47ce12189579d7bba5 DependenciesID=d5340e3f67ef7dbb5307a8b144a008af StaticDependenciesID=62194a0448f2b8616e1214fb593272db 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapNormalIntegration.urtshader using Guid(1451d029813b192429211be28181beab) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapNormalIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '823f5b41eabbf5eae9e8850e8b1f0a34') in 0.0397232 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f5e78361ac1af9bf1d45dc9bbf4844d9 DependenciesID=e38c6a3e2ae63499c79d1ef6fd10e148 StaticDependenciesID=cbe3820d9825e61936c3967ec27e4e90 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/RenderingLayerMask/TraceRenderingLayerMask.urtshader using Guid(94a070d33e408384bafc1dea4a565df9) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceRenderingLayerMask.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '19e1c1cd8ea8d38c44d891321b898df4') in 0.042312 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b96706131d2589dbb3905ceda1ae1132 DependenciesID=5e0890490b5ab135ca6a223d42bdfdaf StaticDependenciesID=83d03f1fcc976b11b697d3bab0b97d8c 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/UniformEstimation.urtshader using Guid(94a39d12848d8d64ca962a72b74e7c50) (ScriptedImporter)
+Compiling Ray Tracing Shader "UniformEstimation.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '59ec6aad33e75dcfd97087078b776b91') in 0.0418569 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d38c271622dec39a1b5b288064f8e020 DependenciesID=f15628005f341703e44588dcd218e751 StaticDependenciesID=f100dc97879ef35876f7ad5427566dd9 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/UnifiedRayTracing/TraceTransparentRays.urtshader using Guid(6513c3b892e933c4f8d00c19d5c47532) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceTransparentRays.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'd7d486e522e3a5cb2d50df80a312aef4') in 0.0272352 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8ef60b30aa3db6e9cbb0eb87f9cc877e DependenciesID=1a4ab7f03c6bb4e8662bb84ec03f26f1 StaticDependenciesID=5e41b194f27d8b70c797e75555e2b1f0 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapIndirectIntegration.urtshader using Guid(7624adbeb148b5c48ab5ab660cc2602a) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapIndirectIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'f49ae0a2a7320eedbddf6d02474736b8') in 0.0461143 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9f5f5060319712817c904aa3ef07c0bd DependenciesID=d341bd1b77e0ae0fe960dbb21ec48ae7 StaticDependenciesID=6d19372de11b03798f093933090e79bb 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapGBufferIntegration.urtshader using Guid(e9f4de6d1e07fb94f9a60d35b618f724) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapGBufferIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '40074a96a3fe36c08698ce7b541bdcd0') in 0.0487593 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=55f9af736fe1398b3c119b3cf21774d0 DependenciesID=6ee5dcd734e1e05dbeaec9a80fa64fb1 StaticDependenciesID=66dc06979910318021783fcb4ccd3ecc 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/DynamicGI/DynamicGISkyOcclusion.urtshader using Guid(5a2a534753fbdb44e96c3c78b5a6999d) (ScriptedImporter)
+Compiling Ray Tracing Shader "DynamicGISkyOcclusion.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'd8ded6dc5c3b04e91c062fec19c82a7c') in 0.0372837 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=322d7d8fa876f352ce0db697b476b038 DependenciesID=5490f389d8f71a38daa5f6d84f0aee4b StaticDependenciesID=18974378deb0e4fc540e6b2321b0ff13 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapDirectIntegration.urtshader using Guid(5bbebdef5916845478fcef13fa10d89f) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapDirectIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '7e27f8826a087acb9e8b0c854a1174b1') in 0.0446166 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ee07de9a1cfd7d1ea55ee050bdcb2f50 DependenciesID=7785453c74c66faa210e906a7c38c941 StaticDependenciesID=63188f79534be5f4b9e074ad4af5bfb7 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/UnifiedRayTracing/TraceRaysAndFetchAttributes.urtshader using Guid(fbc59f55df2416344b008dc23753cae2) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceRaysAndFetchAttributes.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '8e035d2af7af9aae17cd26d191149584') in 0.0336596 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b6e2eae356b5970494320f97574c4741 DependenciesID=0d9bee40825d6072233e26e62a49e6ca StaticDependenciesID=aa8291e86ea82085a643681c1c779d39 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapAOIntegration.urtshader using Guid(1c410815c01ce1d4d82c645c0cd45747) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapAOIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '0ac6965b8f7c38236e998fbbd7c1923a') in 0.0435724 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b56d9ee1f70afc1d3714cd131cd4f4fb DependenciesID=9ea87e46a631c828066b2ff9bb32bcaf StaticDependenciesID=bcaf3aac9727a2ca27155e619d011e5f 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationValidity.urtshader using Guid(2c32233d92a2d0745930664c087c5c9a) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationValidity.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'a8a23debe44577f90b5dec603a3fead9') in 0.043827 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=004d617a6e19642074ae39fec2fdb46f DependenciesID=e7ca257ff36a7859dace051ddc6b714e StaticDependenciesID=4aea10376946a8225ccdfdec15a70dac 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapValidityIntegration.urtshader using Guid(ace95ac84e213794891b4bd7c9b3c158) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapValidityIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '3e6495cc74158fc089ac7348abc0990f') in 0.0355894 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4c92990546703840ab0731a3c78282bd DependenciesID=420f3851492d6d21991e571fd3b69f3b StaticDependenciesID=46d905dacc01197a8e043a8ad4f9d21d 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/RestirCandidateTemporal.urtshader using Guid(ad3a9f9982f8c4f4a839a78955e78458) (ScriptedImporter)
+Compiling Ray Tracing Shader "RestirCandidateTemporal.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'b2772b095459374b0ce32fe5c5282cd0') in 0.0515647 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=842b178c635807ad6ced256ed1ed845e DependenciesID=03f07e01f4507dcb3b560ca183144bb5 StaticDependenciesID=2beaac54fac463ee5ee15c00b0990d01 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationIndirect.urtshader using Guid(5ecdabd800f05984696f22ba95284516) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationIndirect.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '69c4b59316d985a619c749d3d1df2d13') in 0.0733574 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=864430e1d9c31d570729614a30b581fb DependenciesID=b466b7b315c94abec71b14dac194ba85 StaticDependenciesID=83ecbbd61911181b4944eb7ac9eabee5 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Runtime/PathTracing/PathIteratorTest.urtshader using Guid(6e0b547bab30a804c8123974120d583f) (ScriptedImporter)
+Compiling Ray Tracing Shader "PathIteratorTest.urtshader", keywords = <no keywords>
+    finished in 0.03 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'cbaa7cf98b3fda79f881a754b07aea17') in 0.0655111 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d563fb3c6214fd8cb4b04517cbbaee3c DependenciesID=03a825de69f655d44bbbd0af80de6114 StaticDependenciesID=cf2a33ce9b71ea08a4459556694e1323 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LiveGI.urtshader using Guid(ceb7a31b84722d144bbeff1c8cd88769) (ScriptedImporter)
+Compiling Ray Tracing Shader "LiveGI.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '2d4831187b3e64e39190dcf379c41fe6') in 0.0402009 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=65d555f817fadb95ff80352c8534f258 DependenciesID=626e06ace4e9f92250fabde5a394d4cb StaticDependenciesID=628001b751fe9fddf64a203b1446575e 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationOcclusion.urtshader using Guid(de3013e16d99f2746ab1735ec06a660b) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationOcclusion.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '3ab899dff91ff43fbf28ce3aef005ccc') in 0.0412185 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=675157276d5fff80627b160cb4bb03c8 DependenciesID=4124a28ec2a70f5622584573dc02e1cc StaticDependenciesID=183f3d853e4af89ec08f4e79696e167d 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationDirect.urtshader using Guid(1f9bfe60b4ad75943a5281839c1a4e5c) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationDirect.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '21bd43bf1c8d1b040a094f675b2a3e22') in 0.034677 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0f93da1bb307c2ba4ba0363c3a7bbb54 DependenciesID=e3269ad8286d5f398dfac79c87f58e6f StaticDependenciesID=d3f99f9cc1ae2c0c0147c2fa8da668fc 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/VirtualOffset/TraceVirtualOffset.urtshader using Guid(ff2cbab5da58bf04d82c5f34037ed123) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceVirtualOffset.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '0832d6c59b134a92ec4c8c2c488555ae') in 0.0282767 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=87b1922dc5d16cf698da333183cb3f5e DependenciesID=70c9ad4e073348d2bce2fc548e38b16e StaticDependenciesID=f51ff46b48d84884c883ac486ebfd7f9 
+Refreshing native plugins compatible for Editor in 19.02 ms, found 7 plugins.
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=38c1d6056e453da40908f6a552c715a3): Total: 19.228 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=23 (actual=23, local cache=0, cache server=0)
+		Asset DB Process Time: managed=7 ms, native=8066 ms
+		Asset DB Callback time: managed=524 ms, native=440 ms
+		Scripting: domain reloads=1, domain reload time=1940 ms, compile time=8159 ms, other=88 ms
+		Project Asset Count: scripts=3212, non-scripts=8661
+		Asset File Changes: new=0, changed=3, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 21.746ms
+	ApplyChangesToAssetFolders: 0.765ms
+	Scan: 385.245ms
+	OnSourceAssetsModified: 0.813ms
+	CategorizeScriptCompilationAssets: 91.767ms
+	ProcessAssetsWithTransientArtifactChanges: 99.832ms
+	CategorizeAssets: 111.188ms
+	CompileScripts: 8158.851ms
+	ImportOutOfDateAssets: 7163.139ms (5712.381ms without children)
+		ImportManagerImport: 1447.502ms (2.256ms without children)
+			UpdateCategorizedAssets: 1.549ms
+		UnloadImportedAssets: 0.178ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.855ms
+		OnDemandSchedulerStart: 1.203ms
+	PostProcessAllAssets: 922.941ms
+		ComputeShaderImportPostprocess 261.777ms
+		RaytracingShaderImportPostprocess 132.213ms
+		XRBuildSystem.XRAssetImported 2.461ms
+		VCAutoAddAssetPostprocess 1.073ms
+		PostProcessCallbackCreateDeferredMaterials 0.066ms
+		MonoPostProcessAllAssets: 524.122ms
+			AssetPostprocessor.OnPostprocessAllAssets 182.798ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 74.990ms
+			AssetReferenceReimportMonitor.OnPostprocessAllAssets 25.218ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 21.110ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.803ms
+			PackageManagerResolver.OnPostprocessAllAssets 6.447ms
+			SyncVS.PostprocessSyncProject 2.914ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.499ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 2.365ms
+			GraphRefreshPostprocessor.OnPostprocessAllAssets 2.189ms
+			VersionHandlerImpl.OnPostprocessAllAssets 1.897ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.521ms
+			AssetChangedListener.OnPostprocessAllAssets 1.364ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.222ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.206ms
+			AssetChangeDetector.OnPostprocessAllAssets 1.022ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.542ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.538ms
+			AssetProcessor.OnPostprocessAllAssets 0.529ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.524ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.519ms
+			PostProcessor.OnPostprocessAllAssets 0.514ms
+			IOSResolver.OnPostprocessAllAssets 0.447ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.443ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.426ms
+			PlayServicesResolver.OnPostprocessAllAssets 0.404ms
+			SkillsProjectAssetPostprocessor.OnPostprocessAllAssets 0.378ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.346ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.328ms
+			ModelAssetProcessor.OnPostprocessAllAssets 0.283ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.277ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.244ms
+			GdkAssemblyAssetProcessor.OnPostprocessAllAssets 0.243ms
+			AssetEvents.OnPostprocessAllAssets 0.211ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.192ms
+			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.184ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.175ms
+			PSDImportPostProcessor.OnPostprocessAllAssets 0.169ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.149ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.146ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.139ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.130ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.105ms
+			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.076ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.074ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.067ms
+			TrackSelectedAssetsProcessor.OnPostprocessAllAssets 0.056ms
+	PostAssetChangesProfiler: 21.716ms
+	UnloadStreamsBegin: 3.935ms
+	PersistCurrentRevisions: 0.626ms
+	GenerateScriptTypeHashes: 3.478ms
+	GenerateScriptTypeSerializationHashes: 5.889ms
+	Untracked: 2238.489ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 2.698ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-The Hero
+GetVirtualKey: Could not map char: z (122) to any virtual key
+GetVirtualKey: Could not map char: y (121) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: l (108) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: k (107) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: G (71) to any virtual key
+GetVirtualKey: Could not map char: G (71) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: g (103) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: o (111) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: u (117) to any virtual key
+Unloading 201 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 13007 unused Assets / (27.0 MB). Loaded Objects now: 13788.
+Memory consumption went from 372.8 MB to 345.8 MB.
+Total: 25.095700 ms (FindLiveObjects: 1.178900 ms CreateObjectMapping: 1.421800 ms MarkObjects: 15.815600 ms  DeleteObjects: 6.676400 ms)
+
+GetVirtualKey: Could not map char: z (122) to any virtual key
+GetVirtualKey: Could not map char: y (121) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: l (108) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: k (107) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: G (71) to any virtual key
+GetVirtualKey: Could not map char: G (71) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: g (103) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: o (111) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: u (117) to any virtual key
+Opening scene 'Assets/Scenes/Map.unity'
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Map.unity'
+	Deserialize:            18.234 ms
+	Integration:            310.821 ms
+	Integration of assets:  0.352 ms
+	Thread Wait Time:       0.018 ms
+	Total Operation Time:   329.425 ms
+Unloading 2 unused Assets / (12.7 MB). Loaded Objects now: 14286.
+Memory consumption went from 319.4 MB to 306.8 MB.
+Total: 15.290700 ms (FindLiveObjects: 0.488900 ms CreateObjectMapping: 0.391400 ms MarkObjects: 14.347300 ms  DeleteObjects: 0.061900 ms)
+
+[TheHeroFinal3Fix] Opened Map.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:49)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 49)
+
+Start importing ProjectSettings/EditorBuildSettings.asset using Guid(0000000000000000b000000000000000) (LibraryAssetImporter) -> (Import Result ID: 'a8e4eb4aa975cd688f756d5133caf018') in 0.0029222 seconds [static dependencies only]. Details - ImportResultOutputID=d777934f36c664454d62eda103573334 DependenciesID=5ae3df728d6e0ca4c8216d6539371702 StaticDependenciesID=9750a39729df08f8f4b2afd1e2c1aabf 
+Start importing Assets/GeneratedTiles/Ground_Grass.asset using Guid(dd6b2de1e7e27ff4b82aa644653f54be) (NativeFormatImporter) -> (Import Result ID: '6dc24546d0448b05607271f17198abc5') in 0.0024199 seconds [static dependencies only]. Details - ImportResultOutputID=41a8f66e258f3578fb755b5b5e90e0d6 DependenciesID=a6306efceebe3e0fa8cb67179fe5a739 StaticDependenciesID=75c7d00f78e1942bc4d989d5669833c7 
+Refreshing native plugins compatible for Editor in 15.47 ms, found 7 plugins.
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=4026d6201e8e0214e985309c5766891f): Total: 0.433 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=2, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=124 ms
+		Asset DB Callback time: managed=260 ms, native=46 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=3212, non-scripts=8661
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.113ms
+	Scan: 16.198ms
+	OnSourceAssetsModified: 0.591ms
+	ProcessAssetsWithTransientArtifactChanges: 0.153ms
+	CategorizeAssets: 86.653ms
+	ImportOutOfDateAssets: 10.738ms (0.882ms without children)
+		ImportManagerImport: 7.216ms (1.171ms without children)
+			UpdateCategorizedAssets: 0.051ms
+		UnloadImportedAssets: 0.206ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.584ms
+		OnDemandSchedulerStart: 0.795ms
+	PostProcessAllAssets: 290.134ms
+		XRBuildSystem.XRAssetImported 29.694ms
+		MonoPostProcessAllAssets: 260.306ms
+			VersionHandlerImpl.OnPostprocessAllAssets 256.521ms
+			AssetPostprocessor.OnPostprocessAllAssets 1.218ms
+			PackageManagerResolver.OnPostprocessAllAssets 0.548ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.502ms
+			SyncVS.PostprocessSyncProject 0.492ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.161ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.092ms
+			GraphRefreshPostprocessor.OnPostprocessAllAssets 0.083ms
+			ModelAssetProcessor.OnPostprocessAllAssets 0.061ms
+	PostAssetChangesProfiler: 16.992ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.574ms
+	UnloadStreamsBegin: 0.051ms
+	PersistCurrentRevisions: 0.519ms
+	Untracked: 10.065ms
+
+[TheHeroFinal3Fix] GroundTilemap tile count after fill: 1536
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:FillGroundTilemap (UnityEngine.SceneManagement.Scene) (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:122)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:53)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 122)
+
+Start importing Assets/Scenes/Map.unity using Guid(da3978d33114ad24f80626786b253bde) (DefaultImporter) -> (Import Result ID: 'ec0b36cf3e99fb2d8d7ae3cdacec1ac2') in 0.0010434 seconds [static dependencies only]. Details - ImportResultOutputID=d949174f9816b137f0bc0117a2b6642b DependenciesID=36c9d58be5a4b907a06fb4e38a494f92 StaticDependenciesID=b6247b9f95b9d573ca37e5c656e0e17c 
+Refreshing native plugins compatible for Editor in 21.77 ms, found 7 plugins.
+Asset Pipeline Refresh (id=07985434d4e1de747b7fcd3cf32459a0): Total: 0.083 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=66e3ed8a02f1f1540b6babf0e070cd6b): Total: 0.013 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Start importing Assets/GeneratedTiles/Road_Path.asset using Guid(8ea83181d892c5a4586b4a981230b0c7) (NativeFormatImporter) -> (Import Result ID: '953ca0786a1342b8f494e4fbd0e2bc88') in 0.0020243 seconds [static dependencies only]. Details - ImportResultOutputID=7516282124c4a91747fb41ed3d4863cc DependenciesID=bde90df5fad9a3a1a733012bc615296d StaticDependenciesID=c7cc2c6074780820a493727ffa49b642 
+Refreshing native plugins compatible for Editor in 59.52 ms, found 7 plugins.
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=935b0a6d796bfc94885140dbcd6ecd10): Total: 0.327 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=50 ms
+		Asset DB Callback time: managed=213 ms, native=62 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=3212, non-scripts=8661
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 3
+	ApplyChangesToAssetFolders: 0.112ms
+	Scan: 7.146ms
+	OnSourceAssetsModified: 0.053ms
+	ProcessAssetsWithTransientArtifactChanges: 0.159ms
+	CategorizeAssets: 30.166ms
+	ImportOutOfDateAssets: 6.328ms (0.762ms without children)
+		ImportManagerImport: 3.019ms (0.598ms without children)
+		UnloadImportedAssets: 0.189ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.373ms
+		OnDemandSchedulerStart: 0.930ms
+	PostProcessAllAssets: 215.667ms
+		XRBuildSystem.XRAssetImported 2.563ms
+		MonoPostProcessAllAssets: 212.985ms
+			VersionHandlerImpl.OnPostprocessAllAssets 210.888ms
+			SyncVS.PostprocessSyncProject 0.554ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.303ms
+			PackageManagerResolver.OnPostprocessAllAssets 0.238ms
+			GraphRefreshPostprocessor.OnPostprocessAllAssets 0.132ms
+			ModelAssetProcessor.OnPostprocessAllAssets 0.101ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.075ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.068ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.053ms
+	PostAssetChangesProfiler: 60.118ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.592ms
+	PersistCurrentRevisions: 0.523ms
+	Untracked: 6.315ms
+
+[TheHeroFinal3Fix] RoadTilemap tile count after fill: 41
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:FillRoadTilemap (UnityEngine.SceneManagement.Scene) (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:183)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:56)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 183)
+
+Start importing Assets/Scenes/Map.unity using Guid(da3978d33114ad24f80626786b253bde) (DefaultImporter) -> (Import Result ID: '3c2b1859376d9b202e7611dfbdcb5fe6') in 0.0014112 seconds [static dependencies only]. Details - ImportResultOutputID=d949174f9816b137f0bc0117a2b6642b DependenciesID=fe9a55d60d866a0f595be9114a1c0f53 StaticDependenciesID=63ff9b0bbe24ae026387d328ca86c272 
+Refreshing native plugins compatible for Editor in 19.27 ms, found 7 plugins.
+Asset Pipeline Refresh (id=498a287405743c244ab9854af7036379): Total: 0.121 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=3a9891d4b84b9ff4aa23604733d21edd): Total: 0.013 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[TheHeroFinal3Fix] Warrior_Idle sprites found: 8
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:FixHeroSprite (UnityEngine.SceneManagement.Scene) (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:204)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:59)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 204)
+
+[TheHeroFinal3Fix] Warrior_Idle sprite Warrior_Idle_0 rect=79x89 texture=1536x192
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:FixHeroSprite (UnityEngine.SceneManagement.Scene) (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:209)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:59)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 209)
+
+[TheHeroFinal3Fix] Warrior_Idle sprite Warrior_Idle_1 rect=79x89 texture=1536x192
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:FixHeroSprite (UnityEngine.SceneManagement.Scene) (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:209)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:59)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 209)
+
+[TheHeroFinal3Fix] Warrior_Idle sprite Warrior_Idle_2 rect=79x88 texture=1536x192
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:FixHeroSprite (UnityEngine.SceneManagement.Scene) (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:209)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:59)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 209)
+
+[TheHeroFinal3Fix] Warrior_Idle sprite Warrior_Idle_3 rect=81x86 texture=1536x192
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:FixHeroSprite (UnityEngine.SceneManagement.Scene) (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:209)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:59)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 209)
+
+[TheHeroFinal3Fix] Warrior_Idle sprite Warrior_Idle_4 rect=83x85 texture=1536x192
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:FixHeroSprite (UnityEngine.SceneManagement.Scene) (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:209)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:59)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 209)
+
+[TheHeroFinal3Fix] Warrior_Idle sprite Warrior_Idle_5 rect=83x85 texture=1536x192
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:FixHeroSprite (UnityEngine.SceneManagement.Scene) (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:209)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:59)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 209)
+
+[TheHeroFinal3Fix] Warrior_Idle sprite Warrior_Idle_6 rect=82x87 texture=1536x192
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:FixHeroSprite (UnityEngine.SceneManagement.Scene) (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:209)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:59)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 209)
+
+[TheHeroFinal3Fix] Warrior_Idle sprite Warrior_Idle_7 rect=80x88 texture=1536x192
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:FixHeroSprite (UnityEngine.SceneManagement.Scene) (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:209)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:59)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 209)
+
+[TheHeroFinal3Fix] Hero sprite assigned from Warrior_Idle frame 0 (imported sub-sprite)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:FixHeroSprite (UnityEngine.SceneManagement.Scene) (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:269)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:59)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 269)
+
+Start importing Assets/Scenes/Map.unity using Guid(da3978d33114ad24f80626786b253bde) (DefaultImporter) -> (Import Result ID: '793c5483148f0e733ce3082db3d3e4f2') in 0.0011143 seconds [static dependencies only]. Details - ImportResultOutputID=d949174f9816b137f0bc0117a2b6642b DependenciesID=48832c21bd0fa896c8d98fe1ebffb77f StaticDependenciesID=90797be12f51869e08c075a094ddfed9 
+Refreshing native plugins compatible for Editor in 15.48 ms, found 7 plugins.
+Asset Pipeline Refresh (id=cb3e8f9d0fe49084a99d482518ac75ed): Total: 0.242 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=0db6a09295c95b9498bb89a6b6275937): Total: 0.010 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Start importing Assets/Scenes/Map.unity using Guid(da3978d33114ad24f80626786b253bde) (DefaultImporter) -> (Import Result ID: '793c5483148f0e733ce3082db3d3e4f2') in 0.0009486 seconds [static dependencies only]. Details - ImportResultOutputID=d949174f9816b137f0bc0117a2b6642b DependenciesID=48832c21bd0fa896c8d98fe1ebffb77f StaticDependenciesID=90797be12f51869e08c075a094ddfed9 
+Refreshing native plugins compatible for Editor in 17.73 ms, found 7 plugins.
+Asset Pipeline Refresh (id=326f44fab8bc48e4a957304e59898501): Total: 0.046 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=c75bafb4712637e46b846677dcba3470): Total: 0.011 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[TheHeroFinal3Fix] Map saved
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TheHeroFixFinalThreeMapValidationFails:Fix () (at Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs:71)
+
+(Filename: Assets/Editor/TheHeroFixFinalThreeMapValidationFails.cs Line: 71)
+
+Start importing Assets/CodeAudit/Final_3_Map_Validation_Fix_Report.md using Guid(6e9b859a7e36bc246b365b8726fbc6b0) (TextScriptImporter) -> (Import Result ID: '60ebe70a6747f87546a46d07ff7f71ad') in 0.0023162 seconds [static dependencies only]. Details - ImportResultOutputID=18a47322488ab038275ebbcfb0961561 DependenciesID=687770f2b32e433ca03d85f289d6de9a StaticDependenciesID=de131369f5e3f03e2b04ced989a11bc7 
+Refreshing native plugins compatible for Editor in 20.06 ms, found 7 plugins.
+Asset Pipeline Refresh (id=2f1b06373aa13f24f907e3a33fcc1e86): Total: 0.229 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Batchmode quit successfully invoked - shutting down!
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-HYPERPC-6000.4.5-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-HYPERPC-6000.4.5 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Exiting batchmode successfully now!
+Exiting without the bug reporter. Application will terminate with return code 0
